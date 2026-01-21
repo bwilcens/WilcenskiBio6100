@@ -16,8 +16,8 @@
   {
     "objectID": "Homework_02.html",
     "href": "Homework_02.html",
-    "title": "Homework_02",
+    "title": "Homework_01",
     "section": "",
-    "text": "This is hw"
+    "text": "This is HW 1\n\nx&lt;-c(1,2,3,4)\ny&lt;- c(3,4,5)\nprint(x)\n\n[1] 1 2 3 4"
   }
 ]

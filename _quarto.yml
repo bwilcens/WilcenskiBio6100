@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "WIlcenskiWhatever"
+  title: "WilcenskiBio381"
   navbar:
     left:
       - href: index.qmd

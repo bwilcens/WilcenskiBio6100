@@ -1,5 +1,11 @@
 ---
-title: "Homework_02"
+title: "Homework_01"
 format: html
 ---
-This is hw
+This is HW 1
+
+```{r}
+x<-c(1,2,3,4)
+y<- c(3,4,5)
+print(x)
+```

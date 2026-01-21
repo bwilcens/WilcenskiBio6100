@@ -1,9 +1,9 @@
 ---
-title: "WIlcenskiWhatever"
+title: "WilcenskiBio381"
 ---
 
 This is a Quarto website. 
 
-[Homework2](Homework_02.html)
+[Homework1](Homework_01.html)
 
 
