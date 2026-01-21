@@ -2,8 +2,8 @@
 title: "WIlcenskiWhatever"
 ---
 
-This is a Quarto website.
+This is a Quarto website. 
 
-Last ditch effort 
+[Homework2](Homework_02.html)
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
