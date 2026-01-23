@@ -2,7 +2,7 @@
 title: "WilcenskiBio6100"
 ---
 
-This is a Quarto website. 
+This website will hold all of Bryan Wilcenski's relevant homework and project files for BIOL6100.
 
 [Homework1](Homework_01.html)
 
