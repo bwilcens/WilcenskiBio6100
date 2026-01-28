@@ -4,6 +4,7 @@ title: "WilcenskiBio6100"
 
 This website will hold all of Bryan Wilcenski's relevant homework and project files for BIOL6100.
 
-[Homework1](Homework_01.html)
+[Homework2](Homework_02.html)
+[Homework3](Homework_03.html)
 
 

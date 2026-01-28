@@ -270,3 +270,4 @@ zd[zd<0.5]
 #dropping NAs with which to index
 
 zd[which(zd<0.5)]
+
