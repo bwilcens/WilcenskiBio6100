@@ -2,7 +2,7 @@
 title: "Homework 03"
 format: html
 ---
-
+## Question 
 ```{r}
 x<- 1.1 #assign value to x
 a<- 2.2 #assign value to a
@@ -16,7 +16,10 @@ print(z) #print z
 
 z<- (3*x^3) + (2*x^2)+1 #assign expression value to z
 print(z) #print z
+```
 
+## Question 2
+```{r}
 vec_a<- c(seq(1:8),seq(from = 7, to =1)) #assigns vector a to vec_a
 print(vec_a) #prints vector a
 
@@ -25,7 +28,10 @@ print(vec_b) #print vector b
 
 vec_c<- rep(5:1, times = 1:5) #assign (5,4,4,3,3,3,2,2,2,2,1,1,1,1,1) to vec_c
 print(vec_c) #print vector c
+```
 
+# Question 3
+```{r}
 set.seed(37) #set seed to get the same two numbers when ran 
 crd <- c(runif(2)) #generate and assign two random numbers
 print(crd) #print coordinates
@@ -40,6 +46,10 @@ r<-sqrt(x^2 + y^2) #calculate r coordinate and assign to r
 theta<-atan(y/x) # calculate theta coordinate and assign to theta
 pcor<- c(r,theta) #concatinate r and theta variables and assign to pcor
 print(pcor) # print polar coordinates - pcor
+```
+
+# Question 4
+```{r}
 
 queue <-c("sheep", "fox", "owl", "ant") #create vector of animal species
 a<- c(queue,"serpent") #serpent comes to end of the line
@@ -48,7 +58,7 @@ print(a) # print new line
 b<- a[-1] # sheep goes into ark
 print(b) #print new line
 
-c<- c("donkey", b)
+c<- c("donkey", b) #donkey  arrives at front of line
 c
 
 d<- c[-5] #serpent leaves line
@@ -66,12 +76,14 @@ f<- c(ln1,"aphid",ln2) #insert aphid between two lines
 print(f) 
 
 which(f=="aphid") #count the aphid's place in line 
+```
 
+## Question 5
+```{r}
 x <- 1:100 #creates vector x
 print(x)
 
 y<-x[!(x%%2==0 | x%%3==0 | x%%7==0)] # removes all values from the vector x that can be divided by 2, 3, and 7, stores as y
 print(y) #print y 
-
 
 ```
