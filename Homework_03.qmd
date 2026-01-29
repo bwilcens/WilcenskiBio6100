@@ -32,14 +32,14 @@ print(vec_c) #print vector c
 
 # Question 3
 ```{r}
-set.seed(37) #set seed to get the same two numbers when ran 
+set.seed(10) #set seed to get the same two numbers when ran 
 crd <- c(runif(2)) #generate and assign two random numbers
 print(crd) #print coordinates
 
 x<-crd[1] #assign first value in crd to x
 y<-crd[2] #assign first value in crd to y
 
-#r = rad(x^2 +y^2)
+#r = sqrt(x^2 +y^2) (r,O)
 #arctan(y/x)= theta
 
 r<-sqrt(x^2 + y^2) #calculate r coordinate and assign to r
