@@ -61,4 +61,92 @@ unrolled[1]
 #make sure that ggplot2 is installed, then invoke in script 
 library(ggplot2)
 
+#create random vars
 y_var<- runif(10)
+x_var<- runif(10)
+
+#regress 
+my_model<- lm(y_var~x_var)
+
+#plot my model
+qplot(x=x_var, y=y_var) 
+
+#explore structure
+print(my_model)
+
+str(summary(my_model))
+
+#extracting pvals -- after getting the summary of my_model, you can index out certain things (pval)
+summary(my_model)$coefficients["x_var", "Pr(>|t|"]
+
+u<- unlist(summary(my_model))
+
+print(u)
+
+pval<-u$coefficients2
+pval
+
+#data frames
+
+ #define variables
+var_a<- 1:12
+var_b<-rep(c("A","B", "C"),4)
+var_c<- runif(12)
+
+#creating a data frame from vecs 9variables
+df<- data.frame(var_a,var_b,var_c)
+df
+
+#view  structure summary of df
+str(df)
+
+#access things in df
+
+df$var_b
+#can also treat like matrix - may not be the best way
+df[1,1]
+
+#best way:
+df$var_a[1] #first elmt in var_a
+
+#expanding the data frame
+
+#contains the things we add to df in the next step
+new_data<-list(var_a = 13, var_b="D", var_c=0.77)
+new_data
+
+#appending data
+df2<-rbind(df,new_data)
+df2
+
+
+head(df2,10)
+tail(df2)
+
+View(df2) #view data frames in the viewer
+
+#add a new column to a dataframe
+print(df2)
+
+#using cbind (adding the column after definign what is in it)
+new_var<- rnorm(13)
+df3<- cbind(df2,new_var) 
+print(df3)
+str(df3)
+
+#using assignment operator
+char_var<- rep("T",13)
+df3$charV<- char_var
+head(df3)
+
+
+## reading and writing data frames
+#know where the data is stored - create a data folder in repository
+
+#writing data frames
+write.csv(df3,"6100data/my_dataframe.csv") 
+#include the subfolder before the file name to place in subfolder
+##
+
+data<-read.csv("6100data/my_dataframe.csv", header = T, sep=",")
+data$var_a
