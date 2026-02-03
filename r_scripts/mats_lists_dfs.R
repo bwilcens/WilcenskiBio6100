@@ -150,3 +150,151 @@ write.csv(df3,"6100data/my_dataframe.csv")
 
 data<-read.csv("6100data/my_dataframe.csv", header = T, sep=",")
 data$var_a
+
+
+##Distinctions between DFs and Mat Dims 
+
+z_mat<-matrix(data=1:30,ncol=3, byrow=T)
+print(z_mat)
+
+z_dframe<- as.data.frame(z_mat) #turn into df
+print(z_dframe)
+
+str(z_mat)
+str(z_dframe)
+
+head(z_dframe)
+head(z_mat)
+
+z_mat[2,1] #element indexing
+z_dframe$V2[2] #correct for dframe
+
+#column ref
+
+z_dframe[,3] #(calls third column) 
+z_dframe$V3#same but the pone above is better
+z_mat[,3]
+
+
+#one dimension referencing (indexing in one dimension with matrix will turn it into a vector)
+z_mat[2]
+z_dframe[2]
+
+#missing data in dfs and mats
+
+zd<- runif(10)
+zd
+
+zd[c(5,7)]<- NA
+zd
+
+#complete cases 
+complete.cases(zd) #when a value is there > true, when not> false
+
+#filter for only True
+zd[complete.cases(zd)]
+
+
+#which positions are missing?
+which(complete.cases(zd)) #returns indexes for which we have complete cases
+which(!complete.cases(zd)) #returns indexes for which we DO NOT have complete cases
+
+# missing data in matrix
+
+m<-matrix(1:20,nrow=5) #will default to column-wise filling
+
+#add missing data 
+m[1,1]<- NA
+m[5,4]<- NA
+m
+
+#other way of writing step above 
+#m[c(1),1]<- NA # missed the formula for doing this
+
+m[complete.cases(m),] #returns only the rows where all values are complete
+
+#complete cases for onlu certain columns
+      
+
+m[complete.cases(m[,c(1,2)]),] #drops first row
+m[complete.cases(m[,c(1,2)]),] #no drops 
+m[complete.cases(m[,c(3,4)]),] # drops row 4 
+m[complete.cases(m[,c(1,4)]),] # drops rows 1 and 4 
+
+#subsetting mats and data frames
+m<- matrix(data=1:12, nrow=3)
+dimnames(m)<- list(paste("Species",LETTERS[1:nrow(m)],sep=""),paste("Site",1:ncol(m),sep=""))
+print(m)
+
+#element wise subsetting ---# better to do the second one if possible
+m[1:2, 3:4]
+m[c("SpeciesA","SpeciesB"),c("Site3", "Site4")]
+
+m[1:2,]
+m[,3:4]
+
+
+#using logical for subsetting (in this case greater than operator)
+
+colSums(m) #generates vector w the sum of the columns 
+colSums(m)>15 # generates logical 
+
+sums<-colSums(m)
+sums[sums >15]
+
+rowSums(m)
+m[rowSums(m)==22,] #add the comma to keep the format 
+
+m[,"Site1"] #gives us first row with site 1 
+
+m[,"Site1"]<3 #turns to logical 
+
+
+#data curation
+
+###---Start of Metadata
+#put some basic metadata in the csv  that the data comes from
+#title, date, author
+#author email address website 
+#ownership collaborators funding src repo citatipns
+#sampling locations samp times vari desc missing data (true zeros vs missing data)
+#data track changes log (date: ~~~~~, changes:)
+###---------END OF METADATA-----
+#///////////
+
+##
+#----start of data-------
+
+read.table(file="ExcelDataTemplate.csv",
+header=TRUE,sep=",",comment.char="#")
+
+
+
+#read in and write out are most often used in r 
+
+#other option: saving r objects as rds file 
+# (output of the model can be preserved so you don't have to rerun every time)
+
+saveRDS(z_dframe,file= "6100data/sData.RDS")
+z_dframe
+
+
+# using RDS function 
+unfrozen_Z<- readRDS("6100data/sData.RDS")
+unfrozen_Z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
