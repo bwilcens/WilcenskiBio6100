@@ -1,0 +1,102 @@
+---
+title: "Homework 04"
+format: html
+---
+
+## Question 1 
+
+```{r}
+
+
+n_dims<-sample(3:10,size=1) #generate n_dims
+n_dims #print n_dims
+
+vec<-1:(n_dims^2) #create vec from 1 to n_dims
+print(vec) 
+sample(vec) #shuffle vec
+
+mat_1<- matrix(vec,nrow=n_dims, ncol=n_dims) #create 3x3 matrix
+mat_1
+
+t(mat_1) #transpose matrix
+mat_1
+# calculate and print the sim ond mean of first and last row
+sum_mean<- c(sum(mat_1[1,]),mean(mat_1[1,]),sum(mat_1[n_dims,]),mean(mat_1[n_dims,]))
+print(sum_mean)
+
+#use eigen tool to transform the matrix
+
+eigen(mat_1,only.values=FALSE)
+
+#type of numbers in the $values and $vectors: they appear to be numeric data types
+
+typeof(mat_1["$values"]) #returns integers 
+typeof(mat_1["$vectors"]) #returns integers
+```
+
+##Question 2 
+
+```{r}
+#make my matrix 4x4 random uniform
+my_matrix<-matrix(runif(16),nrow=4,ncol=4)
+my_matrix
+
+
+#100 element vec of true false
+my_logical<-runif(100,min=0,max=100)
+my_logical<-my_logical<10
+my_logical
+
+#generate list of 26 lowercase letters
+my_letters<- letters[1:26]
+rand_lett<-sample(my_letters)
+
+#create list of elements from matrix, logical, and letters
+my_list<- list(my_matrix[2,2],my_logical[2],rand_lett[2])
+my_list
+
+#test type of item in list
+typeof(my_list[[1]])
+typeof(my_list[[2]])
+typeof(my_list[[3]])
+
+#combine list items into vector
+new_vec<- c(my_list[[1]], my_list[[2]], my_list[[3]])
+new_vec
+
+typeof(new_vec)
+
+```
+##Question 3
+
+```{r}
+
+#create random uniform dist from 0-10 with 26 items
+my_unis<- runif(26,min=0,max=10)
+my_unis
+
+#random list of 26 capital letters
+my_letters<- sample(LETTERS)
+my_letters
+
+#create data frame
+df<-data.frame(my_unis,my_letters)
+df
+
+# change four random rows of datas in data frame to NA values
+replaced<-sample(1:nrow(df),4,replace=FALSE)
+df$my_unis[replaced]<- NA
+df
+
+# print the rows that contain NA values
+which(!complete.cases(df))
+
+#order data frame with my_letters sorted alphabetically
+
+reorder<-df[order(df$my_letters),]
+reorder
+
+# calculate mean of my_unis
+mean(df$my_unis, na.rm=TRUE)
+
+```
