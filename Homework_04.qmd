@@ -34,7 +34,7 @@ typeof(mat_1["$values"]) #returns integers
 typeof(mat_1["$vectors"]) #returns integers
 ```
 
-##Question 2 
+## Question 2 
 
 ```{r}
 #make my matrix 4x4 random uniform
@@ -64,6 +64,7 @@ typeof(my_list[[3]])
 new_vec<- c(my_list[[1]], my_list[[2]], my_list[[3]])
 new_vec
 
+# get type of items in new_vec
 typeof(new_vec)
 
 ```
