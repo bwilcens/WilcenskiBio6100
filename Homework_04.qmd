@@ -28,6 +28,8 @@ print(sum_mean)
 
 eigen(mat_1,only.values=FALSE)
 
+#the matrix has been transposed along the diagonal
+
 #type of numbers in the $values and $vectors: they appear to be numeric data types
 
 typeof(mat_1["$values"]) #returns integers 
