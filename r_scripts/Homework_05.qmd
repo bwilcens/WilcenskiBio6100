@@ -1,11 +1,11 @@
 ---
-title: "Untitled"
+title: "Homework_05"
 format: html
 ---
 
 ## Question 1 
 ```{r}
-################Function Start
+################ Function Start ########################
 #FUNCTION NAME: my_func
 #PURPOSE: function returns a df with columns for pop size and time
 #INPUTS: initial pop, growth rate, carrying capacity, end time of time vector,timestep for time vector
@@ -21,7 +21,7 @@ my_func<-function(No = 5, r = 0.5, K = 75, tf=100, ts= 1){
 
 df<-my_func() #run function, assign to df
 
-
+################### Function End ############################
 ```
 
 
@@ -31,20 +31,22 @@ df<-my_func() #run function, assign to df
 #library call
 library(ggplot2)
 library(magrittr)
-########################### Question 2 : FUNCTION
+
+
+########################### Question 2 : FUNCTION ##################################
 #FUNCTION NAME: plot_func
 #PURPOSE: function returns a scatter plot showing population vs time
 #INPUTS: df <- the data frame from my_func (question 1)
 #OUTPUTS:scatter plot showing the population curve
 
-plot_func <-function(data=df){
-    df%>%
-        ggplot(aes(x=t,
-                y=n +))+
+plot_func<-function(data=df){
+        plot<-ggplot(data=df, aes(x=t, y=n))+
                     geom_point(size=1) +
-                  labs(
-                  x= "Time (year)"+
-                y="Population size")
-
+                  labs(x= "Time (year)", y="Population size")
+  plot
 }
-plot_func()
+                  
+
+plot_func(data=df)
+
+############################ End Function ####################

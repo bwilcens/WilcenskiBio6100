@@ -14,7 +14,7 @@ my_func<-function(No = 5, r = 0.5, K = 75, tf=100, ts= 1){
     return(out_df)
     }
 
-df<-my_func() #run function, assign to df
+df2<-my_func() #run function, assign to df
 
 
 #library call
@@ -26,20 +26,21 @@ library(magrittr)
 #INPUTS: initial pop, growth rate, carrying capacity, end time of time vector,timestep for time vector
 #OUTPUTS:
 
-plot_func<-function(data=df){
-    df%>%
-        ggplot(aes(x=t,
-                y=n +))+
+plot<-ggplot(data=df, aes(x=t, y=n))+
                     geom_point(size=1) +
-                  labs(
-                  x= "Time (year)"+
-                y="Population size")
+                  labs(x= "Time (year)", y="Population size")
+plot
 
+plot_func<-function(data=df){
+        plot<-ggplot(data=df, aes(x=t, y=n))+
+                    geom_point(size=1) +
+                  labs(x= "Time (year)", y="Population size")
+  plot
 }
                   
 
 
-plot_func()
+plot_func(data=df)
 
 
 
