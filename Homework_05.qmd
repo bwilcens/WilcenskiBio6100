@@ -20,7 +20,7 @@ my_func<-function(No = 5, r = 0.5, K = 75, tf=100, ts= 1){
     }
 
 df<-my_func() #run function, assign to df
-
+df
 ################### Function End ############################
 ```
 
@@ -50,3 +50,5 @@ plot_func<-function(data=df){
 plot_func(data=df)
 
 ############################ End Function ####################
+
+```

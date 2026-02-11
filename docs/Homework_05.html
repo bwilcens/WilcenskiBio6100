@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WilcenskiBio6100 – WilcenskiBio381</title>
+<title>Homework_05 – WilcenskiBio381</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -91,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -109,15 +144,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">WilcenskiBio6100</h1>
+<h1 class="title">Homework_05</h1>
 </div>
 
 
@@ -134,10 +176,166 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website will hold all of Bryan Wilcenski’s relevant homework and project files for BIOL6100.</p>
-<p><a href="Homework_02.html">Homework2</a> <a href="Homework_03.html">Homework3</a> <a href="Homework_04.html">Homework4</a> <a href="Homework_05.html">Homework5</a></p>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">################ Function Start ########################</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#FUNCTION NAME: my_func</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#PURPOSE: function returns a df with columns for pop size and time</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#INPUTS: initial pop, growth rate, carrying capacity, end time of time vector,timestep for time vector</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#OUTPUTS: #data frame with pop size and time</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>my_func<span class="ot">&lt;-</span><span class="cf">function</span>(<span class="at">No =</span> <span class="dv">5</span>, <span class="at">r =</span> <span class="fl">0.5</span>, <span class="at">K =</span> <span class="dv">75</span>, <span class="at">tf=</span><span class="dv">100</span>, <span class="at">ts=</span> <span class="dv">1</span>){ </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    e <span class="ot">&lt;-</span> <span class="fl">2.718281828459</span> <span class="co">#define e constant</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    t<span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span> <span class="dv">1</span>,<span class="at">to=</span>tf,<span class="at">by =</span> ts) <span class="co">#define the number of steps, store as vector</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    n<span class="ot">&lt;-</span> K<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span>((K<span class="sc">-</span>No)<span class="sc">/</span>No)<span class="sc">*</span>e<span class="sc">^</span>(<span class="sc">-</span>r<span class="sc">*</span>t)) <span class="co"># formula to calculate the N(t) </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    out_df<span class="ot">&lt;-</span> <span class="fu">data.frame</span>(t,n) <span class="co"># create df</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(out_df)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>df<span class="ot">&lt;-</span><span class="fu">my_func</span>() <span class="co">#run function, assign to df</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      t         n
+1     1  7.901866
+2     2 12.194503
+3     3 18.187011
+4     4 25.909475
+5     5 34.896868
+6     6 44.195146
+7     7 52.714318
+8     8 59.693465
+9     9 64.905509
+10   10 68.535007
+11   11 70.941118
+12   12 72.484601
+13   13 73.453931
+14   14 74.054593
+15   15 74.423724
+16   16 74.649411
+17   17 74.786965
+18   18 74.870643
+19   19 74.921488
+20   20 74.952360
+21   21 74.971098
+22   22 74.982467
+23   23 74.989365
+24   24 74.993549
+25   25 74.996087
+26   26 74.997627
+27   27 74.998561
+28   28 74.999127
+29   29 74.999470
+30   30 74.999679
+31   31 74.999805
+32   32 74.999882
+33   33 74.999928
+34   34 74.999957
+35   35 74.999974
+36   36 74.999984
+37   37 74.999990
+38   38 74.999994
+39   39 74.999996
+40   40 74.999998
+41   41 74.999999
+42   42 74.999999
+43   43 75.000000
+44   44 75.000000
+45   45 75.000000
+46   46 75.000000
+47   47 75.000000
+48   48 75.000000
+49   49 75.000000
+50   50 75.000000
+51   51 75.000000
+52   52 75.000000
+53   53 75.000000
+54   54 75.000000
+55   55 75.000000
+56   56 75.000000
+57   57 75.000000
+58   58 75.000000
+59   59 75.000000
+60   60 75.000000
+61   61 75.000000
+62   62 75.000000
+63   63 75.000000
+64   64 75.000000
+65   65 75.000000
+66   66 75.000000
+67   67 75.000000
+68   68 75.000000
+69   69 75.000000
+70   70 75.000000
+71   71 75.000000
+72   72 75.000000
+73   73 75.000000
+74   74 75.000000
+75   75 75.000000
+76   76 75.000000
+77   77 75.000000
+78   78 75.000000
+79   79 75.000000
+80   80 75.000000
+81   81 75.000000
+82   82 75.000000
+83   83 75.000000
+84   84 75.000000
+85   85 75.000000
+86   86 75.000000
+87   87 75.000000
+88   88 75.000000
+89   89 75.000000
+90   90 75.000000
+91   91 75.000000
+92   92 75.000000
+93   93 75.000000
+94   94 75.000000
+95   95 75.000000
+96   96 75.000000
+97   97 75.000000
+98   98 75.000000
+99   99 75.000000
+100 100 75.000000</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">################### Function End ############################</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#library call</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="do">########################### Question 2 : FUNCTION ##################################</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#FUNCTION NAME: plot_func</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#PURPOSE: function returns a scatter plot showing population vs time</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#INPUTS: df &lt;- the data frame from my_func (question 1)</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#OUTPUTS:scatter plot showing the population curve</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plot_func<span class="ot">&lt;-</span><span class="cf">function</span>(<span class="at">data=</span>df){</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        plot<span class="ot">&lt;-</span><span class="fu">ggplot</span>(<span class="at">data=</span>df, <span class="fu">aes</span>(<span class="at">x=</span>t, <span class="at">y=</span>n))<span class="sc">+</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">"Time (year)"</span>, <span class="at">y=</span><span class="st">"Population size"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  plot</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                  </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_func</span>(<span class="at">data=</span>df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_05_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">############################ End Function ####################</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
