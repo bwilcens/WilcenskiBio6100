@@ -43,8 +43,8 @@ sum(3,2) # function
 `+`(3,2) #plus sign is a function
 
 y<-3
-`<-`(yy,5) #even the assignment operator can be called as a function
-yy
+`<-`(y,5) #even the assignment operator can be called as a function
+y
 
 
 print(read.table) #see inside the function
