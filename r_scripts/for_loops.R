@@ -122,11 +122,91 @@ for (i in seq_along(r_vec)){
   container_vec[i] <- max_n #storage is happening here
  
 }
-growth_df <- data.frame(r= r_vec,n = container_vec) #
-plot(x= growth_df$r,y=growth_df$n) #
+
+growth_df <- data.frame(r= r_vec,n = container_vec) 
+plot(x= growth_df$r,y=growth_df$n) 
+
+############
+#2D parameter sweep for log growth func
+
+r_values<- seq(0,1, length,out = 100)
+K_values<- seq(10,1000, length,out = 100)
+
+store_mat<- matrix (NA,nrow = length(r_values), ncol = length(K_values))
+
+my_func(r=r_values[i],K = K_values)
+
+
+
+growth_mat<- growth_sweep(r_vec = r_values,kvec=K_values)
+
+growth_mat <- 
+
+
+######## missed a ton of shit, None of the above will work^^^^^^
+  
+  
+#2D parameter sweeep output Data Fram
+for (i in seq_along(r_vec)){
+
+  
+}
 
 
 
 
+
+
+
+#random walk func
+
+###########
+#Name; 
+#purpose
+#input : times = number of time steps 
+#         n1    = inital pop size 
+#          lamda = finite rate of increase
+#        noise_sd= 10 
+# output: 
+#         vector n with pop size >0 until extinct 
+#
+library(ggplot2)
+
+ran_walk <- function(times=100, n1= 50 ,lamda = 1, noise_sd=10){
+  n <- rep(NA,times) #create our output vec ("storage container")
+  n[1]<- n1 #initialize init pop size
+  noise <- rnorm(n=100,mean =0, sd = noise_sd) #created noise/error 
+
+  for(i in 1:(times-1)){ #do times-1 because we already defined n[1] as initial pop
+    n[i+1] <- lamda*n[i] + noise_sd[i]
+    if(n[i+1] <= 0){
+      n[i+1] <- NA
+      cat("Population Extinction at time", i+1, "\n")
+      break 
+    }
+  }
+  return(n)
+
+}
+
+x<- ran_walk()
+print(x)
+
+#plotting with default values
+qplot(x = 1:100,y=ran_walk(), geom="line")
+
+
+# no noise/not so random walk
+qplot(x = 1:100,y=ran_walk(noise_sd=0), geom="line")
+
+
+#no noise and adjust lamda
+
+qplot(x = 1:100,y=ran_walk(lamda = 0.92, noise_sd=0), geom="line")
+
+
+#add some stoch back, make lamda>1
+
+qplot(x = 1:100,y=ran_walk(lamda = 1.11, noise_sd=10), geom="line")
 
 
