@@ -122,8 +122,8 @@ for (i in seq_along(r_vec)){
   container_vec[i] <- max_n #storage is happening here
  
 }
-growth_df <- data.frame(r= r_vec,n = container_vec)
-plot(x= growth_df$r,y=growth_df$n)
+growth_df <- data.frame(r= r_vec,n = container_vec) #
+plot(x= growth_df$r,y=growth_df$n) #
 
 
 
