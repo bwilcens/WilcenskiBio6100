@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "WilcenskiBio6100",
     "section": "",
-    "text": "This website will hold all of Bryan Wilcenski’s relevant homework and project files for BIOL6100.\nHomework2 Homework3 Homework4 Homework5"
+    "text": "This website will hold all of Bryan Wilcenski’s relevant homework and project files for BIOL6100.\nHomework2 Homework3 Homework4 Homework5 Homework6"
   },
   {
     "objectID": "about.html",
@@ -89,5 +89,26 @@
     "title": "Homework_05",
     "section": "Question 2",
     "text": "Question 2\n\n#library call\nlibrary(ggplot2)\nlibrary(magrittr)\n\n\n########################### Question 2 : FUNCTION ##################################\n#FUNCTION NAME: plot_func\n#PURPOSE: function returns a scatter plot showing population vs time\n#INPUTS: df &lt;- the data frame from my_func (question 1)\n#OUTPUTS:scatter plot showing the population curve\n\nplot_func&lt;-function(data=df){\n        plot&lt;-ggplot(data=df, aes(x=t, y=n))+\n                    geom_point(size=1) +\n                  labs(x= \"Time (year)\", y=\"Population size\")\n  plot\n}\n                  \n\nplot_func(data=df)\n\n\n\n\n\n\n\n############################ End Function ####################"
+  },
+  {
+    "objectID": "Homework_06.html",
+    "href": "Homework_06.html",
+    "title": "Homework_06",
+    "section": "",
+    "text": "library(deSolve)\n\n############################################################\n# FUNCTION: run_sir_model\n# PURPOSE: Solve deterministic SIR model with deSolve\n# INPUTS:\n#   beta, gamma : transmission & recovery rates\n#   N           : total population\n#   S0, I0, R0  : initial conditions\n#   t_start     : start time\n#   t_end       : end time\n#   dt          : timestep\n# OUTPUT:\n#   data.frame with columns: time, S, I, R\n############################################################\n\nrun_sir_model &lt;- function(\n  beta    = 0.1,\n  gamma   = 0.1,\n  N       = 1000,\n  S0      = 999,\n  I0      = 1,\n  R0      = 0,\n  t_start = 0,\n  t_end   = 160,\n  dt      = 1\n) {\n\n  init  &lt;- c(S = S0, I = I0, R = R0)\n  times &lt;- seq(t_start, t_end, by = dt)\n\n  sir_equations &lt;- function(time, state, parameters) {\n    with(as.list(c(state, parameters)), {\n      dS &lt;- -beta * S * I / N\n      dI &lt;-  beta * S * I / N - gamma * I\n      dR &lt;-  gamma * I\n      list(c(dS, dI, dR))\n    })\n  }\n\n  out &lt;- ode(\n    y     = init,\n    times = times,\n    func  = sir_equations,\n    parms = c(beta = beta, gamma = gamma, N = N)\n  )\n\n  as.data.frame(out)\n}\n\nrun&lt;- run_sir_model\n############################## BETA AND GAMMA FOR LOOP FUNCTION ######################\n\n\n\n\n\nb_g_I &lt;- function(beta=seq(0,0.5,by=0.01), gamma=seq(0,0.5,by=0.01)){\n\n  # row indexing variable\n  counter &lt;- 1\n\n  # create storage dataframe\n  dfLength &lt;- length(beta)*length(gamma) # how long is DF\n  b_out &lt;- rep(NA, dfLength)\n  g_out &lt;- rep(NA, dfLength)\n  maxi_out &lt;- rep(NA, dfLength)\n\n  # turn vecs into df\n  storageDF &lt;- data.frame(b_out, g_out, maxi_out)\n\n\n  # enter our loops\n  for (i in seq_along(beta)){ # rows\n    for (j in seq_along(gamma)){ # cols\n\n      # run sir model\n      tmp_df &lt;- run_sir_model(beta = beta[i], gamma = gamma[j])\n\n      # store max i in dataframe\n      storageDF$maxi_out[counter] &lt;- max(tmp_df$I)\n      storageDF$b_out[counter] &lt;- beta[i] # value for b stored\n      storageDF$g_out[counter] &lt;- gamma[j] # value for g stored\n\n      counter &lt;- counter + 1 # increase counter\n    }\n  }\n  return(storageDF)\n}\n\nmax_i&lt;-b_g_I()"
+  },
+  {
+    "objectID": "Homework_06.html#question-1",
+    "href": "Homework_06.html#question-1",
+    "title": "Homework_06",
+    "section": "",
+    "text": "library(deSolve)\n\n############################################################\n# FUNCTION: run_sir_model\n# PURPOSE: Solve deterministic SIR model with deSolve\n# INPUTS:\n#   beta, gamma : transmission & recovery rates\n#   N           : total population\n#   S0, I0, R0  : initial conditions\n#   t_start     : start time\n#   t_end       : end time\n#   dt          : timestep\n# OUTPUT:\n#   data.frame with columns: time, S, I, R\n############################################################\n\nrun_sir_model &lt;- function(\n  beta    = 0.1,\n  gamma   = 0.1,\n  N       = 1000,\n  S0      = 999,\n  I0      = 1,\n  R0      = 0,\n  t_start = 0,\n  t_end   = 160,\n  dt      = 1\n) {\n\n  init  &lt;- c(S = S0, I = I0, R = R0)\n  times &lt;- seq(t_start, t_end, by = dt)\n\n  sir_equations &lt;- function(time, state, parameters) {\n    with(as.list(c(state, parameters)), {\n      dS &lt;- -beta * S * I / N\n      dI &lt;-  beta * S * I / N - gamma * I\n      dR &lt;-  gamma * I\n      list(c(dS, dI, dR))\n    })\n  }\n\n  out &lt;- ode(\n    y     = init,\n    times = times,\n    func  = sir_equations,\n    parms = c(beta = beta, gamma = gamma, N = N)\n  )\n\n  as.data.frame(out)\n}\n\nrun&lt;- run_sir_model\n############################## BETA AND GAMMA FOR LOOP FUNCTION ######################\n\n\n\n\n\nb_g_I &lt;- function(beta=seq(0,0.5,by=0.01), gamma=seq(0,0.5,by=0.01)){\n\n  # row indexing variable\n  counter &lt;- 1\n\n  # create storage dataframe\n  dfLength &lt;- length(beta)*length(gamma) # how long is DF\n  b_out &lt;- rep(NA, dfLength)\n  g_out &lt;- rep(NA, dfLength)\n  maxi_out &lt;- rep(NA, dfLength)\n\n  # turn vecs into df\n  storageDF &lt;- data.frame(b_out, g_out, maxi_out)\n\n\n  # enter our loops\n  for (i in seq_along(beta)){ # rows\n    for (j in seq_along(gamma)){ # cols\n\n      # run sir model\n      tmp_df &lt;- run_sir_model(beta = beta[i], gamma = gamma[j])\n\n      # store max i in dataframe\n      storageDF$maxi_out[counter] &lt;- max(tmp_df$I)\n      storageDF$b_out[counter] &lt;- beta[i] # value for b stored\n      storageDF$g_out[counter] &lt;- gamma[j] # value for g stored\n\n      counter &lt;- counter + 1 # increase counter\n    }\n  }\n  return(storageDF)\n}\n\nmax_i&lt;-b_g_I()"
+  },
+  {
+    "objectID": "Homework_06.html#question-2",
+    "href": "Homework_06.html#question-2",
+    "title": "Homework_06",
+    "section": "Question 2",
+    "text": "Question 2\n\nlibrary(ggplot2)\n\nplot_maxi&lt;- function(data= max_i){\n  heatmap_plot &lt;- max_i\n\n  heatmap_plot &lt;- ggplot(data = max_i, aes(x = b_out, y = g_out, fill= maxi_out)) + \n    geom_tile() #scatter plot, data defined, x and y labels\n\n  return(heatmap_plot)\n\n}\n\nplot_maxi() #print heat map the heat map"
   }
 ]

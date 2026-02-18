@@ -91,25 +91,24 @@ b_g_I <- function(beta=seq(0,0.5,by=0.01), gamma=seq(0,0.5,by=0.01)){
   return(storageDF)
 }
 
-result<-b_g_I()
-result
-
-
-# run growth param sweep
-df <- growth_sweep(rvec = r_values, kvec = K_values)
-
-df
-
+max_i<-b_g_I()
+head(max_i)
 
 
 ## Question 2
 
-ggplot(data = df, aes(x = g_out, y = b_out, fill= maxn_out)) + 
-  geom_tile()
+library(ggplot2)
 
+plot_maxi<- function(data= max_i){
+  heatmap_plot <- max_i
 
+  heatmap_plot <- ggplot(data = max_i, aes(x = b_out, y = g_out, fill= maxi_out)) + 
+    geom_tile() #scatter plot return
 
+  return(heatmap_plot)
 
+}
 
+plot_maxi()
 
 
