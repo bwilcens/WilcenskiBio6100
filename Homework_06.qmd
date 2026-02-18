@@ -59,7 +59,7 @@ run_sir_model <- function(
   as.data.frame(out)
 }
 
-
+run<- run_sir_model
 ############################## BETA AND GAMMA FOR LOOP FUNCTION ######################
 
 
@@ -100,7 +100,7 @@ b_g_I <- function(beta=seq(0,0.5,by=0.01), gamma=seq(0,0.5,by=0.01)){
 }
 
 max_i<-b_g_I()
-head(max_i)
+
 
 ```
 
