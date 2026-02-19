@@ -120,7 +120,7 @@ plot_maxi<- function(data= max_i){
 
 }
 
-plot_maxi() #print heat map the heat map
+plot_maxi() #print the heat map 
 
 
 ```
