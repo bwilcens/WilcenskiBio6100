@@ -137,7 +137,9 @@ print(p1)
 
 
 p2<- ggplot(data=d,mapping=aes(x=fl,fill=fl))+ #fill function within aes can colorize cats using the stuff
-  geom_bar()
+  geom_bar() +
+  labs(fill="Fuel Type",x = "Fuel Type", y = "Count") +
+  theme(legend.position = c(.2,.8)) #place legend on the 
 print(p2)
 
 
@@ -153,9 +155,113 @@ p2 <- ggplot(data=d,mapping=aes(x=displ,y=cty)) + #fill function within aes can 
   geom_point() +
   theme_bw(base_size=20) +
   xlim(0,8)+
-  ylim(8,30)
+  ylim(8,30) 
 
  print(p2)
+
+
+# #########################################
+# multipanel plots 
+ 
+install.packages("patchwork")
+install.packages("ggthemes")
+
+library(patchwork)
+library(ggthemes)
+
+g1 <-ggplot(data=d)+
+  aes(x= displ, y= cty) +
+  geom_point() +
+  geom_smooth()
+g1
+
+g2 <- ggplot(data=d) +
+  aes(x=fl) +
+  geom_bar(fill = "tomato", color = "black")
+g2
+
+
+g3<- ggplot(data = d) +
+  aes(x=displ) +
+  geom_histogram(fill= "royalblue", color="black")
+g3
+
+g4 <- ggplot(data=d) + 
+  aes(x=fl,y=cty, fill =fl) +
+  geom_boxplot()+
+  theme(legend.position = "none")
+g4
+
+ #patchwork to combine 
+g1+g2
+
+g1 + g2 + g3 +plot_layout(ncol=1) #layout organization like matrix 
+
+
+#changing area of each plot
+
+g1+g2 +plot_layout(ncol=1, heights =c(2,1)) #heights takes vector of weights (top is twice as tall in this case)
+
+g1+g2 +plot_layout(ncol=2, widths =c(1,2)) #change widths 
+
+
+
+#add a spacer 
+
+g1+ plot_spacer() + g2 
+
+
+#nested layouts
+
+g1+ {
+  g2 +{
+    g3 +
+      g4 +
+      plot_layout(ncol=1)  #layout for g3 and g4
+  }
+} +
+  plot_layout(ncol=1) #laout for g1 and then the other three groupes
+
+# - operator for subtrack placement
+
+g1 + g2 - g3 + plot_layout(ncol=1) # - symbor returns full size plot 
+
+# using | amd \ 
+(g1 | g2 | g3 )/g4 #same method as subtrack
+
+# add global titles
+(g1 | g2 | g3 )/g4 + plot_annotation("Title Here",
+caption = "made this in patchwork")
+
+
+
+# adding tags
+
+g1/ (g2|g3)+
+  plot_annotation(tag_levels = "1")
+
+
+###############################
+# multi panel plots with facet
+
+m1 <- ggplot(data = d) +
+  aes(x=displ, y =cty) +
+  geom_point() + 
+  geom_smooth(method=lm)
+
+#using facet grid
+m1 + facet_grid(class ~ fl, scales = "free_y") #enables y axis scales to adapt to data 
+
+
+# facet for only one variable
+m1 +facet_grid(class~.)
+
+# facet wrap  (one variable, three columns )
+
+m1 +facet_wrap(~class)
+
+m1 +facet_wrap(~class +fl) #will remove nonexistant combinations (can use drop = F to return them to chart)
+
 
 
 
