@@ -5,10 +5,11 @@ format: html
 
 ##HW 8
 
-
+```{r}
 library(dplyr)
 library(sqldf)
 library(tidyr)
+```
 
 ## Question 1
 ```{r}
