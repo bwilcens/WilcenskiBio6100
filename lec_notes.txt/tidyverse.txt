@@ -1,0 +1,27 @@
+Tidyverse Notes 2/25/26
+
+Tidyverse: can read in all tidyverse packages together 
+
+Data import/mgmt 
+readr - import tabular data 
+
+
+Dplyr -- workign with data stuff
+Tidyr -- data manipulation to create "tidy" colunns 
+
+
+ggplot: 
+rcolorbrewewr templates for use in ggplot
+
+Shiny Apps : create a web app to share data as needed
+
+SQL can query large datasets 
+- created from arc code
+- identify patterns, create new rows, etc. 
+
+r-graph-gallery.com
+- good source to view charts, and get code to make them
+
+
+
+
