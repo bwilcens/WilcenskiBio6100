@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "WilcenskiBio6100",
     "section": "",
-    "text": "This website will hold all of Bryan Wilcenski’s relevant homework and project files for BIOL6100.\nHomework2 Homework3 Homework4 Homework5 Homework6"
+    "text": "This website will hold all of Bryan Wilcenski’s relevant homework and project files for BIOL6100.\nHomework2 Homework3 Homework4 Homework5 Homework6 Homework7"
   },
   {
     "objectID": "about.html",
@@ -109,6 +109,76 @@
     "href": "Homework_06.html#question-2",
     "title": "Homework_06",
     "section": "Question 2",
-    "text": "Question 2\n\nlibrary(ggplot2)\n\nplot_maxi&lt;- function(data= max_i){\n  heatmap_plot &lt;- max_i\n\n  heatmap_plot &lt;- ggplot(data = max_i, aes(x = b_out, y = g_out, fill= maxi_out)) + \n    geom_tile() #scatter plot, data defined, x and y labels\n\n  return(heatmap_plot)\n\n}\n\nplot_maxi() #print heat map the heat map"
+    "text": "Question 2\n\nlibrary(ggplot2)\n\nplot_maxi&lt;- function(data= max_i){\n  heatmap_plot &lt;- max_i\n\n  heatmap_plot &lt;- ggplot(data = max_i, aes(x = b_out, y = g_out, fill= maxi_out)) + \n    geom_tile() #scatter plot, data defined, x and y labels\n\n  return(heatmap_plot)\n\n}\n\nplot_maxi() #print the heat map"
+  },
+  {
+    "objectID": "Homework_07.html",
+    "href": "Homework_07.html",
+    "title": "Homework_07",
+    "section": "",
+    "text": "##HW 8\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(sqldf)\n\nLoading required package: gsubfn\n\n\nLoading required package: proto\n\n\nLoading required package: RSQLite\n\nlibrary(tidyr)"
+  },
+  {
+    "objectID": "Homework_07.html#question-1",
+    "href": "Homework_07.html#question-1",
+    "title": "Homework_07",
+    "section": "Question 1",
+    "text": "Question 1\n\nstr(iris)\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "Homework_07.html#question-2",
+    "href": "Homework_07.html#question-2",
+    "title": "Homework_07",
+    "section": "Question 2",
+    "text": "Question 2\n\nanyNA(iris)\n\n[1] FALSE\n\nunique(iris$Species)\n\n[1] setosa     versicolor virginica \nLevels: setosa versicolor virginica\n\niris1&lt;- iris %&gt;%\n  filter(Species ==\"versicolor\" | Species == \"virginica\") %&gt;%\n  filter(Sepal.Length &gt; 6 & Sepal.Width &gt; 2.5)\n\nstr(iris1)\n\n'data.frame':   56 obs. of  5 variables:\n $ Sepal.Length: num  7 6.4 6.9 6.5 6.3 6.6 6.1 6.7 6.1 6.1 ...\n $ Sepal.Width : num  3.2 3.2 3.1 2.8 3.3 2.9 2.9 3.1 2.8 2.8 ...\n $ Petal.Length: num  4.7 4.5 4.9 4.6 4.7 4.6 4.7 4.4 4 4.7 ...\n $ Petal.Width : num  1.4 1.5 1.5 1.5 1.6 1.3 1.4 1.4 1.3 1.2 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 2 2 2 2 2 2 2 2 2 2 ..."
+  },
+  {
+    "objectID": "Homework_07.html#question-3",
+    "href": "Homework_07.html#question-3",
+    "title": "Homework_07",
+    "section": "Question 3",
+    "text": "Question 3\n\niris2&lt;-select(iris1,Species, Sepal.Length, Sepal.Width)\nstr(iris2)\n\n'data.frame':   56 obs. of  3 variables:\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 2 2 2 2 2 2 2 2 2 2 ...\n $ Sepal.Length: num  7 6.4 6.9 6.5 6.3 6.6 6.1 6.7 6.1 6.1 ...\n $ Sepal.Width : num  3.2 3.2 3.1 2.8 3.3 2.9 2.9 3.1 2.8 2.8 ...\n\niris2\n\n      Species Sepal.Length Sepal.Width\n1  versicolor          7.0         3.2\n2  versicolor          6.4         3.2\n3  versicolor          6.9         3.1\n4  versicolor          6.5         2.8\n5  versicolor          6.3         3.3\n6  versicolor          6.6         2.9\n7  versicolor          6.1         2.9\n8  versicolor          6.7         3.1\n9  versicolor          6.1         2.8\n10 versicolor          6.1         2.8\n11 versicolor          6.4         2.9\n12 versicolor          6.6         3.0\n13 versicolor          6.8         2.8\n14 versicolor          6.7         3.0\n15 versicolor          6.7         3.1\n16 versicolor          6.1         3.0\n17 versicolor          6.2         2.9\n18  virginica          6.3         3.3\n19  virginica          7.1         3.0\n20  virginica          6.3         2.9\n21  virginica          6.5         3.0\n22  virginica          7.6         3.0\n23  virginica          7.3         2.9\n24  virginica          7.2         3.6\n25  virginica          6.5         3.2\n26  virginica          6.4         2.7\n27  virginica          6.8         3.0\n28  virginica          6.4         3.2\n29  virginica          6.5         3.0\n30  virginica          7.7         3.8\n31  virginica          7.7         2.6\n32  virginica          6.9         3.2\n33  virginica          7.7         2.8\n34  virginica          6.3         2.7\n35  virginica          6.7         3.3\n36  virginica          7.2         3.2\n37  virginica          6.2         2.8\n38  virginica          6.1         3.0\n39  virginica          6.4         2.8\n40  virginica          7.2         3.0\n41  virginica          7.4         2.8\n42  virginica          7.9         3.8\n43  virginica          6.4         2.8\n44  virginica          6.3         2.8\n45  virginica          6.1         2.6\n46  virginica          7.7         3.0\n47  virginica          6.3         3.4\n48  virginica          6.4         3.1\n49  virginica          6.9         3.1\n50  virginica          6.7         3.1\n51  virginica          6.9         3.1\n52  virginica          6.8         3.2\n53  virginica          6.7         3.3\n54  virginica          6.7         3.0\n55  virginica          6.5         3.0\n56  virginica          6.2         3.4"
+  },
+  {
+    "objectID": "Homework_07.html#question-4",
+    "href": "Homework_07.html#question-4",
+    "title": "Homework_07",
+    "section": "Question 4",
+    "text": "Question 4\n\niris3&lt;- arrange(iris2,by=desc(Sepal.Length))\nhead(iris3)\n\n    Species Sepal.Length Sepal.Width\n1 virginica          7.9         3.8\n2 virginica          7.7         3.8\n3 virginica          7.7         2.6\n4 virginica          7.7         2.8\n5 virginica          7.7         3.0\n6 virginica          7.6         3.0"
+  },
+  {
+    "objectID": "Homework_07.html#question-5",
+    "href": "Homework_07.html#question-5",
+    "title": "Homework_07",
+    "section": "Question 5",
+    "text": "Question 5\n\niris4&lt;- mutate(iris3, Sepal.Area = Sepal.Length*Sepal.Width)\nstr(iris4)\n\n'data.frame':   56 obs. of  4 variables:\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 3 3 3 3 3 3 3 3 3 3 ...\n $ Sepal.Length: num  7.9 7.7 7.7 7.7 7.7 7.6 7.4 7.3 7.2 7.2 ...\n $ Sepal.Width : num  3.8 3.8 2.6 2.8 3 3 2.8 2.9 3.6 3.2 ...\n $ Sepal.Area  : num  30 29.3 20 21.6 23.1 ...\n\nhead(iris4)\n\n    Species Sepal.Length Sepal.Width Sepal.Area\n1 virginica          7.9         3.8      30.02\n2 virginica          7.7         3.8      29.26\n3 virginica          7.7         2.6      20.02\n4 virginica          7.7         2.8      21.56\n5 virginica          7.7         3.0      23.10\n6 virginica          7.6         3.0      22.80"
+  },
+  {
+    "objectID": "Homework_07.html#question-6",
+    "href": "Homework_07.html#question-6",
+    "title": "Homework_07",
+    "section": "Question 6",
+    "text": "Question 6\n\niris5&lt;- summarize(iris4, meanSplLen=mean(Sepal.Length), meanSplWid=mean(Sepal.Width), TotalNumber=n())\niris5\n\n  meanSplLen meanSplWid TotalNumber\n1   6.698214   3.041071          56"
+  },
+  {
+    "objectID": "Homework_07.html#question-7",
+    "href": "Homework_07.html#question-7",
+    "title": "Homework_07",
+    "section": "Question 7",
+    "text": "Question 7\n\niris6&lt;- iris4 %&gt;%\n  group_by(Species)%&gt;%\n  summarize(meanSplLen=mean(Sepal.Length), meanSplWid=mean(Sepal.Width), TotalNumber=n())\niris6\n\n# A tibble: 2 × 4\n  Species    meanSplLen meanSplWid TotalNumber\n  &lt;fct&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;int&gt;\n1 versicolor       6.48       2.99          17\n2 virginica        6.79       3.06          39"
+  },
+  {
+    "objectID": "Homework_07.html#question-8",
+    "href": "Homework_07.html#question-8",
+    "title": "Homework_07",
+    "section": "Question 8",
+    "text": "Question 8\n\nirisFinal &lt;- iris%&gt;%\n  filter(Species ==\"versicolor\" | Species == \"virginica\") %&gt;%\n  filter(Sepal.Length &gt; 6 & Sepal.Width &gt; 2.5) %&gt;%\n      select(Species, Sepal.Length, Sepal.Width) %&gt;%\n        arrange(by=desc(Sepal.Length)) %&gt;%\n         mutate(Sepal.Area = Sepal.Length*Sepal.Width) %&gt;%\n          #summarize(meanSplLen=mean(Sepal.Length), meanSplWid=mean(Sepal.Width), TotalNumber=n())%&gt;%\n            group_by(Species)%&gt;%\n              summarize(meanSplLen=mean(Sepal.Length), meanSplWid=mean(Sepal.Width), TotalNumber=n())\nirisFinal\n\n# A tibble: 2 × 4\n  Species    meanSplLen meanSplWid TotalNumber\n  &lt;fct&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;int&gt;\n1 versicolor       6.48       2.99          17\n2 virginica        6.79       3.06          39"
+  },
+  {
+    "objectID": "Homework_07.html#question-9",
+    "href": "Homework_07.html#question-9",
+    "title": "Homework_07",
+    "section": "Question 9",
+    "text": "Question 9\n\nirisLong&lt;- iris%&gt;%\n\n  pivot_longer(cols=Sepal.Length:Petal.Width, names_to=\"Measure\", values_to= \"values\")\nhead(irisLong)\n\n# A tibble: 6 × 3\n  Species Measure      values\n  &lt;fct&gt;   &lt;chr&gt;         &lt;dbl&gt;\n1 setosa  Sepal.Length    5.1\n2 setosa  Sepal.Width     3.5\n3 setosa  Petal.Length    1.4\n4 setosa  Petal.Width     0.2\n5 setosa  Sepal.Length    4.9\n6 setosa  Sepal.Width     3"
   }
 ]
