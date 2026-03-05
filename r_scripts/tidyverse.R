@@ -18,7 +18,7 @@ stats::filter()
 
 data(starwars)
 class(starwars)
-#tbl_df (similar to data frame), "tbl" (similar to df),
+# tbl_df (similar to data frame), "tbl" (similar to df),
 head(starwars)
 glimpse(starwars)
 

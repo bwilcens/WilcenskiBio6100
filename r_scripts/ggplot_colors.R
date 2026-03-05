@@ -18,6 +18,16 @@ devtools::install_github("wilkelab/cowplot")
 devtools::install_github("clauswilke/colorblindr")
 install.packages("colorspace", repo = "http://R-Forge.R-project.org")
 
+########### 3/5/2026 George Lecture
+
+library(ggplot2)
+library(colorblindr)
+library(colorspace)
+library(wesanderson)
+library(ggsci)
+
+d<- mpg
+
 
 
 
