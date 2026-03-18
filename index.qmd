@@ -10,4 +10,5 @@ This website will hold all of Bryan Wilcenski's relevant homework and project fi
 [Homework5](Homework_05.html)
 [Homework6](Homework_06.html)
 [Homework7](Homework_07.html)
+[Homework8](Homework_08.html)
 
