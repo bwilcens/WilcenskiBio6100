@@ -60,5 +60,5 @@ binary.jit
 ```{r}
 bumble <- read.csv("beeData.csv") #read in csv
 
-mosaic1<- mosaicplot(~  sampling_event+ bee_caste, data=bumble, main = "Sample Event and Caste", color=TRUE, cex.axis= 2) #generate mosaic plot
+mosaic1<- mosaicplot(~  sampling_event+ bee_caste, data=bumble, main = "Sample Event and Caste", color=c("red", "blue", "green"), cex.axis= 2) #generate mosaic plot
 ```
