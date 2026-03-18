@@ -1,0 +1,35 @@
+3/17/2026
+
+Intro to python 
+
+R intended for stats (ggplot also is really good)
+
+Python - preferable for most other data science professionals 
+- more support for python than r 
+- tensor flow (ML package)
+
+- built on C (open source, more powerful than R)
+
+- indentation is important in python (unlike R)
+- Python Functions 
+
+Structure:
+object = function(data=ds, method ="mean", num=10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

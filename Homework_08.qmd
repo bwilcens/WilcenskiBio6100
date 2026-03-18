@@ -1,3 +1,7 @@
+---
+title: "Homework_08"
+format: html
+---
 # Bryan Wilcenski
 # 3/4/2024
 # HW 07
@@ -5,15 +9,7 @@
 
 ## Question 1
 
-# Using a for loop, write a function to calculate the number of zeroes in a numeric vector. 
-# Before entering the loop, set up a counter variable counter <- 0. Inside the loop, 
-# add 1 to counter each time you have a zero in the vector. Finally, use return(counter) for the output.
-# generate vec binom, 
-
-
-
-
-
+```{r}
 zero_count<- function(n=1000){
   counter <- 0
   rb<- rbinom(n,1, 0.5) # create the vector
@@ -25,13 +21,13 @@ zero_count<- function(n=1000){
     return(counter)
 }
 zero_count()
+```
 
 
 ## Question 2 
 
-
-#Spoke with George, requested to use this method
-
+```{r}
+#Spoke with George, asked to use this method
 
 library(dplyr)
 library(sqldf)
@@ -44,8 +40,12 @@ df<- data.frame(ID,resp)
 sbst_0 <- nrow(filter(df,resp==0))
 sbst_0
 
+```
+
+
 ## Question 3
 
+```{r}
 
 get_mat <- function(r=5,c=5){
   matrix<- matrix(NA, nrow = r, ncol = c)
@@ -58,9 +58,11 @@ get_mat <- function(r=5,c=5){
 }
 get_mat()
 
+```
 
 ## Question 4
 
+```{r}
 library(ggplot2)
 
 
@@ -117,6 +119,7 @@ qplot(results$Bryan,   geom = "histogram", bins = 20, xlab = "Mean", ylab= "Coun
 qplot(results$Hannah,  geom = "histogram", bins = 20, xlab = "Mean", ylab= "Count", main = "Hannah means")
 qplot(results$Jackson, geom = "histogram", bins = 20, xlab = "Mean", ylab= "Count", main = "Jackson means")
 
+```
 
 
 
