@@ -1,5 +1,64 @@
 ---
-title: "Untitled"
+title: "Homework_09"
 format: html
 ---
 
+library(ggplot2)
+
+## Question 1
+```{r}
+iris <- iris
+
+
+
+petal.plot <- ggplot(data = iris, aes(x = Petal.Length, y = Petal.Width)) + 
+  geom_point(size=1) +
+  geom_smooth(method="lm")+
+  labs(
+    x = "Petal Length (in.)",
+    y= "Petal Width (in.)"
+  )
+
+
+petal.plot
+```
+
+## Question 2
+```{r}
+petal.box <- ggplot(data = iris, aes(x = Species, y = Petal.Length)) + 
+  geom_boxplot(size=1, fill = "orange")+
+  geom_jitter(size=1) + 
+
+  labs(
+    x = "Species",
+    y= "Petal Width"
+  )
+petal.box
+
+```
+
+## Question 3
+
+```{r}
+library(tidyverse)
+
+newdf <- iris%>%
+  mutate(binary_setosa=case_when(Species=="setosa"~1, TRUE ~0)) %>%
+  select(Species, binary_setosa, everything()) #create new binary column for setosa (0/1)
+newdf
+
+
+
+binary.jit <- ggplot(data = newdf, aes(x = Petal.Length, y = binary_setosa)) + 
+  geom_point(size=1)+
+  geom_smooth(method = "glm", method.args = list(family = "binomial")) #generate box 
+
+binary.jit
+```
+
+## Question 4
+```{r}
+bumble <- read.csv("beeData.csv") #read in csv
+
+mosaic1<- mosaicplot(~  sampling_event+ bee_caste, data=bumble, main = "Sample Event and Caste", color=TRUE, cex.axis= 2) #generate mosaic plot
+```

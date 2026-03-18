@@ -141,3 +141,5 @@ x<-wideSW %>%
   pivot_longer(cols=male:female, names_to="sex", values_to="height",
   values_drop_na=TRUE)
 
+
+
