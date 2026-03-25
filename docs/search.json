@@ -180,5 +180,33 @@
     "title": "Homework_07",
     "section": "Question 9",
     "text": "Question 9\n\nirisLong&lt;- iris%&gt;%\n\n  pivot_longer(cols=Sepal.Length:Petal.Width, names_to=\"Measure\", values_to= \"values\")\nhead(irisLong)\n\n# A tibble: 6 × 3\n  Species Measure      values\n  &lt;fct&gt;   &lt;chr&gt;         &lt;dbl&gt;\n1 setosa  Sepal.Length    5.1\n2 setosa  Sepal.Width     3.5\n3 setosa  Petal.Length    1.4\n4 setosa  Petal.Width     0.2\n5 setosa  Sepal.Length    4.9\n6 setosa  Sepal.Width     3"
+  },
+  {
+    "objectID": "Homework_10.html",
+    "href": "Homework_10.html",
+    "title": "Homework_10",
+    "section": "",
+    "text": "import numpy as np \nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nmyList = [1,2,3,4] # secondary list \n\nmixed = [1,2,True,\"blue\", myList] #primary mixed list\nmixed\n\n#extract third element\n\nthird = mixed[2] #pull third element\nprint(third)\n\nlistWithinList = mixed[4][2] #pull third element of fourth element\nprint(listWithinList)\n\nmixed.append(7) #add an element\nmixed\n\nmixed.remove(7) #remove an element\nmixed\n\nmixed.clear() # clear the whole situation \nmixed\n\nTrue\n3\n\n\n[]"
+  },
+  {
+    "objectID": "Homework_10.html#question-1",
+    "href": "Homework_10.html#question-1",
+    "title": "Homework_10",
+    "section": "",
+    "text": "import numpy as np \nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nmyList = [1,2,3,4] # secondary list \n\nmixed = [1,2,True,\"blue\", myList] #primary mixed list\nmixed\n\n#extract third element\n\nthird = mixed[2] #pull third element\nprint(third)\n\nlistWithinList = mixed[4][2] #pull third element of fourth element\nprint(listWithinList)\n\nmixed.append(7) #add an element\nmixed\n\nmixed.remove(7) #remove an element\nmixed\n\nmixed.clear() # clear the whole situation \nmixed\n\nTrue\n3\n\n\n[]"
+  },
+  {
+    "objectID": "Homework_10.html#question-2",
+    "href": "Homework_10.html#question-2",
+    "title": "Homework_10",
+    "section": "Question 2",
+    "text": "Question 2\n\nmd = {\n    \"first\":\"Bryan\",\n    \"last\" : \"Wilcenski\",\n    \"year\" : 2002,\n    \"status\": \"active\",\n    \"coding\" : \"yes\"\n}\n\n\nkeys = md.keys() #extract the keys \nkeys\n\nvalues = md.values() #extract the values\nvalues\n\nmd.get(\"last\") # \"md.get(x) extracts the value associated with the key \"x\". \n\nmd.items() # md.items() ceates a list of touples containing all keys and their associated values \n\nmd[\"age\"] = 23 #add new element \n\ndel md[\"coding\"] #remove the coding key and value \nmd\n\n{'first': 'Bryan',\n 'last': 'Wilcenski',\n 'year': 2002,\n 'status': 'active',\n 'age': 23}"
+  },
+  {
+    "objectID": "Homework_10.html#question-3",
+    "href": "Homework_10.html#question-3",
+    "title": "Homework_10",
+    "section": "Question 3",
+    "text": "Question 3\n\nimport numpy as np \nfrom numpy import random\n\n\narr1 = random.rand(100) #create list of random numbers between 0 and 1 - 100 long\n\narr1[-10:] #extract last ten numbers in array \n\narr1.astype(str) #convert to strings\n\narr1.astype(float) #convert back to float\n\n\n\narr2D= arr1.reshape(10,10) #reshape to 10 by 10 array\narr2D\n\narr_bin = random.choice([0,1], p = [.8,.2],size= (10,10)) # create binary array  with probability of 1s and 0s \n\nnewStack= np.stack((arr2D, arr_bin)) #stack two arrays on top of eachother \nnewStack\n\narray([[[0.30646595, 0.69867441, 0.30242771, 0.94186003, 0.48132211,\n         0.469714  , 0.73942078, 0.9552842 , 0.93517891, 0.80952949],\n        [0.11813517, 0.81654038, 0.40924372, 0.29708924, 0.51467819,\n         0.69061534, 0.24380684, 0.02749896, 0.24261988, 0.68608978],\n        [0.63086633, 0.39587699, 0.42968977, 0.9083177 , 0.02815177,\n         0.97732591, 0.90574925, 0.80761261, 0.66797847, 0.3387974 ],\n        [0.54636418, 0.47589136, 0.88531436, 0.23241331, 0.82712068,\n         0.37082953, 0.45772546, 0.83939913, 0.87316724, 0.18065925],\n        [0.57401901, 0.05263379, 0.38918614, 0.82186356, 0.46470039,\n         0.0779189 , 0.47249935, 0.98005797, 0.296454  , 0.18408821],\n        [0.61285339, 0.8338631 , 0.69361783, 0.24652867, 0.25209619,\n         0.65482479, 0.72524745, 0.36255658, 0.37252998, 0.3911288 ],\n        [0.53265216, 0.30989154, 0.88787172, 0.86892137, 0.68194386,\n         0.91178976, 0.40211504, 0.73258022, 0.73178613, 0.09309886],\n        [0.50439637, 0.28333253, 0.14087924, 0.08903961, 0.00163558,\n         0.9662574 , 0.19221927, 0.37728563, 0.26603976, 0.82623903],\n        [0.74797738, 0.89140186, 0.57665015, 0.28513472, 0.34218874,\n         0.5497246 , 0.99806757, 0.01055635, 0.06838211, 0.98900156],\n        [0.60806462, 0.99426517, 0.86484458, 0.0721298 , 0.823472  ,\n         0.3523328 , 0.50507982, 0.25963294, 0.47979777, 0.81484279]],\n\n       [[0.        , 0.        , 0.        , 1.        , 0.        ,\n         0.        , 0.        , 0.        , 1.        , 0.        ],\n        [0.        , 1.        , 0.        , 0.        , 0.        ,\n         0.        , 1.        , 0.        , 0.        , 1.        ],\n        [1.        , 0.        , 1.        , 1.        , 0.        ,\n         0.        , 0.        , 0.        , 0.        , 0.        ],\n        [1.        , 0.        , 0.        , 0.        , 0.        ,\n         0.        , 0.        , 0.        , 0.        , 1.        ],\n        [0.        , 0.        , 0.        , 0.        , 0.        ,\n         0.        , 1.        , 0.        , 0.        , 0.        ],\n        [0.        , 0.        , 0.        , 0.        , 0.        ,\n         1.        , 1.        , 0.        , 0.        , 0.        ],\n        [0.        , 0.        , 0.        , 0.        , 1.        ,\n         0.        , 0.        , 1.        , 0.        , 0.        ],\n        [0.        , 0.        , 0.        , 0.        , 0.        ,\n         0.        , 0.        , 0.        , 0.        , 0.        ],\n        [1.        , 0.        , 0.        , 0.        , 1.        ,\n         0.        , 0.        , 1.        , 0.        , 1.        ],\n        [0.        , 0.        , 0.        , 1.        , 0.        ,\n         0.        , 0.        , 0.        , 0.        , 0.        ]]])"
   }
 ]
