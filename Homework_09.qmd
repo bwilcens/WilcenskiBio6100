@@ -3,7 +3,7 @@ title: "Homework_09"
 format: html
 ---
 
-library(ggplot2)
+
 
 ## Question 1
 ```{r}

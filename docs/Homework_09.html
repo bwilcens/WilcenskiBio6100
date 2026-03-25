@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homework_10 – WilcenskiBio3816</title>
+<title>Homework_09 – WilcenskiBio3816</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,6 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
   </ul>
 </nav>
     </div>
@@ -160,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework_10</h1>
+<h1 class="title">Homework_09</h1>
 </div>
 
 
@@ -177,144 +178,268 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>library(ggplot2)</p>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div id="0f69ece4" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>iris <span class="ot">&lt;-</span> iris</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>myList <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>] <span class="co"># secondary list </span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>mixed <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="va">True</span>,<span class="st">"blue"</span>, myList] <span class="co">#primary mixed list</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>mixed</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#extract third element</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>third <span class="op">=</span> mixed[<span class="dv">2</span>] <span class="co">#pull third element</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(third)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>petal.plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Length, <span class="at">y =</span> Petal.Width)) <span class="sc">+</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>)<span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Petal Length (in.)"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span> <span class="st">"Petal Width (in.)"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>listWithinList <span class="op">=</span> mixed[<span class="dv">4</span>][<span class="dv">2</span>] <span class="co">#pull third element of fourth element</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(listWithinList)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>mixed.append(<span class="dv">7</span>) <span class="co">#add an element</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>mixed</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>mixed.remove(<span class="dv">7</span>) <span class="co">#remove an element</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>mixed</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>mixed.clear() <span class="co"># clear the whole situation </span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>mixed</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>True
-3</code></pre>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>petal.plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>[]</code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_09_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div id="dfa1d7ca" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>md <span class="op">=</span> {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"first"</span>:<span class="st">"Bryan"</span>,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"last"</span> : <span class="st">"Wilcenski"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"year"</span> : <span class="dv">2002</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"status"</span>: <span class="st">"active"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"coding"</span> : <span class="st">"yes"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>keys <span class="op">=</span> md.keys() <span class="co">#extract the keys </span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>keys</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> md.values() <span class="co">#extract the values</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>values</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>md.get(<span class="st">"last"</span>) <span class="co"># "md.get(x) extracts the value associated with the key "x". </span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>md.items() <span class="co"># md.items() ceates a list of touples containing all keys and their associated values </span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>md[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">23</span> <span class="co">#add new element </span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> md[<span class="st">"coding"</span>] <span class="co">#remove the coding key and value </span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>{'first': 'Bryan',
- 'last': 'Wilcenski',
- 'year': 2002,
- 'status': 'active',
- 'age': 23}</code></pre>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>petal.box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Species, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">size=</span><span class="dv">1</span>, <span class="at">fill =</span> <span class="st">"orange"</span>)<span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Species"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span> <span class="st">"Petal Width"</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>petal.box</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_09_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div id="1d05011a" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> random</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>arr1 <span class="op">=</span> random.rand(<span class="dv">100</span>) <span class="co">#create list of random numbers between 0 and 1 - 100 long</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>arr1[<span class="op">-</span><span class="dv">10</span>:] <span class="co">#extract last ten numbers in array </span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>arr1.astype(<span class="bu">str</span>) <span class="co">#convert to strings</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>arr1.astype(<span class="bu">float</span>) <span class="co">#convert back to float</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>arr2D<span class="op">=</span> arr1.reshape(<span class="dv">10</span>,<span class="dv">10</span>) <span class="co">#reshape to 10 by 10 array</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>arr2D</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>arr_bin <span class="op">=</span> random.choice([<span class="dv">0</span>,<span class="dv">1</span>], p <span class="op">=</span> [<span class="fl">.8</span>,<span class="fl">.2</span>],size<span class="op">=</span> (<span class="dv">10</span>,<span class="dv">10</span>)) <span class="co"># create binary array  with probability of 1s and 0s </span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>newStack<span class="op">=</span> np.stack((arr2D, arr_bin)) <span class="co">#stack two arrays on top of eachother </span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>newStack</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>array([[[0.43313913, 0.3284624 , 0.23402228, 0.62060704, 0.48820668,
-         0.06166986, 0.20112538, 0.92390469, 0.64764072, 0.1964001 ],
-        [0.36265624, 0.57885587, 0.28812097, 0.07988026, 0.8815901 ,
-         0.04766002, 0.27484787, 0.23848619, 0.2700345 , 0.25868887],
-        [0.26469547, 0.34032163, 0.06823022, 0.34924743, 0.9966407 ,
-         0.82132443, 0.60314733, 0.04174773, 0.03491098, 0.00235191],
-        [0.72569188, 0.63893051, 0.42330112, 0.00664386, 0.17153604,
-         0.89529441, 0.42944756, 0.7774285 , 0.67603484, 0.54427063],
-        [0.04002258, 0.24266472, 0.693552  , 0.18409793, 0.66128167,
-         0.40280617, 0.77571966, 0.26502753, 0.0442284 , 0.20529401],
-        [0.81188495, 0.58904638, 0.85712339, 0.72339176, 0.84329993,
-         0.81131536, 0.8349142 , 0.87065676, 0.48778827, 0.08225842],
-        [0.49843836, 0.57812103, 0.46668951, 0.79127116, 0.92963064,
-         0.84367609, 0.45423742, 0.46954098, 0.96622381, 0.93610066],
-        [0.36393575, 0.9733773 , 0.88243431, 0.26569712, 0.40197433,
-         0.84998947, 0.69375571, 0.37353369, 0.82346193, 0.63104966],
-        [0.86083216, 0.29763312, 0.94714934, 0.44412538, 0.22614628,
-         0.37791886, 0.15296146, 0.50148359, 0.72238125, 0.9529875 ],
-        [0.15281981, 0.95357416, 0.95097444, 0.87209607, 0.90993553,
-         0.02936109, 0.37810911, 0.83766094, 0.88509572, 0.86467012]],
-
-       [[1.        , 0.        , 0.        , 0.        , 0.        ,
-         1.        , 0.        , 0.        , 0.        , 0.        ],
-        [0.        , 0.        , 0.        , 0.        , 0.        ,
-         0.        , 0.        , 0.        , 0.        , 0.        ],
-        [0.        , 0.        , 0.        , 1.        , 1.        ,
-         0.        , 0.        , 0.        , 0.        , 0.        ],
-        [0.        , 0.        , 0.        , 0.        , 0.        ,
-         0.        , 0.        , 0.        , 0.        , 1.        ],
-        [0.        , 0.        , 0.        , 0.        , 0.        ,
-         0.        , 0.        , 0.        , 0.        , 0.        ],
-        [1.        , 0.        , 0.        , 1.        , 0.        ,
-         0.        , 0.        , 0.        , 1.        , 0.        ],
-        [1.        , 0.        , 1.        , 1.        , 1.        ,
-         0.        , 0.        , 0.        , 1.        , 0.        ],
-        [0.        , 0.        , 0.        , 1.        , 0.        ,
-         0.        , 0.        , 1.        , 1.        , 0.        ],
-        [0.        , 1.        , 1.        , 0.        , 0.        ,
-         0.        , 0.        , 1.        , 0.        , 1.        ],
-        [0.        , 1.        , 0.        , 0.        , 0.        ,
-         0.        , 1.        , 0.        , 0.        , 0.        ]]])</code></pre>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.0     ✔ readr     2.1.6
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ lubridate 1.9.4     ✔ tibble    3.3.1
+✔ purrr     1.2.1     ✔ tidyr     1.3.2
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>newdf <span class="ot">&lt;-</span> iris<span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">binary_setosa=</span><span class="fu">case_when</span>(Species<span class="sc">==</span><span class="st">"setosa"</span><span class="sc">~</span><span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span><span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Species, binary_setosa, <span class="fu">everything</span>()) <span class="co">#create new binary column for setosa (0/1)</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>newdf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       Species binary_setosa Sepal.Length Sepal.Width Petal.Length Petal.Width
+1       setosa             1          5.1         3.5          1.4         0.2
+2       setosa             1          4.9         3.0          1.4         0.2
+3       setosa             1          4.7         3.2          1.3         0.2
+4       setosa             1          4.6         3.1          1.5         0.2
+5       setosa             1          5.0         3.6          1.4         0.2
+6       setosa             1          5.4         3.9          1.7         0.4
+7       setosa             1          4.6         3.4          1.4         0.3
+8       setosa             1          5.0         3.4          1.5         0.2
+9       setosa             1          4.4         2.9          1.4         0.2
+10      setosa             1          4.9         3.1          1.5         0.1
+11      setosa             1          5.4         3.7          1.5         0.2
+12      setosa             1          4.8         3.4          1.6         0.2
+13      setosa             1          4.8         3.0          1.4         0.1
+14      setosa             1          4.3         3.0          1.1         0.1
+15      setosa             1          5.8         4.0          1.2         0.2
+16      setosa             1          5.7         4.4          1.5         0.4
+17      setosa             1          5.4         3.9          1.3         0.4
+18      setosa             1          5.1         3.5          1.4         0.3
+19      setosa             1          5.7         3.8          1.7         0.3
+20      setosa             1          5.1         3.8          1.5         0.3
+21      setosa             1          5.4         3.4          1.7         0.2
+22      setosa             1          5.1         3.7          1.5         0.4
+23      setosa             1          4.6         3.6          1.0         0.2
+24      setosa             1          5.1         3.3          1.7         0.5
+25      setosa             1          4.8         3.4          1.9         0.2
+26      setosa             1          5.0         3.0          1.6         0.2
+27      setosa             1          5.0         3.4          1.6         0.4
+28      setosa             1          5.2         3.5          1.5         0.2
+29      setosa             1          5.2         3.4          1.4         0.2
+30      setosa             1          4.7         3.2          1.6         0.2
+31      setosa             1          4.8         3.1          1.6         0.2
+32      setosa             1          5.4         3.4          1.5         0.4
+33      setosa             1          5.2         4.1          1.5         0.1
+34      setosa             1          5.5         4.2          1.4         0.2
+35      setosa             1          4.9         3.1          1.5         0.2
+36      setosa             1          5.0         3.2          1.2         0.2
+37      setosa             1          5.5         3.5          1.3         0.2
+38      setosa             1          4.9         3.6          1.4         0.1
+39      setosa             1          4.4         3.0          1.3         0.2
+40      setosa             1          5.1         3.4          1.5         0.2
+41      setosa             1          5.0         3.5          1.3         0.3
+42      setosa             1          4.5         2.3          1.3         0.3
+43      setosa             1          4.4         3.2          1.3         0.2
+44      setosa             1          5.0         3.5          1.6         0.6
+45      setosa             1          5.1         3.8          1.9         0.4
+46      setosa             1          4.8         3.0          1.4         0.3
+47      setosa             1          5.1         3.8          1.6         0.2
+48      setosa             1          4.6         3.2          1.4         0.2
+49      setosa             1          5.3         3.7          1.5         0.2
+50      setosa             1          5.0         3.3          1.4         0.2
+51  versicolor             0          7.0         3.2          4.7         1.4
+52  versicolor             0          6.4         3.2          4.5         1.5
+53  versicolor             0          6.9         3.1          4.9         1.5
+54  versicolor             0          5.5         2.3          4.0         1.3
+55  versicolor             0          6.5         2.8          4.6         1.5
+56  versicolor             0          5.7         2.8          4.5         1.3
+57  versicolor             0          6.3         3.3          4.7         1.6
+58  versicolor             0          4.9         2.4          3.3         1.0
+59  versicolor             0          6.6         2.9          4.6         1.3
+60  versicolor             0          5.2         2.7          3.9         1.4
+61  versicolor             0          5.0         2.0          3.5         1.0
+62  versicolor             0          5.9         3.0          4.2         1.5
+63  versicolor             0          6.0         2.2          4.0         1.0
+64  versicolor             0          6.1         2.9          4.7         1.4
+65  versicolor             0          5.6         2.9          3.6         1.3
+66  versicolor             0          6.7         3.1          4.4         1.4
+67  versicolor             0          5.6         3.0          4.5         1.5
+68  versicolor             0          5.8         2.7          4.1         1.0
+69  versicolor             0          6.2         2.2          4.5         1.5
+70  versicolor             0          5.6         2.5          3.9         1.1
+71  versicolor             0          5.9         3.2          4.8         1.8
+72  versicolor             0          6.1         2.8          4.0         1.3
+73  versicolor             0          6.3         2.5          4.9         1.5
+74  versicolor             0          6.1         2.8          4.7         1.2
+75  versicolor             0          6.4         2.9          4.3         1.3
+76  versicolor             0          6.6         3.0          4.4         1.4
+77  versicolor             0          6.8         2.8          4.8         1.4
+78  versicolor             0          6.7         3.0          5.0         1.7
+79  versicolor             0          6.0         2.9          4.5         1.5
+80  versicolor             0          5.7         2.6          3.5         1.0
+81  versicolor             0          5.5         2.4          3.8         1.1
+82  versicolor             0          5.5         2.4          3.7         1.0
+83  versicolor             0          5.8         2.7          3.9         1.2
+84  versicolor             0          6.0         2.7          5.1         1.6
+85  versicolor             0          5.4         3.0          4.5         1.5
+86  versicolor             0          6.0         3.4          4.5         1.6
+87  versicolor             0          6.7         3.1          4.7         1.5
+88  versicolor             0          6.3         2.3          4.4         1.3
+89  versicolor             0          5.6         3.0          4.1         1.3
+90  versicolor             0          5.5         2.5          4.0         1.3
+91  versicolor             0          5.5         2.6          4.4         1.2
+92  versicolor             0          6.1         3.0          4.6         1.4
+93  versicolor             0          5.8         2.6          4.0         1.2
+94  versicolor             0          5.0         2.3          3.3         1.0
+95  versicolor             0          5.6         2.7          4.2         1.3
+96  versicolor             0          5.7         3.0          4.2         1.2
+97  versicolor             0          5.7         2.9          4.2         1.3
+98  versicolor             0          6.2         2.9          4.3         1.3
+99  versicolor             0          5.1         2.5          3.0         1.1
+100 versicolor             0          5.7         2.8          4.1         1.3
+101  virginica             0          6.3         3.3          6.0         2.5
+102  virginica             0          5.8         2.7          5.1         1.9
+103  virginica             0          7.1         3.0          5.9         2.1
+104  virginica             0          6.3         2.9          5.6         1.8
+105  virginica             0          6.5         3.0          5.8         2.2
+106  virginica             0          7.6         3.0          6.6         2.1
+107  virginica             0          4.9         2.5          4.5         1.7
+108  virginica             0          7.3         2.9          6.3         1.8
+109  virginica             0          6.7         2.5          5.8         1.8
+110  virginica             0          7.2         3.6          6.1         2.5
+111  virginica             0          6.5         3.2          5.1         2.0
+112  virginica             0          6.4         2.7          5.3         1.9
+113  virginica             0          6.8         3.0          5.5         2.1
+114  virginica             0          5.7         2.5          5.0         2.0
+115  virginica             0          5.8         2.8          5.1         2.4
+116  virginica             0          6.4         3.2          5.3         2.3
+117  virginica             0          6.5         3.0          5.5         1.8
+118  virginica             0          7.7         3.8          6.7         2.2
+119  virginica             0          7.7         2.6          6.9         2.3
+120  virginica             0          6.0         2.2          5.0         1.5
+121  virginica             0          6.9         3.2          5.7         2.3
+122  virginica             0          5.6         2.8          4.9         2.0
+123  virginica             0          7.7         2.8          6.7         2.0
+124  virginica             0          6.3         2.7          4.9         1.8
+125  virginica             0          6.7         3.3          5.7         2.1
+126  virginica             0          7.2         3.2          6.0         1.8
+127  virginica             0          6.2         2.8          4.8         1.8
+128  virginica             0          6.1         3.0          4.9         1.8
+129  virginica             0          6.4         2.8          5.6         2.1
+130  virginica             0          7.2         3.0          5.8         1.6
+131  virginica             0          7.4         2.8          6.1         1.9
+132  virginica             0          7.9         3.8          6.4         2.0
+133  virginica             0          6.4         2.8          5.6         2.2
+134  virginica             0          6.3         2.8          5.1         1.5
+135  virginica             0          6.1         2.6          5.6         1.4
+136  virginica             0          7.7         3.0          6.1         2.3
+137  virginica             0          6.3         3.4          5.6         2.4
+138  virginica             0          6.4         3.1          5.5         1.8
+139  virginica             0          6.0         3.0          4.8         1.8
+140  virginica             0          6.9         3.1          5.4         2.1
+141  virginica             0          6.7         3.1          5.6         2.4
+142  virginica             0          6.9         3.1          5.1         2.3
+143  virginica             0          5.8         2.7          5.1         1.9
+144  virginica             0          6.8         3.2          5.9         2.3
+145  virginica             0          6.7         3.3          5.7         2.5
+146  virginica             0          6.7         3.0          5.2         2.3
+147  virginica             0          6.3         2.5          5.0         1.9
+148  virginica             0          6.5         3.0          5.2         2.0
+149  virginica             0          6.2         3.4          5.4         2.3
+150  virginica             0          5.9         3.0          5.1         1.8</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>binary.jit <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> newdf, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Length, <span class="at">y =</span> binary_setosa)) <span class="sc">+</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"glm"</span>, <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="st">"binomial"</span>)) <span class="co">#generate box </span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>binary.jit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: glm.fit: algorithm did not converge</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_09_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>bumble <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"beeData.csv"</span>) <span class="co">#read in csv</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>mosaic1<span class="ot">&lt;-</span> <span class="fu">mosaicplot</span>(<span class="sc">~</span>  sampling_event<span class="sc">+</span> bee_caste, <span class="at">data=</span>bumble, <span class="at">main =</span> <span class="st">"Sample Event and Caste"</span>, <span class="at">color=</span><span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>), <span class="at">cex.axis=</span> <span class="dv">2</span>) <span class="co">#generate mosaic plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_09_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 
