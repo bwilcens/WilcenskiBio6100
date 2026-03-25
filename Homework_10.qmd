@@ -3,6 +3,7 @@ title: "Homework_10"
 format: html
 ---
 
+
 ## Question 1
 
 ```{python}
@@ -36,6 +37,7 @@ mixed
 
 
 ## Question 2
+
 ```{python}
 md = {
     "first":"Bryan",
@@ -63,6 +65,7 @@ md
 
 
 ```
+
 
 ## Question 3
 
