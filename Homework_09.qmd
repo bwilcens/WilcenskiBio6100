@@ -26,6 +26,7 @@ petal.plot
 
 ## Question 2
 ```{r}
+library(ggplot2)
 petal.box <- ggplot(data = iris, aes(x = Species, y = Petal.Length)) + 
   geom_boxplot(size=1, fill = "orange")+
   geom_jitter(size=1) + 
@@ -42,6 +43,7 @@ petal.box
 
 ```{r}
 library(tidyverse)
+library(ggplot2)
 
 newdf <- iris%>%
   mutate(binary_setosa=case_when(Species=="setosa"~1, TRUE ~0)) %>%
