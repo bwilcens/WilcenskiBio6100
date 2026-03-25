@@ -1,0 +1,93 @@
+---
+title: "Homework_10"
+format: html
+---
+
+## Question 1
+
+```{python}
+import numpy as np 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+myList = [1,2,3,4] # secondary list 
+
+mixed = [1,2,True,"blue", myList] #primary mixed list
+mixed
+
+#extract third element
+
+third = mixed[2] #pull third element
+print(third)
+
+listWithinList = mixed[4][2] #pull third element of fourth element
+print(listWithinList)
+
+mixed.append(7) #add an element
+mixed
+
+mixed.remove(7) #remove an element
+mixed
+
+mixed.clear() # clear the whole situation 
+mixed
+
+```
+
+
+## Question 2
+```{python}
+md = {
+    "first":"Bryan",
+    "last" : "Wilcenski",
+    "year" : 2002,
+    "status": "active",
+    "coding" : "yes"
+}
+
+
+keys = md.keys() #extract the keys 
+keys
+
+values = md.values() #extract the values
+values
+
+md.get("last") # "md.get(x) extracts the value associated with the key "x". 
+
+md.items() # md.items() ceates a list of touples containing all keys and their associated values 
+
+md["age"] = 23 #add new element 
+
+del md["coding"] #remove the coding key and value 
+md
+
+
+```
+
+## Question 3
+
+```{python}
+import numpy as np 
+from numpy import random
+
+
+arr1 = random.rand(100) #create list of random numbers between 0 and 1 - 100 long
+
+arr1[-10:] #extract last ten numbers in array 
+
+arr1.astype(str) #convert to strings
+
+arr1.astype(float) #convert back to float
+
+
+
+arr2D= arr1.reshape(10,10) #reshape to 10 by 10 array
+arr2D
+
+arr_bin = random.choice([0,1], p = [.8,.2],size= (10,10)) # create binary array  with probability of 1s and 0s 
+
+newStack= np.stack((arr2D, arr_bin)) #stack two arrays on top of eachother 
+newStack
+
+
+```
