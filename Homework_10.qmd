@@ -25,13 +25,13 @@ listWithinList = mixed[4][2] #pull third element of fourth element
 print(listWithinList)
 
 mixed.append(7) #add an element
-mixed
+print(mixed)
 
 mixed.remove(7) #remove an element
-mixed
+print(mixed)
 
 mixed.clear() # clear the whole situation 
-mixed
+print(mixed)
 
 ```
 
@@ -49,10 +49,10 @@ md = {
 
 
 keys = md.keys() #extract the keys 
-keys
+print(keys)
 
 values = md.values() #extract the values
-values
+print(values)
 
 md.get("last") # "md.get(x) extracts the value associated with the key "x". 
 
@@ -85,12 +85,12 @@ arr1.astype(float) #convert back to float
 
 
 arr2D= arr1.reshape(10,10) #reshape to 10 by 10 array
-arr2D
+print(arr2D)
 
 arr_bin = random.choice([0,1], p = [.8,.2],size= (10,10)) # create binary array  with probability of 1s and 0s 
 
 newStack= np.stack((arr2D, arr_bin)) #stack two arrays on top of eachother 
-newStack
+print(newStack)
 
 
 ```

@@ -48,7 +48,7 @@ library(ggplot2)
 newdf <- iris%>%
   mutate(binary_setosa=case_when(Species=="setosa"~1, TRUE ~0)) %>%
   select(Species, binary_setosa, everything()) #create new binary column for setosa (0/1)
-newdf
+
 
 
 
