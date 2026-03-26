@@ -2,7 +2,8 @@
 title: "Homework_09"
 format: html
 ---
-
+# Bryan Wilcenski 
+# 3/18/2026
 
 
 ## Question 1

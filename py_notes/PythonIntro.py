@@ -319,7 +319,7 @@ elif operation=="sub":
 else:
     "I don't know this operation"
 
-print(y)
+
 
 ###################################
 #Loops 
@@ -404,3 +404,111 @@ ds.head() #view
 
 #fully numeric filter (if something is not meeting a criteria, make it NaN)
 df[df>0.5]
+
+
+
+##### DF Grouping and Summary #####
+
+
+#grouping means for two vars
+mean_table = ds.groupby("species")[["petal_length","sepal_length"]].mean()
+
+## create long form dataset 
+#SHIT DIDNT WORK -- GOTTA FIGURE IT OUT FOR THE REST OF SECTION 
+
+ds_long = pd.melt(ds, id_vars= ['species'], value = ["sepal_width", "sepal_length", "petal_width", "petal_length"], var_name = "vars", value_name = 'vals')
+
+#group_by on long form 
+
+mult_indx = ds_long.groupby(["species", "vars"])
+
+#pandas pivot 
+
+pd.pivot_table(ds_long, values = "vals", index = ["vars"], columns = ["species"], aggfunc = np.mean)
+pd.pivot_table(ds_long, values = "vals", index = ["vars"], columns = ["species"], aggfunc = np.min)
+
+
+# Functions 
+
+# basic function structure
+
+
+######################################
+#START FUNCTION
+
+def number_adder(a,b):
+    # PURPOSE: add two nums and return the sum
+    #params: a = numeric, b = numeric 
+    #output: numeric sum of a and b
+    out = a + b 
+    return(out)
+######################################
+# END OF FUNCTION
+
+number_adder(a=3, b = 6)
+
+
+#more complex func
+######################################
+#START FUNCTION
+
+def number_adder_two(a=None,b=None):
+    # PURPOSE: add two nums and return the sum
+    #params: a = numeric, b = numeric 
+    #output: numeric sum of a and b
+    if a == None or b == None:
+        out = "please provide inputs for a and b of type numeric."
+    else:
+        out = a + b 
+    return(out)
+######################################
+# END OF FUNCTION
+
+number_adder_two() #should return sting warning 
+
+
+# GRAPHICS - can use matplotlib, ggplot(in r), or seabourne (python)
+
+# seaborn tutorials online seabor website for figure creation 
+import seaborn as sns
+
+#styles: "darkgrid", "whitegrid", "dark", white, ticks etc 
+sns.set_theme(style = "ticks", font_scale = 1.5)
+
+#scatter plot 
+
+#species as column 
+f = sns.relplot(
+    data = ds,
+    x= "sepal_width", y = "petal_length",
+    style = "species", hue = "species" #sets diff style and color, and combines on one chart 
+    #column = "species" -------- other option to make a multipane plot thing
+)
+
+
+f.set_axis_labels("Sepal Width", "Petal Length", labelpad = 10)  # axis labels
+f.legend.set_title("Species")
+
+#sns.move_legend(
+   # f,"upper center", 
+
+#didnt work for alex, but we can pay with it 
+
+# add a linear model for each species
+f = sns.lmplot(
+    data = ds, 
+    x = "sepal_width", y = "petal_length",
+    hue= "species", palette = "bright" # update palette colors 
+)
+
+# 4 panel hist 
+f = sns.displot (  # not going to work until the ds_long works 
+    data = ds_long,
+    x= "vals", hue= "species",
+    col = "vars", col_wrap = 2, height = 3, 
+    kde = True,
+)
+
+# bar plot 
+
+sns.catplot(data = ds_long, kind = "bar", x = "species", y = "vals", hue= "vars")

@@ -179,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div id="0f69ece4" class="cell" data-execution_count="1">
+<div id="93964303" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -198,48 +198,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(listWithinList)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>mixed.append(<span class="dv">7</span>) <span class="co">#add an element</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>mixed</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mixed)</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>mixed.remove(<span class="dv">7</span>) <span class="co">#remove an element</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>mixed</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mixed)</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>mixed.clear() <span class="co"># clear the whole situation </span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>mixed</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mixed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True
-3</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>[]</code></pre>
+3
+[1, 2, True, 'blue', [1, 2, 3, 4], 7]
+[1, 2, True, 'blue', [1, 2, 3, 4]]
+[]</code></pre>
 </div>
 </div>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div id="dfa1d7ca" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>md <span class="op">=</span> {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"first"</span>:<span class="st">"Bryan"</span>,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"last"</span> : <span class="st">"Wilcenski"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"year"</span> : <span class="dv">2002</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"status"</span>: <span class="st">"active"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"coding"</span> : <span class="st">"yes"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>keys <span class="op">=</span> md.keys() <span class="co">#extract the keys </span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>keys</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> md.values() <span class="co">#extract the values</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>values</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>md.get(<span class="st">"last"</span>) <span class="co"># "md.get(x) extracts the value associated with the key "x". </span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>md.items() <span class="co"># md.items() ceates a list of touples containing all keys and their associated values </span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>md[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">23</span> <span class="co">#add new element </span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> md[<span class="st">"coding"</span>] <span class="co">#remove the coding key and value </span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="666883e9" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>md <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"first"</span>:<span class="st">"Bryan"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"last"</span> : <span class="st">"Wilcenski"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"year"</span> : <span class="dv">2002</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"status"</span>: <span class="st">"active"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"coding"</span> : <span class="st">"yes"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>keys <span class="op">=</span> md.keys() <span class="co">#extract the keys </span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(keys)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> md.values() <span class="co">#extract the values</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(values)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>md.get(<span class="st">"last"</span>) <span class="co"># "md.get(x) extracts the value associated with the key "x". </span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>md.items() <span class="co"># md.items() ceates a list of touples containing all keys and their associated values </span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>md[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">23</span> <span class="co">#add new element </span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> md[<span class="st">"coding"</span>] <span class="co">#remove the coding key and value </span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>dict_keys(['first', 'last', 'year', 'status', 'coding'])
+dict_values(['Bryan', 'Wilcenski', 2002, 'active', 'yes'])</code></pre>
+</div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>{'first': 'Bryan',
  'last': 'Wilcenski',
@@ -251,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div id="1d05011a" class="cell" data-execution_count="3">
+<div id="35432557" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> random</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -267,54 +271,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>arr2D<span class="op">=</span> arr1.reshape(<span class="dv">10</span>,<span class="dv">10</span>) <span class="co">#reshape to 10 by 10 array</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>arr2D</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr2D)</span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>arr_bin <span class="op">=</span> random.choice([<span class="dv">0</span>,<span class="dv">1</span>], p <span class="op">=</span> [<span class="fl">.8</span>,<span class="fl">.2</span>],size<span class="op">=</span> (<span class="dv">10</span>,<span class="dv">10</span>)) <span class="co"># create binary array  with probability of 1s and 0s </span></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>newStack<span class="op">=</span> np.stack((arr2D, arr_bin)) <span class="co">#stack two arrays on top of eachother </span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>newStack</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>array([[[0.43313913, 0.3284624 , 0.23402228, 0.62060704, 0.48820668,
-         0.06166986, 0.20112538, 0.92390469, 0.64764072, 0.1964001 ],
-        [0.36265624, 0.57885587, 0.28812097, 0.07988026, 0.8815901 ,
-         0.04766002, 0.27484787, 0.23848619, 0.2700345 , 0.25868887],
-        [0.26469547, 0.34032163, 0.06823022, 0.34924743, 0.9966407 ,
-         0.82132443, 0.60314733, 0.04174773, 0.03491098, 0.00235191],
-        [0.72569188, 0.63893051, 0.42330112, 0.00664386, 0.17153604,
-         0.89529441, 0.42944756, 0.7774285 , 0.67603484, 0.54427063],
-        [0.04002258, 0.24266472, 0.693552  , 0.18409793, 0.66128167,
-         0.40280617, 0.77571966, 0.26502753, 0.0442284 , 0.20529401],
-        [0.81188495, 0.58904638, 0.85712339, 0.72339176, 0.84329993,
-         0.81131536, 0.8349142 , 0.87065676, 0.48778827, 0.08225842],
-        [0.49843836, 0.57812103, 0.46668951, 0.79127116, 0.92963064,
-         0.84367609, 0.45423742, 0.46954098, 0.96622381, 0.93610066],
-        [0.36393575, 0.9733773 , 0.88243431, 0.26569712, 0.40197433,
-         0.84998947, 0.69375571, 0.37353369, 0.82346193, 0.63104966],
-        [0.86083216, 0.29763312, 0.94714934, 0.44412538, 0.22614628,
-         0.37791886, 0.15296146, 0.50148359, 0.72238125, 0.9529875 ],
-        [0.15281981, 0.95357416, 0.95097444, 0.87209607, 0.90993553,
-         0.02936109, 0.37810911, 0.83766094, 0.88509572, 0.86467012]],
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(newStack)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[0.8848134  0.33865103 0.21571515 0.80745451 0.78003329 0.89794137
+  0.63846477 0.83232603 0.61600676 0.11587919]
+ [0.32085001 0.39750969 0.26020903 0.74029535 0.78629185 0.5390031
+  0.48115196 0.65355331 0.02433831 0.40552364]
+ [0.18278015 0.9402982  0.16507905 0.93407338 0.23921376 0.48486985
+  0.36834922 0.38754042 0.22014131 0.46059137]
+ [0.20312451 0.69041618 0.14079533 0.27563399 0.78974268 0.39969735
+  0.7738938  0.58718435 0.51669658 0.06907768]
+ [0.06636896 0.84133445 0.64800713 0.15992609 0.28115665 0.67956539
+  0.02531185 0.85464646 0.38140517 0.91757722]
+ [0.55837503 0.6180325  0.19676334 0.42129598 0.56309929 0.46441583
+  0.86152029 0.98503792 0.45900458 0.40257422]
+ [0.68196323 0.00139725 0.76953104 0.16419309 0.19929781 0.97879509
+  0.13430242 0.64013369 0.53913132 0.40165715]
+ [0.89599063 0.34626656 0.11256243 0.53241167 0.15581953 0.76997638
+  0.91264137 0.24649139 0.80965804 0.42380795]
+ [0.59155277 0.65209488 0.27632706 0.025018   0.78639352 0.59234134
+  0.57557203 0.68474207 0.73587023 0.09231857]
+ [0.13092657 0.14458414 0.92816176 0.25589636 0.69695183 0.09670125
+  0.12073611 0.38851007 0.0339607  0.37333266]]
+[[[0.8848134  0.33865103 0.21571515 0.80745451 0.78003329 0.89794137
+   0.63846477 0.83232603 0.61600676 0.11587919]
+  [0.32085001 0.39750969 0.26020903 0.74029535 0.78629185 0.5390031
+   0.48115196 0.65355331 0.02433831 0.40552364]
+  [0.18278015 0.9402982  0.16507905 0.93407338 0.23921376 0.48486985
+   0.36834922 0.38754042 0.22014131 0.46059137]
+  [0.20312451 0.69041618 0.14079533 0.27563399 0.78974268 0.39969735
+   0.7738938  0.58718435 0.51669658 0.06907768]
+  [0.06636896 0.84133445 0.64800713 0.15992609 0.28115665 0.67956539
+   0.02531185 0.85464646 0.38140517 0.91757722]
+  [0.55837503 0.6180325  0.19676334 0.42129598 0.56309929 0.46441583
+   0.86152029 0.98503792 0.45900458 0.40257422]
+  [0.68196323 0.00139725 0.76953104 0.16419309 0.19929781 0.97879509
+   0.13430242 0.64013369 0.53913132 0.40165715]
+  [0.89599063 0.34626656 0.11256243 0.53241167 0.15581953 0.76997638
+   0.91264137 0.24649139 0.80965804 0.42380795]
+  [0.59155277 0.65209488 0.27632706 0.025018   0.78639352 0.59234134
+   0.57557203 0.68474207 0.73587023 0.09231857]
+  [0.13092657 0.14458414 0.92816176 0.25589636 0.69695183 0.09670125
+   0.12073611 0.38851007 0.0339607  0.37333266]]
 
-       [[1.        , 0.        , 0.        , 0.        , 0.        ,
-         1.        , 0.        , 0.        , 0.        , 0.        ],
-        [0.        , 0.        , 0.        , 0.        , 0.        ,
-         0.        , 0.        , 0.        , 0.        , 0.        ],
-        [0.        , 0.        , 0.        , 1.        , 1.        ,
-         0.        , 0.        , 0.        , 0.        , 0.        ],
-        [0.        , 0.        , 0.        , 0.        , 0.        ,
-         0.        , 0.        , 0.        , 0.        , 1.        ],
-        [0.        , 0.        , 0.        , 0.        , 0.        ,
-         0.        , 0.        , 0.        , 0.        , 0.        ],
-        [1.        , 0.        , 0.        , 1.        , 0.        ,
-         0.        , 0.        , 0.        , 1.        , 0.        ],
-        [1.        , 0.        , 1.        , 1.        , 1.        ,
-         0.        , 0.        , 0.        , 1.        , 0.        ],
-        [0.        , 0.        , 0.        , 1.        , 0.        ,
-         0.        , 0.        , 1.        , 1.        , 0.        ],
-        [0.        , 1.        , 1.        , 0.        , 0.        ,
-         0.        , 0.        , 1.        , 0.        , 1.        ],
-        [0.        , 1.        , 0.        , 0.        , 0.        ,
-         0.        , 1.        , 0.        , 0.        , 0.        ]]])</code></pre>
+ [[0.         0.         0.         0.         1.         0.
+   0.         0.         0.         1.        ]
+  [0.         0.         0.         0.         1.         0.
+   1.         1.         0.         0.        ]
+  [0.         0.         0.         1.         0.         0.
+   0.         0.         0.         0.        ]
+  [1.         0.         0.         0.         0.         0.
+   0.         0.         0.         0.        ]
+  [1.         0.         0.         0.         0.         0.
+   0.         0.         0.         0.        ]
+  [0.         0.         0.         1.         0.         1.
+   0.         0.         0.         0.        ]
+  [1.         0.         0.         0.         0.         1.
+   0.         0.         1.         0.        ]
+  [1.         0.         0.         0.         0.         1.
+   0.         0.         0.         0.        ]
+  [0.         1.         0.         0.         0.         0.
+   0.         0.         0.         1.        ]
+  [0.         1.         1.         0.         0.         0.
+   0.         0.         0.         0.        ]]]</code></pre>
 </div>
 </div>
 

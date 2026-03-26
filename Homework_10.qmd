@@ -2,6 +2,10 @@
 title: "Homework_10"
 format: html
 ---
+# Bryan Wilcenski
+# Homework 10
+# 3/25/2026
+# Bio 1600
 
 
 ## Question 1
