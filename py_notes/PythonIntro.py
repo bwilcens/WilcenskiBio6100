@@ -416,7 +416,7 @@ mean_table = ds.groupby("species")[["petal_length","sepal_length"]].mean()
 ## create long form dataset 
 #SHIT DIDNT WORK -- GOTTA FIGURE IT OUT FOR THE REST OF SECTION 
 
-ds_long = pd.melt(ds, id_vars= ['species'], value = ["sepal_width", "sepal_length", "petal_width", "petal_length"], var_name = "vars", value_name = 'vals')
+ds_long = pd.melt(ds, id_vars= ['species'], value_vars = ["sepal_width", "sepal_length", "petal_width", "petal_length"], var_name = "vars", value_name = 'vals')
 
 #group_by on long form 
 
