@@ -149,10 +149,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#bryan-wilcenski" id="toc-bryan-wilcenski" class="nav-link active" data-scroll-target="#bryan-wilcenski">Bryan Wilcenski</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">3/18/2026</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +182,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>library(ggplot2)</p>
+<section id="bryan-wilcenski" class="level1">
+<h1>Bryan Wilcenski</h1>
+</section>
+<section id="section" class="level1">
+<h1>3/18/2026</h1>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
 <div class="cell">
@@ -251,165 +259,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>newdf <span class="ot">&lt;-</span> iris<span class="sc">%&gt;%</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">binary_setosa=</span><span class="fu">case_when</span>(Species<span class="sc">==</span><span class="st">"setosa"</span><span class="sc">~</span><span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span><span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Species, binary_setosa, <span class="fu">everything</span>()) <span class="co">#create new binary column for setosa (0/1)</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>newdf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       Species binary_setosa Sepal.Length Sepal.Width Petal.Length Petal.Width
-1       setosa             1          5.1         3.5          1.4         0.2
-2       setosa             1          4.9         3.0          1.4         0.2
-3       setosa             1          4.7         3.2          1.3         0.2
-4       setosa             1          4.6         3.1          1.5         0.2
-5       setosa             1          5.0         3.6          1.4         0.2
-6       setosa             1          5.4         3.9          1.7         0.4
-7       setosa             1          4.6         3.4          1.4         0.3
-8       setosa             1          5.0         3.4          1.5         0.2
-9       setosa             1          4.4         2.9          1.4         0.2
-10      setosa             1          4.9         3.1          1.5         0.1
-11      setosa             1          5.4         3.7          1.5         0.2
-12      setosa             1          4.8         3.4          1.6         0.2
-13      setosa             1          4.8         3.0          1.4         0.1
-14      setosa             1          4.3         3.0          1.1         0.1
-15      setosa             1          5.8         4.0          1.2         0.2
-16      setosa             1          5.7         4.4          1.5         0.4
-17      setosa             1          5.4         3.9          1.3         0.4
-18      setosa             1          5.1         3.5          1.4         0.3
-19      setosa             1          5.7         3.8          1.7         0.3
-20      setosa             1          5.1         3.8          1.5         0.3
-21      setosa             1          5.4         3.4          1.7         0.2
-22      setosa             1          5.1         3.7          1.5         0.4
-23      setosa             1          4.6         3.6          1.0         0.2
-24      setosa             1          5.1         3.3          1.7         0.5
-25      setosa             1          4.8         3.4          1.9         0.2
-26      setosa             1          5.0         3.0          1.6         0.2
-27      setosa             1          5.0         3.4          1.6         0.4
-28      setosa             1          5.2         3.5          1.5         0.2
-29      setosa             1          5.2         3.4          1.4         0.2
-30      setosa             1          4.7         3.2          1.6         0.2
-31      setosa             1          4.8         3.1          1.6         0.2
-32      setosa             1          5.4         3.4          1.5         0.4
-33      setosa             1          5.2         4.1          1.5         0.1
-34      setosa             1          5.5         4.2          1.4         0.2
-35      setosa             1          4.9         3.1          1.5         0.2
-36      setosa             1          5.0         3.2          1.2         0.2
-37      setosa             1          5.5         3.5          1.3         0.2
-38      setosa             1          4.9         3.6          1.4         0.1
-39      setosa             1          4.4         3.0          1.3         0.2
-40      setosa             1          5.1         3.4          1.5         0.2
-41      setosa             1          5.0         3.5          1.3         0.3
-42      setosa             1          4.5         2.3          1.3         0.3
-43      setosa             1          4.4         3.2          1.3         0.2
-44      setosa             1          5.0         3.5          1.6         0.6
-45      setosa             1          5.1         3.8          1.9         0.4
-46      setosa             1          4.8         3.0          1.4         0.3
-47      setosa             1          5.1         3.8          1.6         0.2
-48      setosa             1          4.6         3.2          1.4         0.2
-49      setosa             1          5.3         3.7          1.5         0.2
-50      setosa             1          5.0         3.3          1.4         0.2
-51  versicolor             0          7.0         3.2          4.7         1.4
-52  versicolor             0          6.4         3.2          4.5         1.5
-53  versicolor             0          6.9         3.1          4.9         1.5
-54  versicolor             0          5.5         2.3          4.0         1.3
-55  versicolor             0          6.5         2.8          4.6         1.5
-56  versicolor             0          5.7         2.8          4.5         1.3
-57  versicolor             0          6.3         3.3          4.7         1.6
-58  versicolor             0          4.9         2.4          3.3         1.0
-59  versicolor             0          6.6         2.9          4.6         1.3
-60  versicolor             0          5.2         2.7          3.9         1.4
-61  versicolor             0          5.0         2.0          3.5         1.0
-62  versicolor             0          5.9         3.0          4.2         1.5
-63  versicolor             0          6.0         2.2          4.0         1.0
-64  versicolor             0          6.1         2.9          4.7         1.4
-65  versicolor             0          5.6         2.9          3.6         1.3
-66  versicolor             0          6.7         3.1          4.4         1.4
-67  versicolor             0          5.6         3.0          4.5         1.5
-68  versicolor             0          5.8         2.7          4.1         1.0
-69  versicolor             0          6.2         2.2          4.5         1.5
-70  versicolor             0          5.6         2.5          3.9         1.1
-71  versicolor             0          5.9         3.2          4.8         1.8
-72  versicolor             0          6.1         2.8          4.0         1.3
-73  versicolor             0          6.3         2.5          4.9         1.5
-74  versicolor             0          6.1         2.8          4.7         1.2
-75  versicolor             0          6.4         2.9          4.3         1.3
-76  versicolor             0          6.6         3.0          4.4         1.4
-77  versicolor             0          6.8         2.8          4.8         1.4
-78  versicolor             0          6.7         3.0          5.0         1.7
-79  versicolor             0          6.0         2.9          4.5         1.5
-80  versicolor             0          5.7         2.6          3.5         1.0
-81  versicolor             0          5.5         2.4          3.8         1.1
-82  versicolor             0          5.5         2.4          3.7         1.0
-83  versicolor             0          5.8         2.7          3.9         1.2
-84  versicolor             0          6.0         2.7          5.1         1.6
-85  versicolor             0          5.4         3.0          4.5         1.5
-86  versicolor             0          6.0         3.4          4.5         1.6
-87  versicolor             0          6.7         3.1          4.7         1.5
-88  versicolor             0          6.3         2.3          4.4         1.3
-89  versicolor             0          5.6         3.0          4.1         1.3
-90  versicolor             0          5.5         2.5          4.0         1.3
-91  versicolor             0          5.5         2.6          4.4         1.2
-92  versicolor             0          6.1         3.0          4.6         1.4
-93  versicolor             0          5.8         2.6          4.0         1.2
-94  versicolor             0          5.0         2.3          3.3         1.0
-95  versicolor             0          5.6         2.7          4.2         1.3
-96  versicolor             0          5.7         3.0          4.2         1.2
-97  versicolor             0          5.7         2.9          4.2         1.3
-98  versicolor             0          6.2         2.9          4.3         1.3
-99  versicolor             0          5.1         2.5          3.0         1.1
-100 versicolor             0          5.7         2.8          4.1         1.3
-101  virginica             0          6.3         3.3          6.0         2.5
-102  virginica             0          5.8         2.7          5.1         1.9
-103  virginica             0          7.1         3.0          5.9         2.1
-104  virginica             0          6.3         2.9          5.6         1.8
-105  virginica             0          6.5         3.0          5.8         2.2
-106  virginica             0          7.6         3.0          6.6         2.1
-107  virginica             0          4.9         2.5          4.5         1.7
-108  virginica             0          7.3         2.9          6.3         1.8
-109  virginica             0          6.7         2.5          5.8         1.8
-110  virginica             0          7.2         3.6          6.1         2.5
-111  virginica             0          6.5         3.2          5.1         2.0
-112  virginica             0          6.4         2.7          5.3         1.9
-113  virginica             0          6.8         3.0          5.5         2.1
-114  virginica             0          5.7         2.5          5.0         2.0
-115  virginica             0          5.8         2.8          5.1         2.4
-116  virginica             0          6.4         3.2          5.3         2.3
-117  virginica             0          6.5         3.0          5.5         1.8
-118  virginica             0          7.7         3.8          6.7         2.2
-119  virginica             0          7.7         2.6          6.9         2.3
-120  virginica             0          6.0         2.2          5.0         1.5
-121  virginica             0          6.9         3.2          5.7         2.3
-122  virginica             0          5.6         2.8          4.9         2.0
-123  virginica             0          7.7         2.8          6.7         2.0
-124  virginica             0          6.3         2.7          4.9         1.8
-125  virginica             0          6.7         3.3          5.7         2.1
-126  virginica             0          7.2         3.2          6.0         1.8
-127  virginica             0          6.2         2.8          4.8         1.8
-128  virginica             0          6.1         3.0          4.9         1.8
-129  virginica             0          6.4         2.8          5.6         2.1
-130  virginica             0          7.2         3.0          5.8         1.6
-131  virginica             0          7.4         2.8          6.1         1.9
-132  virginica             0          7.9         3.8          6.4         2.0
-133  virginica             0          6.4         2.8          5.6         2.2
-134  virginica             0          6.3         2.8          5.1         1.5
-135  virginica             0          6.1         2.6          5.6         1.4
-136  virginica             0          7.7         3.0          6.1         2.3
-137  virginica             0          6.3         3.4          5.6         2.4
-138  virginica             0          6.4         3.1          5.5         1.8
-139  virginica             0          6.0         3.0          4.8         1.8
-140  virginica             0          6.9         3.1          5.4         2.1
-141  virginica             0          6.7         3.1          5.6         2.4
-142  virginica             0          6.9         3.1          5.1         2.3
-143  virginica             0          5.8         2.7          5.1         1.9
-144  virginica             0          6.8         3.2          5.9         2.3
-145  virginica             0          6.7         3.3          5.7         2.5
-146  virginica             0          6.7         3.0          5.2         2.3
-147  virginica             0          6.3         2.5          5.0         1.9
-148  virginica             0          6.5         3.0          5.2         2.0
-149  virginica             0          6.2         3.4          5.4         2.3
-150  virginica             0          5.9         3.0          5.1         1.8</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>binary.jit <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> newdf, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Length, <span class="at">y =</span> binary_setosa)) <span class="sc">+</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"glm"</span>, <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="st">"binomial"</span>)) <span class="co">#generate box </span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>binary.jit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>binary.jit <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> newdf, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Length, <span class="at">y =</span> binary_setosa)) <span class="sc">+</span> </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"glm"</span>, <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="st">"binomial"</span>)) <span class="co">#generate box </span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>binary.jit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -431,9 +289,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="question-4" class="level2">
 <h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>bumble <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"beeData.csv"</span>) <span class="co">#read in csv</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>mosaic1<span class="ot">&lt;-</span> <span class="fu">mosaicplot</span>(<span class="sc">~</span>  sampling_event<span class="sc">+</span> bee_caste, <span class="at">data=</span>bumble, <span class="at">main =</span> <span class="st">"Sample Event and Caste"</span>, <span class="at">color=</span><span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>), <span class="at">cex.axis=</span> <span class="dv">2</span>) <span class="co">#generate mosaic plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bumble <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"beeData.csv"</span>) <span class="co">#read in csv</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>mosaic1<span class="ot">&lt;-</span> <span class="fu">mosaicplot</span>(<span class="sc">~</span>  sampling_event<span class="sc">+</span> bee_caste, <span class="at">data=</span>bumble, <span class="at">main =</span> <span class="st">"Sample Event and Caste"</span>, <span class="at">color=</span><span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>), <span class="at">cex.axis=</span> <span class="dv">2</span>) <span class="co">#generate mosaic plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -444,6 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
