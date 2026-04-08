@@ -1,0 +1,45 @@
+---
+title: "Homework_12"
+format: html
+---
+
+## Homework 12 
+# Question 1 
+
+```{python}
+
+import json
+import pandas as pd 
+import plotly.express as px
+import plotly.graph_objects as go 
+
+gap = px.data.gapminder().query("year==2007")
+gap.head()
+europe = gap.query("continent == 'Europe'")
+europe.head()
+
+
+fig = px.choropleth(
+    europe,
+    locations = "iso_alpha",
+    color = "gdpPercap",
+    hover_name = "country",
+    hover_data = {
+        "gdpPercap": ":,.0f",
+        "pop": ":,",
+        "iso_alpha" : False
+    },
+    color_continuous_scale = "Viridis", 
+    title = "Europe: GDP per cap. and Population by country (2007)"
+)
+
+
+fig.update_geos(
+    scope = "europe",
+    showland = True,
+    landcolor = "rgb(240,240,240)"
+
+)
+
+
+```
