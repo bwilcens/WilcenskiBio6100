@@ -4,6 +4,8 @@ format: html
 ---
 
 ## Homework 12 
+# Bryan Wilcenski
+
 # Question 1 
 
 ```{python}
