@@ -1,12 +1,3 @@
----
-title: "Homework_12"
-format: html
----
-
-## Homework 12 
-# Question 1 
-
-```{python}
 
 import json
 import pandas as pd 
@@ -58,37 +49,23 @@ fig2 = px.choropleth( #make world figure with only data in europe
     color_continuous_scale = "Viridis", 
     title = "Europe: GDP per cap. and Population by country",
     subtitle = "2007 Data", #added subtitle
-    
+   
 )
-
+fig2.show()
 fig2.update_geos( #clip map to only show european countries 
     scope = "europe",
     showland = True,
-    landcolor = "rgb(240,240,240)"
-    
+    landcolor = "rgb(240,240,240)",
+    zoom = 20
 )
 fig2.show()
 
-```
-# I added in a subtitle using the 'subtitle =' command. This enabled me to remove (2007 Data) from the main title and place it in smaller text below.
-
-
-```{python}
 fig3 = px.scatter_geo(
     gap,
     locations = "iso_alpha",
-    color="gdpPercap",
-    size = 'pop',
-    hover_name="country",
-    hover_data = {
-        "pop": ":,",
-        "lifeExp":":1f",
-        "iso_alpha" : False,
-        "continent" : False
-    },
-    title = "Country Populations",
-    subtitle = "Colored by Continent"
+    color = 
+
+
+
+
 )
-fig3.show()
-```
-# I changed the color argument (per George's suggestion) to make the color more meaningful than just reflecting the continent. The color now reflects GDP per capita. 
