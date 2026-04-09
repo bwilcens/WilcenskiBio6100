@@ -16,4 +16,3 @@ This website will hold all of Bryan Wilcenski's relevant homework and project fi
 [Homework11](ca_sir_driver.html)
 [Homework11Repo](https://github.com/bwilcens/CA_SIR_1600)
 [Homework12](Homework_12.html)
-.
