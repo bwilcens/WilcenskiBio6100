@@ -135,7 +135,84 @@ fig = px.choropleth_map(
 fig.show()
 
 
+#### 4/9/2026
+# Density Heat Maps 
 
+eq = pd.read_csv(
+    "https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv"
+)
+eq.head()
 
+fig = px.density_map(
+    eq,
+    lat = "Latitude",
+    lon = "Longitude",
+    z = "Magnitude", 
+    radius = 10,
+    zoom= 0,
+    center = {"lat":0, "lon":180},
+    map_style = "open-street-map",
+    title = "Global Earthquake Density"
+)
 
+fig.show()
 
+#increase radius
+
+fig = px.density_map(
+    eq,
+    lat = "Latitude",
+    lon = "Longitude",
+    z = "Magnitude", 
+    radius = 10, #changed here
+    zoom= 0,
+    center = {"lat":0, "lon":180},
+    map_style = "open-street-map",
+    title = "Global Earthquake Density"
+)
+
+fig.show()
+
+#change opacity 
+
+fig.update_traces(opacity=0.6)
+fig.show()
+
+#focus on a region 
+
+pacific =eq.query("Latitude > -60 and Latitude <60 and Longitude >100")
+
+fig = px.density_map(
+    pacific,
+    lat = "Latitude",
+    lon = "Longitude",
+    z = "Magnitude", 
+    radius = 10, #changed here
+    zoom= 2,# update zoom (goes to 7)
+    center = {"lat":10, "lon":160},
+    map_style = "carto-darkmatter", #change the style here
+    title = "PacificGlobal Earthquake Density"
+)
+
+fig.show()
+
+# bubble maps (and animation frame)
+
+#make da map 
+
+gap
+
+df = px.data.gapminder() #make df with all years
+
+fig = px.scatter_geo(
+    df,
+    locations = "iso_alpha",
+    color = "continent",
+    hover_name = "country",
+    size = "pop",
+    animation_frame = "year",
+    projection = "natural earth"
+)
+fig.show()
+
+# can make time series animations into gifs ^^ and then use it in a presentation 
