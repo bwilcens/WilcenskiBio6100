@@ -216,3 +216,14 @@ fig = px.scatter_geo(
 fig.show()
 
 # can make time series animations into gifs ^^ and then use it in a presentation 
+
+
+#this is running the figure in dash text -- we could put this text (fig code) 
+from dash import Dash,dcc,html
+
+app = Dash()
+app.layout = html.Div([
+    dcc.Graph(figure = fig) #fig is the name of the time series map thing we made above
+])
+
+app.run(debug = True, use_reloader = False)
