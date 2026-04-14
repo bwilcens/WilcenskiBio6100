@@ -1,0 +1,13 @@
+GLM 
+Generalized Linear Model 
+
+Don't need numerical stuff like a linear model
+
+GLMM - Generalized Linear Mixed Model
+
+
+
+
+
+
+
