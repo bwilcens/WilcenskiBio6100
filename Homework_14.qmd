@@ -1,0 +1,113 @@
+---
+title: "Homework_14"
+format: html
+---
+# Homework 14
+# 4/23/2026
+
+### Multivariate Analysis
+
+## The goal of the following two models is to: 
+
+# 1. Determine whether or not I have a sufficient number of predictors to adequately describe the variance in my dataset (road damages during extreme storm events)
+
+# 2. Use a Random Forest to determine which predictor variables were most important in determining whether a road segment was damaged during the July 2023 flood event. 
+
+# (These models were recommended by Professor Burnham for use in the context of my RA position and thesis work.)
+
+
+```{r}
+library(randomForest)
+library(caret)
+library(e1071)
+library(tidyverse)
+library(corrplot)
+library(pROC)
+
+
+model_data <- read.csv("Data/model_data_Classifier1.csv")
+head(model_data) 
+
+
+
+cat_cols_full<- c("Surface", "HYDROGROUP", "PARENT", "StreamCros","damaged" ) 
+
+for (col in cat_cols_full) {
+  model_data[[col]] <- as.factor(model_data[[col]])
+} #turn into factor so RF doesn't treat two different categories (stored internally as integers) like numbers
+
+
+train <- createDataPartition(model_data$damaged, p = 0.7, list = FALSE) # this line samples 70% as training data and keeps 0.7% damaged segments ratio for both train and test sets
+
+train_data <- model_data[train, ] #train data 
+test_data  <- model_data[-train, ] # model_data - train data = 30% of model_data 
+nrow(train_data)
+nrow(test_data)
+
+# tuneRF() suggested using mtry=1 (both mtry=1 and mtry=3 had the same OOB error)
+
+best_mtry <- round(sqrt(ncol(train_data) - 1)) # based on square root of prediction data columns (hueristic) https://bradleyboehmke.github.io/HOML/random-forest.html
+
+
+# Random Forest with Balanced downsampling to address imbalanced classes
+# Reference: Chen, Liaw & Breiman (2004) "Using Random Forest to Learn
+#            Imbalanced Data" (UC Berkeley Technical Report 666)
+
+
+set.seed(123)
+
+
+
+n_no  <- sum(train_data$damaged == "No")
+n_yes <- sum(train_data$damaged == "Yes")
+
+set.seed(123)
+
+
+# run model 
+
+
+rf_model_ds <- randomForest(
+  damaged ~ .,
+  data       = train_data,
+  ntree      = 500,
+  mtry       = best_mtry,
+  strata     = train_data$damaged,
+  sampsize   = c("No" = n_yes, "Yes" = n_yes),
+  importance = TRUE,
+  proximity  = FALSE
+)
+
+print(rf_model_ds)
+
+p_test_ds <- predict(rf_model_ds, test_data) #evaluate on test data
+cm_test_ds <- confusionMatrix(p_test_ds, test_data$damaged, positive = "Yes") # confusion matrix
+print(cm_test_ds)
+
+acc_ds <- mean(p_test_ds == test_data$damaged) #this exists in the confustion matrix but is called separately
+
+Balanced_Accuracy <-c(cm_test_ds$byClass["Balanced Accuracy"])
+\
+
+print(acc_ds)
+#given the class imbalance in the dataset, the balanced accuracy is a better representation of the model's fit (average of Sensitivity and Specificity)
+print(Balanced_Accuracy)
+
+plot(rf_model_ds, main = "Random forest OOB error vs number of trees")
+
+importance_ds <- as.data.frame(importance(rf_model_ds)) %>%
+  rownames_to_column("Variable") %>%
+  arrange(desc(MeanDecreaseAccuracy))
+print(importance_ds) #plot two variable importance measures
+
+varImpPlot(rf_model_ds) # further to the right is most important 
+
+```
+
+#  OOB estimate of  error rate: 16.07%
+
+# The Balanced Accuracy (a better metric given the class imbalance) in this model ~= 0.76. There is a need for more predictor variables. It also may make sense to use a neural network or another algorithm that is more robust to extreme class imbalance such as CatBoost.
+
+# MeanTopoConvergence_50m (Mean Topographic Wetness within a 50m buffer of the road segment)  had high MeanDecreaseGini and MeanDecreaseAccuracy, indicating that it has high predictive power and influence over tree structure. 
+
+# Precipitation (in.) on the road surface (predictor name: MEAN) had the highest MeanDecreaseGini, but the lowest MeanDecreaseAccuracy. This indicates that, while the variable is important to the tree structure, permuting it doesn't alter the accuracy of the model as much as other variables. It is likely that--due to the orographic effects--high precipitation values are correlated with very high/low topographic variables seen in mountainous areas (e.g. Topographic Wetness Index, Road Slope, Mean hillslope angle, etc.)

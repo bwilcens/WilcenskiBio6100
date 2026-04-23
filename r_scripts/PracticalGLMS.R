@@ -30,6 +30,7 @@ glimpse(bee_dat)
 # load = magnitude (numerical)
 
 # filter for only pos:
+
 df_filtered <- bee_dat[bee_dat$log10_DWV_load > 0 & bee_dat$log10_BQCV_load > 0, ]
 
 hist(df_filtered$log10_BQCV_load)
@@ -107,6 +108,17 @@ g_bqcv_site <- lmer(
 Anova(g_bqcv_site)
 
 
+# make pos only nosema
+nosPos <- bee_dat[bee_dat$Nosema_pathogen_load > 0,]
 
+# gamma
 
+nos_gamma <- glmer(
+  Nosema_pathogen_load ~ site_code + bombus_spp + (1 | sampling_event),
+  data = nosPos, family = Gamma)
+Anova(nos_gamma)
 
+nos <- glmer(
+  log10_Nosema_load ~ site_code + bombus_spp + (1 | sampling_event),
+  data = nosPos)
+Anova(nos)

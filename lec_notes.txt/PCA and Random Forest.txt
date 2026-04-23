@@ -1,0 +1,37 @@
+PCA and Random Forest
+
+Supervised Learning: RF 
+- knows the categories we are trying to predict at outset
+- maximize variance between groups 
+- classifier (using subset of data to train, then predict based on the training groups with data it hasn't seen yet) 
+- can use one decision tree if you want to partition data (bootstrapping random permutions of decision trees to prevent overfitting)
+- linear discriminant analysis (uses a structure like PCA to make linear models of variables)
+
+
+
+Unsupervised Learning: PCA (NMDS - non parametric version)
+- doesn't know diff between categories we want to predict
+- trying to understand variance in model and partition vars into diff segments called PCs 
+- dimensionality reduction (at heart)
+- PCA assumes normal distribution (a must)
+- 
+
+PCA: 
+ex dataset: 
+- Cols: IDs (num),  Class (Binary), X1, X2, X3, ...
+- Goal: reduce x vals into a few (couple PCs)
+PCs: made up of: loading coefficient*X1, + loading coefficient*X2 + loading coefficient*X3 + ...
+
+
+Random Forest:
+
+
+given imbalanced datasets: 
+
+- deep learning 
+- tensor flow (Neural Nets)
+
+
+
+
+

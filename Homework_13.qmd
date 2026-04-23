@@ -1,0 +1,57 @@
+---
+title: "Homework_13"
+format: html
+---
+# Bryan Wilcenski
+# 4/15/2026
+
+
+## Question 1:
+# Does the slope of the road differ across
+```{r}
+library(tidyverse)
+library(lubridate)
+library(lme4)
+library(car)
+
+# code based on workflow from https://stats.oarc.ucla.edu/r/dae/zinb/ due to the significant imbalance between damaged road segments and undamaged road segments 
+
+require(ggplot2)
+require(pscl)
+require(MASS)
+require(boot)
+
+road_dat<- read_csv("Data/model_data_Classifier1.csv")
+names(road_dat)
+class(road_dat)
+
+road_dat$damaged <- factor(ifelse(road_dat$damaged == "Yes", 1, 0))
+
+road_dat <- within(road_dat,{
+  Surface <- factor(Surface)
+  StreamCros<- factor(StreamCros)
+  HYDROGROUP<- factor(HYDROGROUP)
+  PARENT <- factor(PARENT)
+})
+
+summary(road_dat)
+
+
+model_MEAN <- zeroinfl(Culvert_Count ~ MEAN,
+  data = road_dat, dist = "negbin")
+summary(model_MEAN)
+
+
+
+
+# zero inflated negative binomial <- THIS IS WHAT I WANT TO USE
+
+
+
+
+```
+
+
+
+m_cont_cat <- lm(data = road_dat, Avg_Slope~damaged)
+summary(m_cont_cat) # cont y , cat x 

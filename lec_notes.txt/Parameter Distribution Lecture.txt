@@ -1,0 +1,90 @@
+Parameter Distribution Lecture 
+
+- create synthetic data to create distributions in that model
+
+- Discrete Distribution 
+   discrete integers (think- bar plot)
+   P l
+     l
+     l
+     l_____________________
+            K
+
+
+1. Binomial 
+- used to model events (e.g. flipping a coin)
+- probability of getting x-value in a given set of tries 
+- 
+
+ P   l
+     l
+     l
+     l_____________________
+            x
+
+2. Negative Binomial 
+- modeling the number of trials before having one success (kinda the opposite as binomial)
+ P   l
+     l
+     l
+     l_____________________
+            x
+
+3. Poisson Dist 
+- used to model count data 
+- lambda =  shifts the x value of the dist (bar plot skewed left, skewed right, centered on a number, etc. )
+- max number of events in a given rate of time 
+
+
+
+ P   l
+     l
+     l
+     l_____________________
+            K
+
+
+
+Continuous distribution 
+- continous dataset 
+
+ P l
+     l
+dens l
+     l_____________________
+     neg,inf            pos inf
+
+center = u ("mew")
+standard dev = can model distribution
+
+1. Probability Density Function: how likely a val is to occur at any one of the x values (density)
+2. Cumulative density function (CDF): what is the prob of veing less than or equal to a value ("what is prob that x is <= 3?)
+3. Q: mathmatical opposite of CDF
+4. Random Number Generation: take parameters of distribution and generate random samples using them 
+
+
+Cont Dists: 
+1. Gamma Dist 
+- shape 
+- scale 
+u(mew) = shape*scale
+variance = shape*scale^2 
+
+
+     l
+     l
+dens l
+     l_____________________
+
+2. Beta Dist
+- can be used to compute confidence intervals around binary stuff
+- important to probabilities and percentages
+
+
+
+
+     l
+     l
+dens l
+     l_____________________
+     0                     1
