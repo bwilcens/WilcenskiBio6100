@@ -17,6 +17,8 @@ format: html
 
 
 ```{r}
+library(FactoMineR)
+library(factoextra)
 library(randomForest)
 library(caret)
 library(e1071)
@@ -24,11 +26,87 @@ library(tidyverse)
 library(corrplot)
 library(pROC)
 
-
 model_data <- read.csv("Data/model_data_Classifier1.csv")
 head(model_data) 
 
 
+famd_data <- model_data %>% select(-damaged)
+
+# Run FAMD
+famd_result <- FAMD(famd_data, ncp = 10, graph = FALSE)
+
+
+# Scree plot ------------------------------------------------------------
+
+# proportion of variance plot
+fviz_screeplot(famd_result, ncp = 10,
+               addlabels = TRUE,
+               barfill = "firebrick", barcolor = "firebrick",
+               linecolor = "black",
+               main = "FAMD Proportion of Variance per Component Plot") +
+  theme_minimal(base_size = 20) +
+  theme(
+    plot.title = element_text(size = 24, face = "bold"),
+    axis.title = element_text(size = 22),
+    axis.text = element_text(size = 22)
+  )
+
+# scree plot
+
+fviz_screeplot(famd_result, ncp = 10,
+               choice = "eigenvalue",
+               addlabels = TRUE,
+               linecolor = "black",
+               main = "Scree Plot — Eigenvalues for each Component") +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "blue", linewidth = 1) +
+  annotate("text", x = 9, y = 1.15, label = "Kaiser criterion (eigenvalue = 1)",
+           color = "blue", size = 5) +
+  theme_minimal(base_size = 20) +
+  theme(
+    plot.title = element_text(size = 24, face = "bold"),
+    axis.title = element_text(size = 22),
+    axis.text = element_text(size = 22)
+  )
+
+get_eigenvalue(famd_result)
+
+
+#  Variable contributions ------------------------------------------------
+
+fviz_famd_var(famd_result, repel = TRUE,
+              col.var = "contrib",
+              gradient.cols = c("grey80", "firebrick"),
+              title = "FAMD — Variable Contributions",
+              labelsize = 6) +
+  theme_minimal(base_size = 20) +
+  theme(
+    plot.title = element_text(size = 22, face = "bold"),
+    axis.title = element_text(size = 18),
+    axis.text = element_text(size = 16),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 13)
+  )
+
+# Print variable contributions to first 3 components
+var_contrib <- famd_result$var$contrib
+print(round(var_contrib[, 1:3], 2))
+
+
+# Extract individual coordinates from FAMD
+
+ind_coords <- as.data.frame(famd_result$ind$coord[, 1:3])
+ind_coords
+names(ind_coords) <- c("Dim1", "Dim2", "Dim3")
+ind_coords$damaged <- model_data$damaged
+
+
+
+```
+
+
+
+
+```{r}
 
 cat_cols_full<- c("Surface", "HYDROGROUP", "PARENT", "StreamCros","damaged" ) 
 
