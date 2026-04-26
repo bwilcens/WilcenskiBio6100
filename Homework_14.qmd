@@ -9,9 +9,9 @@ format: html
 
 ## The goal of the following two models is to: 
 
-# 1. Determine whether or not I have a sufficient number of predictors to adequately describe the variance in my dataset (road damages during extreme storm events)
+# 1. Determine whether more predictors are needed to adequately describe the variance in the dataset (road damages during extreme storm events)
 
-# 2. Use a Random Forest to determine which predictor variables were most important in determining whether a road segment was damaged during the July 2023 flood event. 
+# 2. Use a Random Forest to identify which predictor variables were most important in determining whether a road segment was damaged during the July 2023 flood event. 
 
 # (These models were recommended by Professor Burnham for use in the context of my RA position and thesis work.)
 
@@ -23,7 +23,6 @@ library(randomForest)
 library(caret)
 library(e1071)
 library(tidyverse)
-library(corrplot)
 library(pROC)
 
 model_data <- read.csv("Data/model_data_Classifier1.csv")
@@ -33,13 +32,13 @@ head(model_data)
 famd_data <- model_data %>% select(-damaged)
 
 # Run FAMD
-famd_result <- FAMD(famd_data, ncp = 10, graph = FALSE)
+famd_result <- FAMD(famd_data, ncp = 12, graph = FALSE)
 
 
 # Scree plot ------------------------------------------------------------
 
 # proportion of variance plot
-fviz_screeplot(famd_result, ncp = 10,
+fviz_screeplot(famd_result, ncp = 12,
                addlabels = TRUE,
                barfill = "firebrick", barcolor = "firebrick",
                linecolor = "black",
@@ -53,7 +52,7 @@ fviz_screeplot(famd_result, ncp = 10,
 
 # scree plot
 
-fviz_screeplot(famd_result, ncp = 10,
+fviz_screeplot(famd_result, ncp = 12,
                choice = "eigenvalue",
                addlabels = TRUE,
                linecolor = "black",
@@ -68,47 +67,81 @@ fviz_screeplot(famd_result, ncp = 10,
     axis.text = element_text(size = 22)
   )
 
-get_eigenvalue(famd_result)
+eig<- get_eigenvalue(famd_result)
 
 
-#  Variable contributions ------------------------------------------------
 
-fviz_famd_var(famd_result, repel = TRUE,
-              col.var = "contrib",
-              gradient.cols = c("grey80", "firebrick"),
-              title = "FAMD — Variable Contributions",
-              labelsize = 6) +
-  theme_minimal(base_size = 20) +
-  theme(
-    plot.title = element_text(size = 22, face = "bold"),
-    axis.title = element_text(size = 18),
-    axis.text = element_text(size = 16),
-    legend.title = element_text(size = 14),
-    legend.text = element_text(size = 13)
-  )
-
-# Print variable contributions to first 3 components
+# Print variable contributions to first 2 components
 var_contrib <- famd_result$var$contrib
-print(round(var_contrib[, 1:3], 2))
+print(round(var_contrib[, 1:2], 2))
 
 
 # Extract individual coordinates from FAMD
 
 ind_coords <- as.data.frame(famd_result$ind$coord[, 1:3])
-ind_coords
-names(ind_coords) <- c("Dim1", "Dim2", "Dim3")
+names(ind_coords) <- c("Dim1", "Dim2")
 ind_coords$damaged <- model_data$damaged
 
+sample_idx <- c(
+  which(ind_coords$damaged == "No"),
+  which(ind_coords$damaged == "Yes")
+)
 
+plot_data <- ind_coords[sample_idx, ]
+plot_data$damaged <- factor(plot_data$damaged, levels = c("No", "Yes"))
+
+# plot first two dimensions with ellipses 
+
+ggplot(plot_data, aes(x = Dim1, y = Dim2, color = damaged)) +
+  geom_point(alpha = 0.3, size = 1.5) +
+  stat_ellipse(level = 0.95, linewidth = 1.2) +
+  scale_color_manual(values = c("No" = "blue", "Yes" = "red"),
+                     labels = c("Not Damaged", "Damaged")) +
+  labs(title = "FAMD — Dim 1 vs Dim 2 with 95% Confidence Ellipses",
+       x = paste0("Dimension 1 (", round(eig[1, 2], 1), "%)"),
+       y = paste0("Dimension 2 (", round(eig[2, 2], 1), "%)"),
+       color = "Status") +
+  theme_minimal(base_size = 20) +
+  theme(
+    plot.title = element_text(size = 22, face = "bold"),
+    axis.title = element_text(size = 18),
+    axis.text = element_text(size = 16),
+    legend.title = element_text(size = 16),
+    legend.text = element_text(size = 15),
+    legend.position = "top"
+  )
+
+# Numeric variable loadings (correlation with each dimension)
+round(famd_result$quanti.var$coord[, 1:2], 3)
+
+# Categorical variable loadings (coordinates per category level)
+round(famd_result$quali.var$coord[, 1:2], 3)
 
 ```
+
+# The figure showing Dimensions 1 and 2 indicates that there is poor separation between groups. Because there was such poor separation seen between components on the scree plot (all Dimension/PC eigenvalues > 1), it is difficult to determine which PCs are needed with the broken stick test. Similarly, if using the Kaiser rule to determine which dimensions should be retained, all dimensions are needed. The fact that the retained dimensions describe 49.4 percent of the variance under the kaiser rule, and possibly less with the broken stick approach indicates two things. Firstly, the relationship between the variables is non-linear, which is likely the case. Secondly, they suggest that variables are missing from the dataset, which--based on domain knowledge--is also likely true. 
+
+# For the numeric variables, Dimension 1 (PC1) is dominated by Parent material rank (PM_Rank), K Factor rating (K_final), and the percent forested land within 50 meters of the road segment (PercentForestedLand). Dimension 2 (PC2) is dominated by topographic convergence (Mean_TopoConvergence_50m), Parent Material Rank (PM_Rank), and mean hillslope within 30 meters of each segment (MeanSlope30m). 
+
+# For Categorical variables, the first dimension partially separates based on the surface type (paved vs. unpaved), and certain parent matierials (e.g. alluvium (A = -2.644), glaciofluvial (GF = -2.804), and mixed deposits like DT/GT/GF (+2.162)). The second dimension has strong contributions from certain parent materials such as water (W = -7.33).
+
+# FAMD does not A significance test for this dataset will return high significance for all principle components given the sample size and was thus not included. 
+
+## Sources:
+# Blaufuks, W. (2021, May 25). FAMD: How to generalize PCA to categorical and numerical data. Towards Data Science. https://towardsdatascience.com/famd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210/
+# MANGALE, S. (2020, August 28). Scree Plot. Medium. https://sanchitamangale12.medium.com/scree-plot-733ed72c8608
+# Roghani, A. (n.d.). RPubs—Factor Analysis of Mixed Data. Retrieved April 20, 2026, from https://rpubs.com/aliro/831890
 
 
 
 
 ```{r}
+library(caret)
+model_data <- read.csv("Data/model_data_Classifier1.csv")
+head(model_data) 
 
 cat_cols_full<- c("Surface", "HYDROGROUP", "PARENT", "StreamCros","damaged" ) 
+
 
 for (col in cat_cols_full) {
   model_data[[col]] <- as.factor(model_data[[col]])
@@ -128,8 +161,7 @@ best_mtry <- round(sqrt(ncol(train_data) - 1)) # based on square root of predict
 
 
 # Random Forest with Balanced downsampling to address imbalanced classes
-# Reference: Chen, Liaw & Breiman (2004) "Using Random Forest to Learn
-#            Imbalanced Data" (UC Berkeley Technical Report 666)
+# Reference: Chen, Liaw & Breiman (2004) "Using Random Forest to Learn Imbalanced Data" (UC Berkeley Technical Report 666)
 
 
 set.seed(123)
@@ -165,7 +197,7 @@ print(cm_test_ds)
 acc_ds <- mean(p_test_ds == test_data$damaged) #this exists in the confustion matrix but is called separately
 
 Balanced_Accuracy <-c(cm_test_ds$byClass["Balanced Accuracy"])
-\
+
 
 print(acc_ds)
 #given the class imbalance in the dataset, the balanced accuracy is a better representation of the model's fit (average of Sensitivity and Specificity)
@@ -184,8 +216,12 @@ varImpPlot(rf_model_ds) # further to the right is most important
 
 #  OOB estimate of  error rate: 16.07%
 
-# The Balanced Accuracy (a better metric given the class imbalance) in this model ~= 0.76. There is a need for more predictor variables. It also may make sense to use a neural network or another algorithm that is more robust to extreme class imbalance such as CatBoost.
+# The Balanced Accuracy (a better metric given the class imbalance) in this model ~= 0.76. There is a need for more predictor variables. Class imbalance may also be less of an issue if a neural network or CatBoost is used.
 
-# MeanTopoConvergence_50m (Mean Topographic Wetness within a 50m buffer of the road segment)  had high MeanDecreaseGini and MeanDecreaseAccuracy, indicating that it has high predictive power and influence over tree structure. 
+# MeanTopoConvergence_50m (Mean Topographic Wetness within a 50m buffer of the road segment) had high MeanDecreaseGini and MeanDecreaseAccuracy, indicating that it has high predictive power and influence over tree structure. 
 
-# Precipitation (in.) on the road surface (predictor name: MEAN) had the highest MeanDecreaseGini, but the lowest MeanDecreaseAccuracy. This indicates that, while the variable is important to the tree structure, permuting it doesn't alter the accuracy of the model as much as other variables. It is likely that--due to the orographic effects--high precipitation values are correlated with very high/low topographic variables seen in mountainous areas (e.g. Topographic Wetness Index, Road Slope, Mean hillslope angle, etc.)
+# Precipitation (in.) on the road surface (predictor name: MEAN) had the highest MeanDecreaseGini, but the lowest MeanDecreaseAccuracy. This indicates that, while the variable is important to the tree structure, permuting it doesn't alter the accuracy of the model as much as other variables. It is likely that--due to orographic effects--high precipitation values are correlated with very high/low topographic variables seen in mountainous areas (e.g. Topographic Wetness Index, Road Slope, Mean hillslope angle, etc.).
+
+# Both models had shortcomings due to class imbalance, and the limited amount of variance explained by the predictors. They both isolated topographic convergence as an important variable/predictor. The FAMD loadings and the Balanced RF MeanDecreaseAccuracy rank both suggest that precipitation is not an important variable, but the MeanDecreaseGini in the RF suggests otherwise as it has significant influence on tree structure. 
+
+# Given that the FAMD focuses on linear relationships, the results from that test are best used as an indication that more variables are needed, instead of as an indicator of variable importance. 
