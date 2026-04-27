@@ -119,18 +119,18 @@ round(famd_result$quali.var$coord[, 1:2], 3)
 
 ```
 
-# The figure showing Dimensions 1 and 2 indicates that there is poor separation between groups. Because there was such poor separation seen between components on the scree plot (all Dimension/PC eigenvalues > 1), it is difficult to determine which PCs are needed with the broken stick test. Similarly, if using the Kaiser rule to determine which dimensions should be retained, all dimensions are needed. The fact that the retained dimensions describe 49.4 percent of the variance under the kaiser rule, and possibly less with the broken stick approach indicates two things. Firstly, the relationship between the variables is non-linear, which is likely the case. Secondly, they suggest that variables are missing from the dataset, which--based on domain knowledge--is also likely true. 
+The figure showing Dimensions 1 and 2 indicates that there is poor separation between groups. Because there was such poor separation seen between components on the scree plot (all Dimension/PC eigenvalues > 1), it is difficult to determine which PCs are needed with the broken stick test. Similarly, if using the Kaiser rule to determine which dimensions should be retained, all dimensions are needed. The fact that the retained dimensions describe 49.4 percent of the variance under the kaiser rule, and possibly less with the broken stick approach indicates two things. Firstly, the relationship between the variables is non-linear, which is likely the case. Secondly, they suggest that variables are missing from the dataset, which--based on domain knowledge--is also likely true. 
 
-# For the numeric variables, Dimension 1 (PC1) is dominated by Parent material rank (PM_Rank), K Factor rating (K_final), and the percent forested land within 50 meters of the road segment (PercentForestedLand). Dimension 2 (PC2) is dominated by topographic convergence (Mean_TopoConvergence_50m), Parent Material Rank (PM_Rank), and mean hillslope within 30 meters of each segment (MeanSlope30m). 
+For the numeric variables, Dimension 1 (PC1) is dominated by Parent material rank (PM_Rank), K Factor rating (K_final), and the percent forested land within 50 meters of the road segment (PercentForestedLand). Dimension 2 (PC2) is dominated by topographic convergence (Mean_TopoConvergence_50m), Parent Material Rank (PM_Rank), and mean hillslope within 30 meters of each segment (MeanSlope30m). 
 
-# For Categorical variables, the first dimension partially separates based on the surface type (paved vs. unpaved), and certain parent matierials (e.g. alluvium (A = -2.644), glaciofluvial (GF = -2.804), and mixed deposits like DT/GT/GF (+2.162)). The second dimension has strong contributions from certain parent materials such as water (W = -7.33).
+For Categorical variables, the first dimension partially separates based on the surface type (paved vs. unpaved), and certain parent matierials (e.g. alluvium (A = -2.644), glaciofluvial (GF = -2.804), and mixed deposits like DT/GT/GF (+2.162)). The second dimension has strong contributions from certain parent materials such as water (W = -7.33).
 
-# FAMD does not A significance test for this dataset will return high significance for all principle components given the sample size and was thus not included. 
+FAMD does not A significance test for this dataset will return high significance for all principle components given the sample size and was thus not included. 
 
-## Sources:
-# Blaufuks, W. (2021, May 25). FAMD: How to generalize PCA to categorical and numerical data. Towards Data Science. https://towardsdatascience.com/famd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210/
-# MANGALE, S. (2020, August 28). Scree Plot. Medium. https://sanchitamangale12.medium.com/scree-plot-733ed72c8608
-# Roghani, A. (n.d.). RPubs—Factor Analysis of Mixed Data. Retrieved April 20, 2026, from https://rpubs.com/aliro/831890
+Sources:
+Blaufuks, W. (2021, May 25). FAMD: How to generalize PCA to categorical and numerical data. Towards Data Science. https://towardsdatascience.com/famd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210/
+MANGALE, S. (2020, August 28). Scree Plot. Medium. https://sanchitamangale12.medium.com/scree-plot-733ed72c8608
+Roghani, A. (n.d.). RPubs—Factor Analysis of Mixed Data. Retrieved April 20, 2026, from https://rpubs.com/aliro/831890
 
 
 
@@ -214,14 +214,14 @@ varImpPlot(rf_model_ds) # further to the right is most important
 
 ```
 
-#  OOB estimate of  error rate: 16.07%
+OOB estimate of  error rate: 16.07%
 
-# The Balanced Accuracy (a better metric given the class imbalance) in this model ~= 0.76. There is a need for more predictor variables. Class imbalance may also be less of an issue if a neural network or CatBoost is used.
+The Balanced Accuracy (a better metric given the class imbalance) in this model ~= 0.76. There is a need for more predictor variables. Class imbalance may also be less of an issue if a neural network or CatBoost is used.
 
-# MeanTopoConvergence_50m (Mean Topographic Wetness within a 50m buffer of the road segment) had high MeanDecreaseGini and MeanDecreaseAccuracy, indicating that it has high predictive power and influence over tree structure. 
+MeanTopoConvergence_50m (Mean Topographic Wetness within a 50m buffer of the road segment) had high MeanDecreaseGini and MeanDecreaseAccuracy, indicating that it has high predictive power and influence over tree structure. 
 
-# Precipitation (in.) on the road surface (predictor name: MEAN) had the highest MeanDecreaseGini, but the lowest MeanDecreaseAccuracy. This indicates that, while the variable is important to the tree structure, permuting it doesn't alter the accuracy of the model as much as other variables. It is likely that--due to orographic effects--high precipitation values are correlated with very high/low topographic variables seen in mountainous areas (e.g. Topographic Wetness Index, Road Slope, Mean hillslope angle, etc.).
+Precipitation (in.) on the road surface (predictor name: MEAN) had the highest MeanDecreaseGini, but the lowest MeanDecreaseAccuracy. This indicates that, while the variable is important to the tree structure, permuting it doesn't alter the accuracy of the model as much as other variables. It is likely that--due to orographic effects--high precipitation values are correlated with very high/low topographic variables seen in mountainous areas (e.g. Topographic Wetness Index, Road Slope, Mean hillslope angle, etc.).
 
-# Both models had shortcomings due to class imbalance, and the limited amount of variance explained by the predictors. They both isolated topographic convergence as an important variable/predictor. The FAMD loadings and the Balanced RF MeanDecreaseAccuracy rank both suggest that precipitation is not an important variable, but the MeanDecreaseGini in the RF suggests otherwise as it has significant influence on tree structure. 
+Both models had shortcomings due to class imbalance, and the limited amount of variance explained by the predictors. They both isolated topographic convergence as an important variable/predictor. The FAMD loadings and the Balanced RF MeanDecreaseAccuracy rank both suggest that precipitation is not an important variable, but the MeanDecreaseGini in the RF suggests otherwise as it has significant influence on tree structure. 
 
-# Given that the FAMD focuses on linear relationships, the results from that test are best used as an indication that more variables are needed, instead of as an indicator of variable importance. 
+Given that the FAMD focuses on linear relationships, the results from that test are best used as an indication that more variables are needed, instead of as an indicator of variable importance. 

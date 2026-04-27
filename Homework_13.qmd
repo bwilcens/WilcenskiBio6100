@@ -111,14 +111,14 @@ ggplot(model_data, aes(x = HYDROGROUP, y = K_final, fill = damaged)) +
 
 ```
 
-# AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages. 
+AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages. 
 
-# According to Burnham and Anderson (2004):
-# "Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta] i ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta] i ≤ 7 have considerably less support, and models having [Delta] i > 10 have essentailly no support". 
+According to Burnham and Anderson (2004):
+"Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta] i ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta] i ≤ 7 have considerably less support, and models having [Delta] i > 10 have essentailly no support". 
 
-# In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model. 
+In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model. 
 
-# The greatest improvement was seen when there was a K_final:HYDROGROUP term used in the GLM. While the ANOVA result shows that K_final is not significant on its own (LR Chisq = 0.11), it is significant depending on the HYDROGROUP it is in (LR Chisq = 113.18). While other predictors are powerful on their own, (e.g. MEAN (precipitation), Mean_TopoConvergence_50m (Topographic Convergence), etc.), this finding highlights a new relationship. The boxplot further demonstrates this relationship, showing that on on poorly-drained HYDROGROUP soils (C, C/D) a higher K_factor is associated with more damage. This relationship makes sense--standing water accumulates on the surface, resulting in roads on soils vulnerable to sheet flow (high K_factor) experiencing more damages. 
+The greatest improvement was seen when there was a K_final:HYDROGROUP term used in the GLM. While the ANOVA result shows that K_final is not significant on its own (LR Chisq = 0.11), it is significant depending on the HYDROGROUP it is in (LR Chisq = 113.18). While other predictors are powerful on their own, (e.g. MEAN (precipitation), Mean_TopoConvergence_50m (Topographic Convergence), etc.), this finding highlights a new relationship. The boxplot further demonstrates this relationship, showing that on on poorly-drained HYDROGROUP soils (C, C/D) a higher K_factor is associated with more damage. This relationship makes sense--standing water accumulates on the surface, resulting in roads on soils vulnerable to sheet flow (high K_factor) experiencing more damages. 
 
 
 
@@ -156,4 +156,4 @@ barplot(re[,2][order(re[,2])],
 abline(v = 0, lty = 2)
 ```
 
-# This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation's effect on damage probabilities do not differ significantly across parent materials. 
+This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation's effect on damage probabilities do not differ significantly across parent materials. 
