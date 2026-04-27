@@ -28,8 +28,9 @@ petal.plot
 ## Question 2
 ```{r}
 library(ggplot2)
-petal.box <- ggplot(data = iris, aes(x = Species, y = Petal.Length)) + 
-  geom_boxplot(size=1, fill = "orange")+
+petal.box <- ggplot(data = iris, aes(x = Species, y = Petal.Length, fill = Species)) + 
+  geom_boxplot(size=1)+
+  scale_fill_manual(values = c("setosa" = "blue", "versicolor" = "orange", "virginica" = "green"))+
   geom_jitter(size=1) + 
 
   labs(
