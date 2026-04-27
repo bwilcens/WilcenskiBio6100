@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Homework_14 – WilcenskiBio3816</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WilcenskiBio3816</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#homework-14" id="toc-homework-14" class="nav-link active" data-scroll-target="#homework-14">Homework 14</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">4/23/2026</a>
+  <ul class="collapse">
+  <li><a href="#multivariate-analysis" id="toc-multivariate-analysis" class="nav-link" data-scroll-target="#multivariate-analysis">Multivariate Analysis</a></li>
+  <li><a href="#the-goal-of-the-following-two-models-is-to" id="toc-the-goal-of-the-following-two-models-is-to" class="nav-link" data-scroll-target="#the-goal-of-the-following-two-models-is-to">The goal of the following two models is to:</a></li>
+  </ul></li>
+  <li><a href="#determine-whether-more-predictors-are-needed-to-adequately-describe-the-variance-in-the-dataset-road-damages-during-extreme-storm-events" id="toc-determine-whether-more-predictors-are-needed-to-adequately-describe-the-variance-in-the-dataset-road-damages-during-extreme-storm-events" class="nav-link" data-scroll-target="#determine-whether-more-predictors-are-needed-to-adequately-describe-the-variance-in-the-dataset-road-damages-during-extreme-storm-events">1. Determine whether more predictors are needed to adequately describe the variance in the dataset (road damages during extreme storm events)</a></li>
+  <li><a href="#use-a-random-forest-to-identify-which-predictor-variables-were-most-important-in-determining-whether-a-road-segment-was-damaged-during-the-july-2023-flood-event." id="toc-use-a-random-forest-to-identify-which-predictor-variables-were-most-important-in-determining-whether-a-road-segment-was-damaged-during-the-july-2023-flood-event." class="nav-link" data-scroll-target="#use-a-random-forest-to-identify-which-predictor-variables-were-most-important-in-determining-whether-a-road-segment-was-damaged-during-the-july-2023-flood-event.">2. Use a Random Forest to identify which predictor variables were most important in determining whether a road segment was damaged during the July 2023 flood event.</a></li>
+  <li><a href="#these-models-were-recommended-by-professor-burnham-for-use-in-the-context-of-my-ra-position-and-thesis-work-and-will-be-incorporated-into-my-larger-research-project" id="toc-these-models-were-recommended-by-professor-burnham-for-use-in-the-context-of-my-ra-position-and-thesis-work-and-will-be-incorporated-into-my-larger-research-project" class="nav-link" data-scroll-target="#these-models-were-recommended-by-professor-burnham-for-use-in-the-context-of-my-ra-position-and-thesis-work-and-will-be-incorporated-into-my-larger-research-project">(These models were recommended by Professor Burnham for use in the context of my RA position and thesis work, and will be incorporated into my larger research project)</a></li>
+  <li><a href="#the-figure-showing-dimensions-1-and-2-indicates-that-there-is-poor-separation-between-groups.-because-there-was-such-poor-separation-seen-between-components-on-the-scree-plot-all-dimensionpc-eigenvalues-1-it-is-difficult-to-determine-which-pcs-are-needed-with-the-broken-stick-test.-similarly-if-using-the-kaiser-rule-to-determine-which-dimensions-should-be-retained-all-dimensions-are-needed.-the-fact-that-the-retained-dimensions-describe-49.4-percent-of-the-variance-under-the-kaiser-rule-and-possibly-less-with-the-broken-stick-approach-indicates-two-things.-firstly-the-relationship-between-the-variables-is-non-linear-which-is-likely-the-case.-secondly-they-suggest-that-variables-are-missing-from-the-dataset-whichbased-on-domain-knowledgeis-also-likely-true." id="toc-the-figure-showing-dimensions-1-and-2-indicates-that-there-is-poor-separation-between-groups.-because-there-was-such-poor-separation-seen-between-components-on-the-scree-plot-all-dimensionpc-eigenvalues-1-it-is-difficult-to-determine-which-pcs-are-needed-with-the-broken-stick-test.-similarly-if-using-the-kaiser-rule-to-determine-which-dimensions-should-be-retained-all-dimensions-are-needed.-the-fact-that-the-retained-dimensions-describe-49.4-percent-of-the-variance-under-the-kaiser-rule-and-possibly-less-with-the-broken-stick-approach-indicates-two-things.-firstly-the-relationship-between-the-variables-is-non-linear-which-is-likely-the-case.-secondly-they-suggest-that-variables-are-missing-from-the-dataset-whichbased-on-domain-knowledgeis-also-likely-true." class="nav-link" data-scroll-target="#the-figure-showing-dimensions-1-and-2-indicates-that-there-is-poor-separation-between-groups.-because-there-was-such-poor-separation-seen-between-components-on-the-scree-plot-all-dimensionpc-eigenvalues-1-it-is-difficult-to-determine-which-pcs-are-needed-with-the-broken-stick-test.-similarly-if-using-the-kaiser-rule-to-determine-which-dimensions-should-be-retained-all-dimensions-are-needed.-the-fact-that-the-retained-dimensions-describe-49.4-percent-of-the-variance-under-the-kaiser-rule-and-possibly-less-with-the-broken-stick-approach-indicates-two-things.-firstly-the-relationship-between-the-variables-is-non-linear-which-is-likely-the-case.-secondly-they-suggest-that-variables-are-missing-from-the-dataset-whichbased-on-domain-knowledgeis-also-likely-true.">The figure showing Dimensions 1 and 2 indicates that there is poor separation between groups. Because there was such poor separation seen between components on the scree plot (all Dimension/PC eigenvalues &gt; 1), it is difficult to determine which PCs are needed with the broken stick test. Similarly, if using the Kaiser rule to determine which dimensions should be retained, all dimensions are needed. The fact that the retained dimensions describe 49.4 percent of the variance under the kaiser rule, and possibly less with the broken stick approach indicates two things. Firstly, the relationship between the variables is non-linear, which is likely the case. Secondly, they suggest that variables are missing from the dataset, which–based on domain knowledge–is also likely true.</a></li>
+  <li><a href="#for-the-numeric-variables-dimension-1-pc1-is-dominated-by-parent-material-rank-pm_rank-k-factor-rating-k_final-and-the-percent-forested-land-within-50-meters-of-the-road-segment-percentforestedland.-dimension-2-pc2-is-dominated-by-topographic-convergence-mean_topoconvergence_50m-parent-material-rank-pm_rank-and-mean-hillslope-within-30-meters-of-each-segment-meanslope30m." id="toc-for-the-numeric-variables-dimension-1-pc1-is-dominated-by-parent-material-rank-pm_rank-k-factor-rating-k_final-and-the-percent-forested-land-within-50-meters-of-the-road-segment-percentforestedland.-dimension-2-pc2-is-dominated-by-topographic-convergence-mean_topoconvergence_50m-parent-material-rank-pm_rank-and-mean-hillslope-within-30-meters-of-each-segment-meanslope30m." class="nav-link" data-scroll-target="#for-the-numeric-variables-dimension-1-pc1-is-dominated-by-parent-material-rank-pm_rank-k-factor-rating-k_final-and-the-percent-forested-land-within-50-meters-of-the-road-segment-percentforestedland.-dimension-2-pc2-is-dominated-by-topographic-convergence-mean_topoconvergence_50m-parent-material-rank-pm_rank-and-mean-hillslope-within-30-meters-of-each-segment-meanslope30m.">For the numeric variables, Dimension 1 (PC1) is dominated by Parent material rank (PM_Rank), K Factor rating (K_final), and the percent forested land within 50 meters of the road segment (PercentForestedLand). Dimension 2 (PC2) is dominated by topographic convergence (Mean_TopoConvergence_50m), Parent Material Rank (PM_Rank), and mean hillslope within 30 meters of each segment (MeanSlope30m).</a></li>
+  <li><a href="#for-categorical-variables-the-first-dimension-partially-separates-based-on-the-surface-type-paved-vs.-unpaved-and-certain-parent-matierials-e.g.-alluvium-a--2.644-glaciofluvial-gf--2.804-and-mixed-deposits-like-dtgtgf-2.162.-the-second-dimension-has-strong-contributions-from-certain-parent-materials-such-as-water-w--7.33." id="toc-for-categorical-variables-the-first-dimension-partially-separates-based-on-the-surface-type-paved-vs.-unpaved-and-certain-parent-matierials-e.g.-alluvium-a--2.644-glaciofluvial-gf--2.804-and-mixed-deposits-like-dtgtgf-2.162.-the-second-dimension-has-strong-contributions-from-certain-parent-materials-such-as-water-w--7.33." class="nav-link" data-scroll-target="#for-categorical-variables-the-first-dimension-partially-separates-based-on-the-surface-type-paved-vs.-unpaved-and-certain-parent-matierials-e.g.-alluvium-a--2.644-glaciofluvial-gf--2.804-and-mixed-deposits-like-dtgtgf-2.162.-the-second-dimension-has-strong-contributions-from-certain-parent-materials-such-as-water-w--7.33.">For Categorical variables, the first dimension partially separates based on the surface type (paved vs.&nbsp;unpaved), and certain parent matierials (e.g.&nbsp;alluvium (A = -2.644), glaciofluvial (GF = -2.804), and mixed deposits like DT/GT/GF (+2.162)). The second dimension has strong contributions from certain parent materials such as water (W = -7.33).</a></li>
+  <li><a href="#famd-does-not-a-significance-test-for-this-dataset-will-return-high-significance-for-all-principle-components-given-the-sample-size-and-was-thus-not-included." id="toc-famd-does-not-a-significance-test-for-this-dataset-will-return-high-significance-for-all-principle-components-given-the-sample-size-and-was-thus-not-included." class="nav-link" data-scroll-target="#famd-does-not-a-significance-test-for-this-dataset-will-return-high-significance-for-all-principle-components-given-the-sample-size-and-was-thus-not-included.">FAMD does not A significance test for this dataset will return high significance for all principle components given the sample size and was thus not included.</a>
+  <ul class="collapse">
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources:</a></li>
+  </ul></li>
+  <li><a href="#blaufuks-w.-2021-may-25.-famd-how-to-generalize-pca-to-categorical-and-numerical-data.-towards-data-science.-httpstowardsdatascience.comfamd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210" id="toc-blaufuks-w.-2021-may-25.-famd-how-to-generalize-pca-to-categorical-and-numerical-data.-towards-data-science.-httpstowardsdatascience.comfamd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210" class="nav-link" data-scroll-target="#blaufuks-w.-2021-may-25.-famd-how-to-generalize-pca-to-categorical-and-numerical-data.-towards-data-science.-httpstowardsdatascience.comfamd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210">Blaufuks, W. (2021, May 25). FAMD: How to generalize PCA to categorical and numerical data. Towards Data Science. https://towardsdatascience.com/famd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210/</a></li>
+  <li><a href="#mangale-s.-2020-august-28.-scree-plot.-medium.-httpssanchitamangale12.medium.comscree-plot-733ed72c8608" id="toc-mangale-s.-2020-august-28.-scree-plot.-medium.-httpssanchitamangale12.medium.comscree-plot-733ed72c8608" class="nav-link" data-scroll-target="#mangale-s.-2020-august-28.-scree-plot.-medium.-httpssanchitamangale12.medium.comscree-plot-733ed72c8608">MANGALE, S. (2020, August 28). Scree Plot. Medium. https://sanchitamangale12.medium.com/scree-plot-733ed72c8608</a></li>
+  <li><a href="#roghani-a.-n.d..-rpubsfactor-analysis-of-mixed-data.-retrieved-april-20-2026-from-httpsrpubs.comaliro831890" id="toc-roghani-a.-n.d..-rpubsfactor-analysis-of-mixed-data.-retrieved-april-20-2026-from-httpsrpubs.comaliro831890" class="nav-link" data-scroll-target="#roghani-a.-n.d..-rpubsfactor-analysis-of-mixed-data.-retrieved-april-20-2026-from-httpsrpubs.comaliro831890">Roghani, A. (n.d.). RPubs—Factor Analysis of Mixed Data. Retrieved April 20, 2026, from https://rpubs.com/aliro/831890</a></li>
+  <li><a href="#oob-estimate-of-error-rate-16.07" id="toc-oob-estimate-of-error-rate-16.07" class="nav-link" data-scroll-target="#oob-estimate-of-error-rate-16.07">OOB estimate of error rate: 16.07%</a></li>
+  <li><a href="#the-balanced-accuracy-a-better-metric-given-the-class-imbalance-in-this-model-0.76.-there-is-a-need-for-more-predictor-variables.-class-imbalance-may-also-be-less-of-an-issue-if-a-neural-network-or-catboost-is-used." id="toc-the-balanced-accuracy-a-better-metric-given-the-class-imbalance-in-this-model-0.76.-there-is-a-need-for-more-predictor-variables.-class-imbalance-may-also-be-less-of-an-issue-if-a-neural-network-or-catboost-is-used." class="nav-link" data-scroll-target="#the-balanced-accuracy-a-better-metric-given-the-class-imbalance-in-this-model-0.76.-there-is-a-need-for-more-predictor-variables.-class-imbalance-may-also-be-less-of-an-issue-if-a-neural-network-or-catboost-is-used.">The Balanced Accuracy (a better metric given the class imbalance) in this model ~= 0.76. There is a need for more predictor variables. Class imbalance may also be less of an issue if a neural network or CatBoost is used.</a></li>
+  <li><a href="#meantopoconvergence_50m-mean-topographic-wetness-within-a-50m-buffer-of-the-road-segment-had-high-meandecreasegini-and-meandecreaseaccuracy-indicating-that-it-has-high-predictive-power-and-influence-over-tree-structure." id="toc-meantopoconvergence_50m-mean-topographic-wetness-within-a-50m-buffer-of-the-road-segment-had-high-meandecreasegini-and-meandecreaseaccuracy-indicating-that-it-has-high-predictive-power-and-influence-over-tree-structure." class="nav-link" data-scroll-target="#meantopoconvergence_50m-mean-topographic-wetness-within-a-50m-buffer-of-the-road-segment-had-high-meandecreasegini-and-meandecreaseaccuracy-indicating-that-it-has-high-predictive-power-and-influence-over-tree-structure.">MeanTopoConvergence_50m (Mean Topographic Wetness within a 50m buffer of the road segment) had high MeanDecreaseGini and MeanDecreaseAccuracy, indicating that it has high predictive power and influence over tree structure.</a></li>
+  <li><a href="#precipitation-in.-on-the-road-surface-predictor-name-mean-had-the-highest-meandecreasegini-but-the-lowest-meandecreaseaccuracy.-this-indicates-that-while-the-variable-is-important-to-the-tree-structure-permuting-it-doesnt-alter-the-accuracy-of-the-model-as-much-as-other-variables.-it-is-likely-thatdue-to-orographic-effectshigh-precipitation-values-are-correlated-with-very-highlow-topographic-variables-seen-in-mountainous-areas-e.g.-topographic-wetness-index-road-slope-mean-hillslope-angle-etc.." id="toc-precipitation-in.-on-the-road-surface-predictor-name-mean-had-the-highest-meandecreasegini-but-the-lowest-meandecreaseaccuracy.-this-indicates-that-while-the-variable-is-important-to-the-tree-structure-permuting-it-doesnt-alter-the-accuracy-of-the-model-as-much-as-other-variables.-it-is-likely-thatdue-to-orographic-effectshigh-precipitation-values-are-correlated-with-very-highlow-topographic-variables-seen-in-mountainous-areas-e.g.-topographic-wetness-index-road-slope-mean-hillslope-angle-etc.." class="nav-link" data-scroll-target="#precipitation-in.-on-the-road-surface-predictor-name-mean-had-the-highest-meandecreasegini-but-the-lowest-meandecreaseaccuracy.-this-indicates-that-while-the-variable-is-important-to-the-tree-structure-permuting-it-doesnt-alter-the-accuracy-of-the-model-as-much-as-other-variables.-it-is-likely-thatdue-to-orographic-effectshigh-precipitation-values-are-correlated-with-very-highlow-topographic-variables-seen-in-mountainous-areas-e.g.-topographic-wetness-index-road-slope-mean-hillslope-angle-etc..">Precipitation (in.) on the road surface (predictor name: MEAN) had the highest MeanDecreaseGini, but the lowest MeanDecreaseAccuracy. This indicates that, while the variable is important to the tree structure, permuting it doesn’t alter the accuracy of the model as much as other variables. It is likely that–due to orographic effects–high precipitation values are correlated with very high/low topographic variables seen in mountainous areas (e.g.&nbsp;Topographic Wetness Index, Road Slope, Mean hillslope angle, etc.).</a></li>
+  <li><a href="#both-models-had-shortcomings-due-to-class-imbalance-and-the-limited-amount-of-variance-explained-by-the-predictors.-they-both-isolated-topographic-convergence-as-an-important-variablepredictor.-the-famd-loadings-and-the-balanced-rf-meandecreaseaccuracy-rank-both-suggest-that-precipitation-is-not-an-important-variable-but-the-meandecreasegini-in-the-rf-suggests-otherwise-as-it-has-significant-influence-on-tree-structure." id="toc-both-models-had-shortcomings-due-to-class-imbalance-and-the-limited-amount-of-variance-explained-by-the-predictors.-they-both-isolated-topographic-convergence-as-an-important-variablepredictor.-the-famd-loadings-and-the-balanced-rf-meandecreaseaccuracy-rank-both-suggest-that-precipitation-is-not-an-important-variable-but-the-meandecreasegini-in-the-rf-suggests-otherwise-as-it-has-significant-influence-on-tree-structure." class="nav-link" data-scroll-target="#both-models-had-shortcomings-due-to-class-imbalance-and-the-limited-amount-of-variance-explained-by-the-predictors.-they-both-isolated-topographic-convergence-as-an-important-variablepredictor.-the-famd-loadings-and-the-balanced-rf-meandecreaseaccuracy-rank-both-suggest-that-precipitation-is-not-an-important-variable-but-the-meandecreasegini-in-the-rf-suggests-otherwise-as-it-has-significant-influence-on-tree-structure.">Both models had shortcomings due to class imbalance, and the limited amount of variance explained by the predictors. They both isolated topographic convergence as an important variable/predictor. The FAMD loadings and the Balanced RF MeanDecreaseAccuracy rank both suggest that precipitation is not an important variable, but the MeanDecreaseGini in the RF suggests otherwise as it has significant influence on tree structure.</a></li>
+  <li><a href="#given-that-the-famd-focuses-on-linear-relationships-the-results-from-that-test-are-best-used-as-an-indication-that-more-variables-are-needed-instead-of-as-an-indicator-of-variable-importance." id="toc-given-that-the-famd-focuses-on-linear-relationships-the-results-from-that-test-are-best-used-as-an-indication-that-more-variables-are-needed-instead-of-as-an-indicator-of-variable-importance." class="nav-link" data-scroll-target="#given-that-the-famd-focuses-on-linear-relationships-the-results-from-that-test-are-best-used-as-an-indication-that-more-variables-are-needed-instead-of-as-an-indicator-of-variable-importance.">Given that the FAMD focuses on linear relationships, the results from that test are best used as an indication that more variables are needed, instead of as an indicator of variable importance.</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework_14</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="homework-14" class="level1">
+<h1>Homework 14</h1>
+</section>
+<section id="section" class="level1">
+<h1>4/23/2026</h1>
+<section id="multivariate-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="multivariate-analysis">Multivariate Analysis</h3>
+</section>
+<section id="the-goal-of-the-following-two-models-is-to" class="level2">
+<h2 class="anchored" data-anchor-id="the-goal-of-the-following-two-models-is-to">The goal of the following two models is to:</h2>
+</section>
+</section>
+<section id="determine-whether-more-predictors-are-needed-to-adequately-describe-the-variance-in-the-dataset-road-damages-during-extreme-storm-events" class="level1">
+<h1>1. Determine whether more predictors are needed to adequately describe the variance in the dataset (road damages during extreme storm events)</h1>
+</section>
+<section id="use-a-random-forest-to-identify-which-predictor-variables-were-most-important-in-determining-whether-a-road-segment-was-damaged-during-the-july-2023-flood-event." class="level1">
+<h1>2. Use a Random Forest to identify which predictor variables were most important in determining whether a road segment was damaged during the July 2023 flood event.</h1>
+</section>
+<section id="these-models-were-recommended-by-professor-burnham-for-use-in-the-context-of-my-ra-position-and-thesis-work-and-will-be-incorporated-into-my-larger-research-project" class="level1">
+<h1>(These models were recommended by Professor Burnham for use in the context of my RA position and thesis work, and will be incorporated into my larger research project)</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(FactoMineR)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(factoextra)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Welcome to factoextra!</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Want to learn more? See two factoextra-related books at https://www.datanovia.com/en/product/practical-guide-to-principal-component-methods-in-r/</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>randomForest 4.7-1.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Type rfNews() to see new features/changes/bug fixes.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'randomForest'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:ggplot2':
+
+    margin</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(e1071)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'e1071'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:ggplot2':
+
+    element</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.0     ✔ readr     2.1.6
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ lubridate 1.9.4     ✔ tibble    3.3.1
+✔ purrr     1.2.1     ✔ tidyr     1.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::combine()       masks randomForest::combine()
+✖ e1071::element()       masks ggplot2::element()
+✖ dplyr::filter()        masks stats::filter()
+✖ dplyr::lag()           masks stats::lag()
+✖ purrr::lift()          masks caret::lift()
+✖ randomForest::margin() masks ggplot2::margin()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pROC)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Type 'citation("pROC")' for a citation.
+
+Attaching package: 'pROC'
+
+The following objects are masked from 'package:stats':
+
+    cov, smooth, var</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>model_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Data/model_data_Classifier1.csv"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(model_data) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Avg_Slope K_final MeanSlope30m PercentForestedLand     MEAN PM_rank
+1  4.954450    0.49     3.082571                   0 1.889603       4
+2  3.684948    0.49     2.312988                   0 1.868395       4
+3  2.748165    0.49     1.622722                   0 1.846787       4
+4  2.862315    0.49     1.907945                   0 1.824649       4
+5  2.361402    0.49     2.805646                   0 1.803920       4
+6  5.839251    0.17     3.445237                   0 2.503557       4
+  Culvert_Count Surface StreamCros HYDROGROUP PARENT Mean_TopoConvergence_50m
+1             0 Unpaved         No          D     GL                 6.855893
+2             0 Unpaved         No          D     GL                 7.832412
+3             0 Unpaved         No          D     GL                 7.630836
+4             0 Unpaved         No          D     GL                 7.938209
+5             1 Unpaved         No          D     GL                 7.184344
+6             0 Unpaved         No          C     GL                 7.195348
+  damaged
+1      No
+2      No
+3      No
+4      No
+5      No
+6      No</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>famd_data <span class="ot">&lt;-</span> model_data <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>damaged)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Run FAMD</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>famd_result <span class="ot">&lt;-</span> <span class="fu">FAMD</span>(famd_data, <span class="at">ncp =</span> <span class="dv">12</span>, <span class="at">graph =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Scree plot ------------------------------------------------------------</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="co"># proportion of variance plot</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_screeplot</span>(famd_result, <span class="at">ncp =</span> <span class="dv">12</span>,</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">addlabels =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">barfill =</span> <span class="st">"firebrick"</span>, <span class="at">barcolor =</span> <span class="st">"firebrick"</span>,</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">linecolor =</span> <span class="st">"black"</span>,</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">main =</span> <span class="st">"FAMD Proportion of Variance per Component Plot"</span>) <span class="sc">+</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">22</span>),</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">22</span>)</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_14_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># scree plot</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">fviz_screeplot</span>(famd_result, <span class="at">ncp =</span> <span class="dv">12</span>,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">choice =</span> <span class="st">"eigenvalue"</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">addlabels =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">linecolor =</span> <span class="st">"black"</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">main =</span> <span class="st">"Scree Plot — Eigenvalues for each Component"</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">9</span>, <span class="at">y =</span> <span class="fl">1.15</span>, <span class="at">label =</span> <span class="st">"Kaiser criterion (eigenvalue = 1)"</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">22</span>),</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">22</span>)</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_14_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>eig<span class="ot">&lt;-</span> <span class="fu">get_eigenvalue</span>(famd_result)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Print variable contributions to first 2 components</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>var_contrib <span class="ot">&lt;-</span> famd_result<span class="sc">$</span>var<span class="sc">$</span>contrib</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">round</span>(var_contrib[, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>], <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                         Dim.1 Dim.2
+Avg_Slope                 7.37  5.20
+K_final                   9.62  2.68
+MeanSlope30m              8.22 10.45
+PercentForestedLand       9.07  6.43
+MEAN                      4.46  0.47
+PM_rank                  11.55 16.67
+Culvert_Count             0.28  0.18
+Mean_TopoConvergence_50m  5.77  8.59
+Surface                   7.95  1.01
+StreamCros                0.02  0.57
+HYDROGROUP               15.66 21.75
+PARENT                   20.02 26.00</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract individual coordinates from FAMD</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>ind_coords <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(famd_result<span class="sc">$</span>ind<span class="sc">$</span>coord[, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(ind_coords) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Dim1"</span>, <span class="st">"Dim2"</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>ind_coords<span class="sc">$</span>damaged <span class="ot">&lt;-</span> model_data<span class="sc">$</span>damaged</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>sample_idx <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">which</span>(ind_coords<span class="sc">$</span>damaged <span class="sc">==</span> <span class="st">"No"</span>),</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">which</span>(ind_coords<span class="sc">$</span>damaged <span class="sc">==</span> <span class="st">"Yes"</span>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>plot_data <span class="ot">&lt;-</span> ind_coords[sample_idx, ]</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>plot_data<span class="sc">$</span>damaged <span class="ot">&lt;-</span> <span class="fu">factor</span>(plot_data<span class="sc">$</span>damaged, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="co"># plot first two dimensions with ellipses </span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_data, <span class="fu">aes</span>(<span class="at">x =</span> Dim1, <span class="at">y =</span> Dim2, <span class="at">color =</span> damaged)) <span class="sc">+</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_ellipse</span>(<span class="at">level =</span> <span class="fl">0.95</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"No"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"red"</span>),</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Not Damaged"</span>, <span class="st">"Damaged"</span>)) <span class="sc">+</span></span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"FAMD — Dim 1 vs Dim 2 with 95% Confidence Ellipses"</span>,</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="fu">paste0</span>(<span class="st">"Dimension 1 ("</span>, <span class="fu">round</span>(eig[<span class="dv">1</span>, <span class="dv">2</span>], <span class="dv">1</span>), <span class="st">"%)"</span>),</span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="fu">paste0</span>(<span class="st">"Dimension 2 ("</span>, <span class="fu">round</span>(eig[<span class="dv">2</span>, <span class="dv">2</span>], <span class="dv">1</span>), <span class="st">"%)"</span>),</span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Status"</span>) <span class="sc">+</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">22</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_14_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Numeric variable loadings (correlation with each dimension)</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(famd_result<span class="sc">$</span>quanti.var<span class="sc">$</span>coord[, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>], <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                          Dim.1  Dim.2
+Avg_Slope                 0.507  0.369
+K_final                   0.579 -0.265
+MeanSlope30m              0.535  0.523
+PercentForestedLand       0.562  0.410
+MEAN                      0.394  0.111
+PM_rank                  -0.634  0.661
+Culvert_Count             0.098 -0.069
+Mean_TopoConvergence_50m -0.448 -0.474</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorical variable loadings (coordinates per category level)</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(famd_result<span class="sc">$</span>quali.var<span class="sc">$</span>coord[, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>], <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           Dim.1  Dim.2
+Paved     -1.366 -0.370
+Unknown   -0.156  0.299
+Unpaved    0.731  0.180
+No         0.015  0.058
+Yes       -0.173 -0.674
+A         -2.480  1.270
+A/D       -3.167 -0.026
+B          0.408  1.332
+B/D       -2.361 -0.612
+C          0.818  0.800
+C/D        0.783 -1.530
+D          0.845 -1.275
+not rated -1.686 -1.023
+Unknown   -3.771 -3.446
+water      1.395 -7.333
+A         -2.644  0.367
+DT         1.389 -1.310
+DT/GT      1.061 -0.820
+DT/GT/GF   2.162  1.689
+DT/O       0.530 -1.550
+GF        -2.804  1.079
+GF/GL     -1.757 -1.262
+GL        -0.547 -1.935
+GL/GF      1.174  0.914
+GT         0.616  1.239
+GT/DT      0.440  1.184
+GT/GF     -0.371  2.407
+GT/GT_R    1.473  2.443
+M         -1.948 -2.001
+M/GF/GL   -1.448  0.264
+O         -1.741 -1.720
+O/A       -3.161  0.243
+Unknown   -3.771 -3.446
+W          1.395 -7.333</code></pre>
+</div>
+</div>
+</section>
+<section id="the-figure-showing-dimensions-1-and-2-indicates-that-there-is-poor-separation-between-groups.-because-there-was-such-poor-separation-seen-between-components-on-the-scree-plot-all-dimensionpc-eigenvalues-1-it-is-difficult-to-determine-which-pcs-are-needed-with-the-broken-stick-test.-similarly-if-using-the-kaiser-rule-to-determine-which-dimensions-should-be-retained-all-dimensions-are-needed.-the-fact-that-the-retained-dimensions-describe-49.4-percent-of-the-variance-under-the-kaiser-rule-and-possibly-less-with-the-broken-stick-approach-indicates-two-things.-firstly-the-relationship-between-the-variables-is-non-linear-which-is-likely-the-case.-secondly-they-suggest-that-variables-are-missing-from-the-dataset-whichbased-on-domain-knowledgeis-also-likely-true." class="level1">
+<h1>The figure showing Dimensions 1 and 2 indicates that there is poor separation between groups. Because there was such poor separation seen between components on the scree plot (all Dimension/PC eigenvalues &gt; 1), it is difficult to determine which PCs are needed with the broken stick test. Similarly, if using the Kaiser rule to determine which dimensions should be retained, all dimensions are needed. The fact that the retained dimensions describe 49.4 percent of the variance under the kaiser rule, and possibly less with the broken stick approach indicates two things. Firstly, the relationship between the variables is non-linear, which is likely the case. Secondly, they suggest that variables are missing from the dataset, which–based on domain knowledge–is also likely true.</h1>
+</section>
+<section id="for-the-numeric-variables-dimension-1-pc1-is-dominated-by-parent-material-rank-pm_rank-k-factor-rating-k_final-and-the-percent-forested-land-within-50-meters-of-the-road-segment-percentforestedland.-dimension-2-pc2-is-dominated-by-topographic-convergence-mean_topoconvergence_50m-parent-material-rank-pm_rank-and-mean-hillslope-within-30-meters-of-each-segment-meanslope30m." class="level1">
+<h1>For the numeric variables, Dimension 1 (PC1) is dominated by Parent material rank (PM_Rank), K Factor rating (K_final), and the percent forested land within 50 meters of the road segment (PercentForestedLand). Dimension 2 (PC2) is dominated by topographic convergence (Mean_TopoConvergence_50m), Parent Material Rank (PM_Rank), and mean hillslope within 30 meters of each segment (MeanSlope30m).</h1>
+</section>
+<section id="for-categorical-variables-the-first-dimension-partially-separates-based-on-the-surface-type-paved-vs.-unpaved-and-certain-parent-matierials-e.g.-alluvium-a--2.644-glaciofluvial-gf--2.804-and-mixed-deposits-like-dtgtgf-2.162.-the-second-dimension-has-strong-contributions-from-certain-parent-materials-such-as-water-w--7.33." class="level1">
+<h1>For Categorical variables, the first dimension partially separates based on the surface type (paved vs.&nbsp;unpaved), and certain parent matierials (e.g.&nbsp;alluvium (A = -2.644), glaciofluvial (GF = -2.804), and mixed deposits like DT/GT/GF (+2.162)). The second dimension has strong contributions from certain parent materials such as water (W = -7.33).</h1>
+</section>
+<section id="famd-does-not-a-significance-test-for-this-dataset-will-return-high-significance-for-all-principle-components-given-the-sample-size-and-was-thus-not-included." class="level1">
+<h1>FAMD does not A significance test for this dataset will return high significance for all principle components given the sample size and was thus not included.</h1>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources:</h2>
+</section>
+</section>
+<section id="blaufuks-w.-2021-may-25.-famd-how-to-generalize-pca-to-categorical-and-numerical-data.-towards-data-science.-httpstowardsdatascience.comfamd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210" class="level1">
+<h1>Blaufuks, W. (2021, May 25). FAMD: How to generalize PCA to categorical and numerical data. Towards Data Science. https://towardsdatascience.com/famd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210/</h1>
+</section>
+<section id="mangale-s.-2020-august-28.-scree-plot.-medium.-httpssanchitamangale12.medium.comscree-plot-733ed72c8608" class="level1">
+<h1>MANGALE, S. (2020, August 28). Scree Plot. Medium. https://sanchitamangale12.medium.com/scree-plot-733ed72c8608</h1>
+</section>
+<section id="roghani-a.-n.d..-rpubsfactor-analysis-of-mixed-data.-retrieved-april-20-2026-from-httpsrpubs.comaliro831890" class="level1">
+<h1>Roghani, A. (n.d.). RPubs—Factor Analysis of Mixed Data. Retrieved April 20, 2026, from https://rpubs.com/aliro/831890</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>model_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Data/model_data_Classifier1.csv"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(model_data) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Avg_Slope K_final MeanSlope30m PercentForestedLand     MEAN PM_rank
+1  4.954450    0.49     3.082571                   0 1.889603       4
+2  3.684948    0.49     2.312988                   0 1.868395       4
+3  2.748165    0.49     1.622722                   0 1.846787       4
+4  2.862315    0.49     1.907945                   0 1.824649       4
+5  2.361402    0.49     2.805646                   0 1.803920       4
+6  5.839251    0.17     3.445237                   0 2.503557       4
+  Culvert_Count Surface StreamCros HYDROGROUP PARENT Mean_TopoConvergence_50m
+1             0 Unpaved         No          D     GL                 6.855893
+2             0 Unpaved         No          D     GL                 7.832412
+3             0 Unpaved         No          D     GL                 7.630836
+4             0 Unpaved         No          D     GL                 7.938209
+5             1 Unpaved         No          D     GL                 7.184344
+6             0 Unpaved         No          C     GL                 7.195348
+  damaged
+1      No
+2      No
+3      No
+4      No
+5      No
+6      No</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>cat_cols_full<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Surface"</span>, <span class="st">"HYDROGROUP"</span>, <span class="st">"PARENT"</span>, <span class="st">"StreamCros"</span>,<span class="st">"damaged"</span> ) </span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> cat_cols_full) {</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  model_data[[col]] <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(model_data[[col]])</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>} <span class="co">#turn into factor so RF doesn't treat two different categories (stored internally as integers) like numbers</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(model_data<span class="sc">$</span>damaged, <span class="at">p =</span> <span class="fl">0.7</span>, <span class="at">list =</span> <span class="cn">FALSE</span>) <span class="co"># this line samples 70% as training data and keeps 0.7% damaged segments ratio for both train and test sets</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> model_data[train, ] <span class="co">#train data </span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>test_data  <span class="ot">&lt;-</span> model_data[<span class="sc">-</span>train, ] <span class="co"># model_data - train data = 30% of model_data </span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(train_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 151130</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(test_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 64769</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tuneRF() suggested using mtry=1 (both mtry=1 and mtry=3 had the same OOB error)</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>best_mtry <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="fu">ncol</span>(train_data) <span class="sc">-</span> <span class="dv">1</span>)) <span class="co"># based on square root of prediction data columns (hueristic) https://bradleyboehmke.github.io/HOML/random-forest.html</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Random Forest with Balanced downsampling to address imbalanced classes</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Reference: Chen, Liaw &amp; Breiman (2004) "Using Random Forest to Learn Imbalanced Data" (UC Berkeley Technical Report 666)</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>n_no  <span class="ot">&lt;-</span> <span class="fu">sum</span>(train_data<span class="sc">$</span>damaged <span class="sc">==</span> <span class="st">"No"</span>)</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>n_yes <span class="ot">&lt;-</span> <span class="fu">sum</span>(train_data<span class="sc">$</span>damaged <span class="sc">==</span> <span class="st">"Yes"</span>)</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a><span class="co"># run model </span></span>
+<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a>rf_model_ds <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(</span>
+<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a>  damaged <span class="sc">~</span> .,</span>
+<span id="cb37-25"><a href="#cb37-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">data       =</span> train_data,</span>
+<span id="cb37-26"><a href="#cb37-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">ntree      =</span> <span class="dv">500</span>,</span>
+<span id="cb37-27"><a href="#cb37-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">mtry       =</span> best_mtry,</span>
+<span id="cb37-28"><a href="#cb37-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">strata     =</span> train_data<span class="sc">$</span>damaged,</span>
+<span id="cb37-29"><a href="#cb37-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">sampsize   =</span> <span class="fu">c</span>(<span class="st">"No"</span> <span class="ot">=</span> n_yes, <span class="st">"Yes"</span> <span class="ot">=</span> n_yes),</span>
+<span id="cb37-30"><a href="#cb37-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">importance =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb37-31"><a href="#cb37-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">proximity  =</span> <span class="cn">FALSE</span></span>
+<span id="cb37-32"><a href="#cb37-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb37-33"><a href="#cb37-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-34"><a href="#cb37-34" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rf_model_ds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+ randomForest(formula = damaged ~ ., data = train_data, ntree = 500,      mtry = best_mtry, strata = train_data$damaged, sampsize = c(No = n_yes,          Yes = n_yes), importance = TRUE, proximity = FALSE) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 3
+
+        OOB estimate of  error rate: 16%
+Confusion matrix:
+        No   Yes class.error
+No  126240 23819   0.1587309
+Yes    366   705   0.3417367</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>p_test_ds <span class="ot">&lt;-</span> <span class="fu">predict</span>(rf_model_ds, test_data) <span class="co">#evaluate on test data</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>cm_test_ds <span class="ot">&lt;-</span> <span class="fu">confusionMatrix</span>(p_test_ds, test_data<span class="sc">$</span>damaged, <span class="at">positive =</span> <span class="st">"Yes"</span>) <span class="co"># confusion matrix</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cm_test_ds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction    No   Yes
+       No  54307   164
+       Yes 10004   294
+                                          
+               Accuracy : 0.843           
+                 95% CI : (0.8402, 0.8458)
+    No Information Rate : 0.9929          
+    P-Value [Acc &gt; NIR] : 1               
+                                          
+                  Kappa : 0.0417          
+                                          
+ Mcnemar's Test P-Value : &lt;2e-16          
+                                          
+            Sensitivity : 0.641921        
+            Specificity : 0.844443        
+         Pos Pred Value : 0.028549        
+         Neg Pred Value : 0.996989        
+             Prevalence : 0.007071        
+         Detection Rate : 0.004539        
+   Detection Prevalence : 0.158996        
+      Balanced Accuracy : 0.743182        
+                                          
+       'Positive' Class : Yes             
+                                          </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>acc_ds <span class="ot">&lt;-</span> <span class="fu">mean</span>(p_test_ds <span class="sc">==</span> test_data<span class="sc">$</span>damaged) <span class="co">#this exists in the confustion matrix but is called separately</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>Balanced_Accuracy <span class="ot">&lt;-</span><span class="fu">c</span>(cm_test_ds<span class="sc">$</span>byClass[<span class="st">"Balanced Accuracy"</span>])</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(acc_ds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8430113</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#given the class imbalance in the dataset, the balanced accuracy is a better representation of the model's fit (average of Sensitivity and Specificity)</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Balanced_Accuracy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Balanced Accuracy 
+        0.7431824 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rf_model_ds, <span class="at">main =</span> <span class="st">"Random forest OOB error vs number of trees"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_14_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>importance_ds <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">importance</span>(rf_model_ds)) <span class="sc">%&gt;%</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="st">"Variable"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(MeanDecreaseAccuracy))</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(importance_ds) <span class="co">#plot two variable importance measures</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   Variable        No       Yes MeanDecreaseAccuracy
+1  Mean_TopoConvergence_50m 36.129647 33.709881            36.475776
+2                 Avg_Slope 13.828280 21.642752            13.976177
+3              MeanSlope30m  8.860386 30.349701             9.064803
+4                StreamCros  8.515646 15.077541             8.724153
+5       PercentForestedLand  8.041420 31.542800             8.345402
+6                    PARENT  7.638901 21.408450             7.782124
+7                   Surface  5.807389  7.223275             5.877388
+8                   PM_rank  4.376142 13.295719             4.453261
+9             Culvert_Count  3.599199 30.221340             4.180131
+10               HYDROGROUP  3.245315 35.809332             3.555132
+11                  K_final  2.406093 24.483616             2.614423
+12                     MEAN -7.334340 89.285239            -6.071765
+   MeanDecreaseGini
+1         147.80889
+2         126.89617
+3         132.85932
+4          21.68704
+5         116.89021
+6          44.31444
+7          17.97353
+8          21.11251
+9          54.39477
+10         66.80006
+11         59.15699
+12        243.09334</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">varImpPlot</span>(rf_model_ds) <span class="co"># further to the right is most important </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_14_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="oob-estimate-of-error-rate-16.07" class="level1">
+<h1>OOB estimate of error rate: 16.07%</h1>
+</section>
+<section id="the-balanced-accuracy-a-better-metric-given-the-class-imbalance-in-this-model-0.76.-there-is-a-need-for-more-predictor-variables.-class-imbalance-may-also-be-less-of-an-issue-if-a-neural-network-or-catboost-is-used." class="level1">
+<h1>The Balanced Accuracy (a better metric given the class imbalance) in this model ~= 0.76. There is a need for more predictor variables. Class imbalance may also be less of an issue if a neural network or CatBoost is used.</h1>
+</section>
+<section id="meantopoconvergence_50m-mean-topographic-wetness-within-a-50m-buffer-of-the-road-segment-had-high-meandecreasegini-and-meandecreaseaccuracy-indicating-that-it-has-high-predictive-power-and-influence-over-tree-structure." class="level1">
+<h1>MeanTopoConvergence_50m (Mean Topographic Wetness within a 50m buffer of the road segment) had high MeanDecreaseGini and MeanDecreaseAccuracy, indicating that it has high predictive power and influence over tree structure.</h1>
+</section>
+<section id="precipitation-in.-on-the-road-surface-predictor-name-mean-had-the-highest-meandecreasegini-but-the-lowest-meandecreaseaccuracy.-this-indicates-that-while-the-variable-is-important-to-the-tree-structure-permuting-it-doesnt-alter-the-accuracy-of-the-model-as-much-as-other-variables.-it-is-likely-thatdue-to-orographic-effectshigh-precipitation-values-are-correlated-with-very-highlow-topographic-variables-seen-in-mountainous-areas-e.g.-topographic-wetness-index-road-slope-mean-hillslope-angle-etc.." class="level1">
+<h1>Precipitation (in.) on the road surface (predictor name: MEAN) had the highest MeanDecreaseGini, but the lowest MeanDecreaseAccuracy. This indicates that, while the variable is important to the tree structure, permuting it doesn’t alter the accuracy of the model as much as other variables. It is likely that–due to orographic effects–high precipitation values are correlated with very high/low topographic variables seen in mountainous areas (e.g.&nbsp;Topographic Wetness Index, Road Slope, Mean hillslope angle, etc.).</h1>
+</section>
+<section id="both-models-had-shortcomings-due-to-class-imbalance-and-the-limited-amount-of-variance-explained-by-the-predictors.-they-both-isolated-topographic-convergence-as-an-important-variablepredictor.-the-famd-loadings-and-the-balanced-rf-meandecreaseaccuracy-rank-both-suggest-that-precipitation-is-not-an-important-variable-but-the-meandecreasegini-in-the-rf-suggests-otherwise-as-it-has-significant-influence-on-tree-structure." class="level1">
+<h1>Both models had shortcomings due to class imbalance, and the limited amount of variance explained by the predictors. They both isolated topographic convergence as an important variable/predictor. The FAMD loadings and the Balanced RF MeanDecreaseAccuracy rank both suggest that precipitation is not an important variable, but the MeanDecreaseGini in the RF suggests otherwise as it has significant influence on tree structure.</h1>
+</section>
+<section id="given-that-the-famd-focuses-on-linear-relationships-the-results-from-that-test-are-best-used-as-an-indication-that-more-variables-are-needed-instead-of-as-an-indicator-of-variable-importance." class="level1">
+<h1>Given that the FAMD focuses on linear relationships, the results from that test are best used as an indication that more variables are needed, instead of as an indicator of variable importance.</h1>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

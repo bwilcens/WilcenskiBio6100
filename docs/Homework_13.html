@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Homework_13 – WilcenskiBio3816</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WilcenskiBio3816</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bryan-wilcenski" id="toc-bryan-wilcenski" class="nav-link active" data-scroll-target="#bryan-wilcenski">Bryan Wilcenski</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">4/15/2026</a>
+  <ul class="collapse">
+  <li><a href="#question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects" id="toc-question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects" class="nav-link" data-scroll-target="#question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects">Question 1:Does any pair of predictors have combined effects on damage likelihood that are greater than their individual effects?</a></li>
+  </ul></li>
+  <li><a href="#note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66." id="toc-note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66." class="nav-link" data-scroll-target="#note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66.">Note: This question and approach was recommended by Professor Burnham after discussing my challenges with developing predictor variables. If there are predictor pairs that act together and have a combined effect on damage probabilities, then it would be possible to use feature engineering to add to my random forest (or Catboost models) to better account for variance. Use of a LLM for coding assistance was also recommended given the number of possible pairs (66).</a></li>
+  <li><a href="#aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages." id="toc-aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages." class="nav-link" data-scroll-target="#aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages.">AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages.</a></li>
+  <li><a href="#according-to-burnham-and-anderson-2004" id="toc-according-to-burnham-and-anderson-2004" class="nav-link" data-scroll-target="#according-to-burnham-and-anderson-2004">According to Burnham and Anderson (2004):</a></li>
+  <li><a href="#some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support." id="toc-some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support." class="nav-link" data-scroll-target="#some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support.">“Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta] i ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta] i ≤ 7 have considerably less support, and models having [Delta] i &gt; 10 have essentailly no support”.</a></li>
+  <li><a href="#in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model." id="toc-in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model." class="nav-link" data-scroll-target="#in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model.">In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model.</a></li>
+  <li><a href="#the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages." id="toc-the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages." class="nav-link" data-scroll-target="#the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages.">The greatest improvement was seen when there was a K_final:HYDROGROUP term used in the GLM. While the ANOVA result shows that K_final is not significant on its own (LR Chisq = 0.11), it is significant depending on the HYDROGROUP it is in (LR Chisq = 113.18). While other predictors are powerful on their own, (e.g.&nbsp;MEAN (precipitation), Mean_TopoConvergence_50m (Topographic Convergence), etc.), this finding highlights a new relationship. The boxplot further demonstrates this relationship, showing that on on poorly-drained HYDROGROUP soils (C, C/D) a higher K_factor is associated with more damage. This relationship makes sense–standing water accumulates on the surface, resulting in roads on soils vulnerable to sheet flow (high K_factor) experiencing more damages.</a>
+  <ul class="collapse">
+  <li><a href="#question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types" id="toc-question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types" class="nav-link" data-scroll-target="#question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types">Question 2: Does the effect of precipitation on damage probability vary across parent material types?</a></li>
+  </ul></li>
+  <li><a href="#this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials." id="toc-this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials." class="nav-link" data-scroll-target="#this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials.">This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation’s effect on damage probabilities do not differ significantly across parent materials.</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework_13</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="bryan-wilcenski" class="level1">
+<h1>Bryan Wilcenski</h1>
+</section>
+<section id="section" class="level1">
+<h1>4/15/2026</h1>
+<section id="question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects" class="level2">
+<h2 class="anchored" data-anchor-id="question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects">Question 1:Does any pair of predictors have combined effects on damage likelihood that are greater than their individual effects?</h2>
+</section>
+</section>
+<section id="note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66." class="level1">
+<h1>Note: This question and approach was recommended by Professor Burnham after discussing my challenges with developing predictor variables. If there are predictor pairs that act together and have a combined effect on damage probabilities, then it would be possible to use feature engineering to add to my random forest (or Catboost models) to better account for variance. Use of a LLM for coding assistance was also recommended given the number of possible pairs (66).</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.0     ✔ readr     2.1.6
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.2     ✔ tibble    3.3.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.2
+✔ purrr     1.2.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: Matrix
+
+Attaching package: 'Matrix'
+
+The following objects are masked from 'package:tidyr':
+
+    expand, pack, unpack</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: carData
+
+Attaching package: 'car'
+
+The following object is masked from 'package:dplyr':
+
+    recode
+
+The following object is masked from 'package:purrr':
+
+    some</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/model_data_Classifier1.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 215899 Columns: 13
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (5): Surface, StreamCros, HYDROGROUP, PARENT, damaged
+dbl (8): Avg_Slope, K_final, MeanSlope30m, PercentForestedLand, MEAN, PM_ran...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model_data <span class="ot">&lt;-</span> model_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Surface =</span> <span class="fu">factor</span>(Surface),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">HYDROGROUP =</span> <span class="fu">factor</span>(HYDROGROUP),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">PARENT =</span> <span class="fu">factor</span>(PARENT),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">StreamCros =</span> <span class="fu">factor</span>(StreamCros),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">damaged_bin =</span> <span class="fu">ifelse</span>(damaged <span class="sc">==</span> <span class="st">"Yes"</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="co">#create damage binary (0,1) and assign all categorical variables as factors</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(model_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 14
+  Avg_Slope K_final MeanSlope30m PercentForestedLand  MEAN PM_rank Culvert_Count
+      &lt;dbl&gt;   &lt;dbl&gt;        &lt;dbl&gt;               &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;         &lt;dbl&gt;
+1      4.95    0.49         3.08                   0  1.89       4             0
+2      3.68    0.49         2.31                   0  1.87       4             0
+3      2.75    0.49         1.62                   0  1.85       4             0
+4      2.86    0.49         1.91                   0  1.82       4             0
+5      2.36    0.49         2.81                   0  1.80       4             1
+6      5.84    0.17         3.45                   0  2.50       4             0
+# ℹ 7 more variables: Surface &lt;fct&gt;, StreamCros &lt;fct&gt;, HYDROGROUP &lt;fct&gt;,
+#   PARENT &lt;fct&gt;, Mean_TopoConvergence_50m &lt;dbl&gt;, damaged &lt;chr&gt;,
+#   damaged_bin &lt;dbl&gt;</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base model — all predictors with no interactions</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>predictors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Avg_Slope"</span>, <span class="st">"K_final"</span>, <span class="st">"MeanSlope30m"</span>, <span class="st">"PercentForestedLand"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">"MEAN"</span>, <span class="st">"PM_rank"</span>, <span class="st">"Culvert_Count"</span>, <span class="st">"Surface"</span>, <span class="st">"StreamCros"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                <span class="st">"HYDROGROUP"</span>, <span class="st">"PARENT"</span>, <span class="st">"Mean_TopoConvergence_50m"</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>base_formula <span class="ot">&lt;-</span> <span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">"damaged_bin ~"</span>, <span class="fu">paste</span>(predictors, <span class="at">collapse =</span> <span class="st">" + "</span>)))</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>base_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(base_formula, <span class="at">data =</span> model_data, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(base_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = base_formula, family = binomial(link = "logit"), 
+    data = model_data)
+
+Coefficients: (3 not defined because of singularities)
+                           Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)              -1.251e+01  8.908e-01 -14.043  &lt; 2e-16 ***
+Avg_Slope                 2.219e-02  6.281e-03   3.533 0.000411 ***
+K_final                  -8.207e-02  2.452e-01  -0.335 0.737861    
+MeanSlope30m              1.040e-01  7.303e-03  14.241  &lt; 2e-16 ***
+PercentForestedLand       3.757e-01  9.076e-02   4.140 3.47e-05 ***
+MEAN                      4.242e-01  1.791e-02  23.688  &lt; 2e-16 ***
+PM_rank                   9.307e-02  1.199e-01   0.776 0.437509    
+Culvert_Count             3.728e-01  2.797e-02  13.332  &lt; 2e-16 ***
+SurfaceUnknown           -5.205e-01  2.337e-01  -2.227 0.025966 *  
+SurfaceUnpaved            1.559e-01  6.949e-02   2.244 0.024836 *  
+StreamCrosYes             6.642e-01  6.865e-02   9.676  &lt; 2e-16 ***
+HYDROGROUPA/D            -1.117e+00  3.820e-01  -2.923 0.003464 ** 
+HYDROGROUPB               3.664e-01  1.271e-01   2.883 0.003934 ** 
+HYDROGROUPB/D            -5.543e-01  2.043e-01  -2.713 0.006676 ** 
+HYDROGROUPC              -4.977e-01  1.385e-01  -3.594 0.000326 ***
+HYDROGROUPC/D            -9.109e-01  1.614e-01  -5.642 1.68e-08 ***
+HYDROGROUPD              -1.145e+00  1.617e-01  -7.079 1.45e-12 ***
+HYDROGROUPnot rated       9.642e-01  2.616e-01   3.686 0.000228 ***
+HYDROGROUPUnknown        -1.139e+01  1.975e+02  -0.058 0.954022    
+HYDROGROUPwater          -8.655e-01  1.241e+00  -0.698 0.485457    
+PARENTDT                  5.820e-01  4.939e-01   1.178 0.238680    
+PARENTDT/GT              -5.179e-01  7.643e-01  -0.678 0.498011    
+PARENTDT/GT/GF           -1.335e+01  4.496e+02  -0.030 0.976305    
+PARENTDT/O               -1.200e+01  1.596e+03  -0.008 0.994003    
+PARENTGF                 -5.230e-01  1.944e-01  -2.690 0.007144 ** 
+PARENTGF/GL              -1.648e+00  6.492e-01  -2.539 0.011129 *  
+PARENTGL                 -2.692e-01  3.935e-01  -0.684 0.493899    
+PARENTGL/GF              -1.326e+01  3.879e+02  -0.034 0.972728    
+PARENTGT                 -6.737e-01  2.727e-01  -2.470 0.013496 *  
+PARENTGT/DT              -1.542e+00  3.887e-01  -3.967 7.26e-05 ***
+PARENTGT/GF              -1.454e+01  5.432e+02  -0.027 0.978649    
+PARENTGT/GT_R            -1.220e+01  2.592e+02  -0.047 0.962463    
+PARENTM                  -1.386e+00  7.654e-01  -1.811 0.070101 .  
+PARENTM/GF/GL            -1.397e+01  5.442e+02  -0.026 0.979525    
+PARENTO                          NA         NA      NA       NA    
+PARENTO/A                -1.228e+01  3.925e+02  -0.031 0.975038    
+PARENTUnknown                    NA         NA      NA       NA    
+PARENTW                          NA         NA      NA       NA    
+Mean_TopoConvergence_50m  6.210e-01  3.329e-02  18.651  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 18185  on 215898  degrees of freedom
+Residual deviance: 16003  on 215863  degrees of freedom
+AIC: 16075
+
+Number of Fisher Scoring iterations: 16</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(base_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table (Type II tests)
+
+Response: damaged_bin
+                         LR Chisq Df Pr(&gt;Chisq)    
+Avg_Slope                   11.82  1  0.0005858 ***
+K_final                      0.11  1  0.7379496    
+MeanSlope30m               180.58  1  &lt; 2.2e-16 ***
+PercentForestedLand         17.21  1  3.346e-05 ***
+MEAN                       571.49  1  &lt; 2.2e-16 ***
+PM_rank                            0               
+Culvert_Count              149.98  1  &lt; 2.2e-16 ***
+Surface                     14.84  2  0.0005990 ***
+StreamCros                  84.03  1  &lt; 2.2e-16 ***
+HYDROGROUP                 201.23  7  &lt; 2.2e-16 ***
+PARENT                     164.19 15  &lt; 2.2e-16 ***
+Mean_TopoConvergence_50m   310.07  1  &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>base_aic <span class="ot">&lt;-</span> <span class="fu">AIC</span>(base_model)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Screen all 66 pairwise interactions</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate all pairs</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>pairs <span class="ot">&lt;-</span> <span class="fu">combn</span>(predictors, <span class="dv">2</span>, <span class="at">simplify =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through pairs, store AIC for each interaction model</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>pair_names <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>pair_aics <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(pairs)) {</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  var1 <span class="ot">&lt;-</span> pairs[[i]][<span class="dv">1</span>]</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  var2 <span class="ot">&lt;-</span> pairs[[i]][<span class="dv">2</span>]</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  int_term <span class="ot">&lt;-</span> <span class="fu">paste</span>(var1, var2, <span class="at">sep =</span> <span class="st">":"</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  int_formula <span class="ot">&lt;-</span> <span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">"damaged_bin ~"</span>,</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                                   <span class="fu">paste</span>(predictors, <span class="at">collapse =</span> <span class="st">" + "</span>),</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">"+"</span>, int_term))</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  int_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(int_formula, <span class="at">data =</span> model_data, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  pair_names <span class="ot">&lt;-</span> <span class="fu">c</span>(pair_names, int_term)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  pair_aics <span class="ot">&lt;-</span> <span class="fu">c</span>(pair_aics, <span class="fu">AIC</span>(int_model))</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: glm.fit: algorithm did not converge</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># results data frame</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Interaction =</span> pair_names,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">AIC_interaction =</span> <span class="fu">round</span>(pair_aics, <span class="dv">2</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co"># create AIC improvement column</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>AIC_improvement <span class="ot">&lt;-</span> <span class="fu">round</span>(base_aic <span class="sc">-</span> results<span class="sc">$</span>AIC_interaction, <span class="dv">2</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort best to worst</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> results[<span class="fu">order</span>(<span class="sc">-</span>results<span class="sc">$</span>AIC_improvement), ]</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(results)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                    Interaction AIC_interaction AIC_improvement
+19                           K_final:HYDROGROUP        15975.76           99.18
+2                        Avg_Slope:MeanSlope30m        16031.05           43.89
+3                 Avg_Slope:PercentForestedLand        16032.41           42.53
+22             MeanSlope30m:PercentForestedLand        16032.52           42.42
+15                              K_final:PM_rank        16039.10           35.84
+20                               K_final:PARENT        16041.11           33.83
+13                  K_final:PercentForestedLand        16041.26           33.68
+31                     PercentForestedLand:MEAN        16044.94           30.00
+38 PercentForestedLand:Mean_TopoConvergence_50m        16048.94           26.00
+33            PercentForestedLand:Culvert_Count        16050.90           24.04
+28                      MeanSlope30m:HYDROGROUP        16051.49           23.45
+14                                 K_final:MEAN        16053.68           21.26
+26                         MeanSlope30m:Surface        16054.06           20.88
+49                           PM_rank:HYDROGROUP        16057.00           17.94
+58                           Surface:HYDROGROUP        16058.42           16.52
+41                                 MEAN:Surface        16059.06           15.88
+43                              MEAN:HYDROGROUP        16060.65           14.29
+6                       Avg_Slope:Culvert_Count        16061.19           13.75
+4                                Avg_Slope:MEAN        16062.12           12.82
+60             Surface:Mean_TopoConvergence_50m        16062.53           12.41
+1                             Avg_Slope:K_final        16063.08           11.86
+23                            MeanSlope30m:MEAN        16064.48           10.46
+12                         K_final:MeanSlope30m        16065.47            9.47
+65          HYDROGROUP:Mean_TopoConvergence_50m        16066.52            8.42
+34                  PercentForestedLand:Surface        16066.62            8.32
+52                        Culvert_Count:Surface        16067.59            7.35
+30        MeanSlope30m:Mean_TopoConvergence_50m        16068.20            6.74
+56       Culvert_Count:Mean_TopoConvergence_50m        16069.30            5.64
+25                   MeanSlope30m:Culvert_Count        16069.71            5.23
+47                              PM_rank:Surface        16070.71            4.23
+11           Avg_Slope:Mean_TopoConvergence_50m        16072.08            2.86
+40                           MEAN:Culvert_Count        16073.45            1.49
+45                MEAN:Mean_TopoConvergence_50m        16073.73            1.21
+21             K_final:Mean_TopoConvergence_50m        16073.95            0.99
+46                        PM_rank:Culvert_Count        16074.53            0.41
+16                        K_final:Culvert_Count        16074.92            0.02
+50                               PM_rank:PARENT        16074.94            0.00
+39                                 MEAN:PM_rank        16075.09           -0.15
+57                           Surface:StreamCros        16075.33           -0.39
+7                             Avg_Slope:Surface        16075.38           -0.44
+63          StreamCros:Mean_TopoConvergence_50m        16075.60           -0.66
+17                              K_final:Surface        16075.71           -0.77
+53                     Culvert_Count:StreamCros        16075.75           -0.81
+42                              MEAN:StreamCros        16076.42           -1.48
+37                   PercentForestedLand:PARENT        16076.49           -1.55
+32                  PercentForestedLand:PM_rank        16076.51           -1.57
+48                           PM_rank:StreamCros        16076.60           -1.66
+27                      MeanSlope30m:StreamCros        16076.64           -1.70
+54                     Culvert_Count:HYDROGROUP        16076.75           -1.81
+5                             Avg_Slope:PM_rank        16076.85           -1.91
+51             PM_rank:Mean_TopoConvergence_50m        16076.91           -1.97
+8                          Avg_Slope:StreamCros        16076.93           -1.99
+18                           K_final:StreamCros        16076.93           -1.99
+24                         MeanSlope30m:PM_rank        16076.93           -1.99
+35               PercentForestedLand:StreamCros        16076.94           -2.00
+61                        StreamCros:HYDROGROUP        16077.53           -2.59
+36               PercentForestedLand:HYDROGROUP        16078.73           -3.79
+44                                  MEAN:PARENT        16079.65           -4.71
+9                          Avg_Slope:HYDROGROUP        16084.00           -9.06
+55                         Culvert_Count:PARENT        16086.40          -11.46
+29                          MeanSlope30m:PARENT        16094.48          -19.54
+10                             Avg_Slope:PARENT        16094.74          -19.80
+66              PARENT:Mean_TopoConvergence_50m        16095.08          -20.14
+62                            StreamCros:PARENT        16095.83          -20.89
+59                               Surface:PARENT        16110.87          -35.93
+64                            HYDROGROUP:PARENT        16331.27         -256.33</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the best model had a K_final:HYDROGROUP interaction term </span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>best_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(damaged_bin <span class="sc">~</span> Avg_Slope <span class="sc">+</span> K_final <span class="sc">+</span> MeanSlope30m <span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                    PercentForestedLand <span class="sc">+</span> MEAN <span class="sc">+</span> PM_rank <span class="sc">+</span> Culvert_Count <span class="sc">+</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                    Surface <span class="sc">+</span> StreamCros <span class="sc">+</span> HYDROGROUP <span class="sc">+</span> PARENT <span class="sc">+</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>                    Mean_TopoConvergence_50m <span class="sc">+</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>                    K_final<span class="sc">:</span>HYDROGROUP,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>                  <span class="at">data =</span> model_data, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(best_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = damaged_bin ~ Avg_Slope + K_final + MeanSlope30m + 
+    PercentForestedLand + MEAN + PM_rank + Culvert_Count + Surface + 
+    StreamCros + HYDROGROUP + PARENT + Mean_TopoConvergence_50m + 
+    K_final:HYDROGROUP, family = binomial(link = "logit"), data = model_data)
+
+Coefficients: (5 not defined because of singularities)
+                              Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                 -1.065e+01  1.024e+00 -10.401  &lt; 2e-16 ***
+Avg_Slope                    2.227e-02  6.283e-03   3.544 0.000395 ***
+K_final                     -2.061e+00  6.945e-01  -2.967 0.003004 ** 
+MeanSlope30m                 1.050e-01  7.313e-03  14.357  &lt; 2e-16 ***
+PercentForestedLand          2.302e-01  9.231e-02   2.494 0.012645 *  
+MEAN                         4.156e-01  1.807e-02  23.002  &lt; 2e-16 ***
+PM_rank                     -1.058e-01  1.391e-01  -0.761 0.446802    
+Culvert_Count                3.697e-01  2.803e-02  13.187  &lt; 2e-16 ***
+SurfaceUnknown              -5.195e-01  2.338e-01  -2.222 0.026316 *  
+SurfaceUnpaved               1.737e-01  6.963e-02   2.495 0.012604 *  
+StreamCrosYes                6.641e-01  6.877e-02   9.656  &lt; 2e-16 ***
+HYDROGROUPA/D               -6.562e-01  9.305e-01  -0.705 0.480647    
+HYDROGROUPB                  2.118e-01  2.419e-01   0.876 0.381144    
+HYDROGROUPB/D                1.017e+00  5.487e-01   1.854 0.063758 .  
+HYDROGROUPC                 -7.868e-01  2.609e-01  -3.016 0.002563 ** 
+HYDROGROUPC/D               -3.915e+00  4.144e-01  -9.448  &lt; 2e-16 ***
+HYDROGROUPD                 -3.859e+00  5.928e-01  -6.509 7.56e-11 ***
+HYDROGROUPnot rated          4.201e-01  6.791e-01   0.619 0.536157    
+HYDROGROUPUnknown           -1.148e+01  1.975e+02  -0.058 0.953639    
+HYDROGROUPwater             -1.721e+00  1.316e+00  -1.308 0.190926    
+PARENTDT                    -5.006e-02  5.666e-01  -0.088 0.929600    
+PARENTDT/GT                 -1.196e+00  7.802e-01  -1.533 0.125200    
+PARENTDT/GT/GF              -1.351e+01  4.499e+02  -0.030 0.976041    
+PARENTDT/O                  -1.203e+01  1.595e+03  -0.008 0.993983    
+PARENTGF                    -7.452e-01  2.190e-01  -3.403 0.000668 ***
+PARENTGF/GL                 -1.980e+00  7.387e-01  -2.680 0.007364 ** 
+PARENTGL                    -7.733e-01  4.457e-01  -1.735 0.082781 .  
+PARENTGL/GF                 -1.376e+01  3.881e+02  -0.035 0.971724    
+PARENTGT                    -9.483e-01  3.089e-01  -3.070 0.002142 ** 
+PARENTGT/DT                 -1.845e+00  4.141e-01  -4.455 8.39e-06 ***
+PARENTGT/GF                 -1.476e+01  5.439e+02  -0.027 0.978358    
+PARENTGT/GT_R               -1.251e+01  2.594e+02  -0.048 0.961551    
+PARENTM                     -2.309e+00  9.279e-01  -2.488 0.012851 *  
+PARENTM/GF/GL               -1.418e+01  5.444e+02  -0.026 0.979214    
+PARENTO                             NA         NA      NA       NA    
+PARENTO/A                   -1.177e+01  3.931e+02  -0.030 0.976110    
+PARENTUnknown                       NA         NA      NA       NA    
+PARENTW                             NA         NA      NA       NA    
+Mean_TopoConvergence_50m     6.184e-01  3.347e-02  18.477  &lt; 2e-16 ***
+K_final:HYDROGROUPA/D       -1.668e+00  3.470e+00  -0.481 0.630856    
+K_final:HYDROGROUPB          1.290e+00  8.061e-01   1.600 0.109661    
+K_final:HYDROGROUPB/D       -4.932e+00  1.931e+00  -2.555 0.010627 *  
+K_final:HYDROGROUPC          1.535e+00  8.154e-01   1.883 0.059697 .  
+K_final:HYDROGROUPC/D        8.141e+00  1.083e+00   7.515 5.67e-14 ***
+K_final:HYDROGROUPD          6.744e+00  1.340e+00   5.033 4.84e-07 ***
+K_final:HYDROGROUPnot rated  2.396e+00  1.654e+00   1.449 0.147437    
+K_final:HYDROGROUPUnknown           NA         NA      NA       NA    
+K_final:HYDROGROUPwater             NA         NA      NA       NA    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 18185  on 215898  degrees of freedom
+Residual deviance: 15890  on 215856  degrees of freedom
+AIC: 15976
+
+Number of Fisher Scoring iterations: 16</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(best_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table (Type II tests)
+
+Response: damaged_bin
+                         LR Chisq Df Pr(&gt;Chisq)    
+Avg_Slope                   11.90  1  0.0005623 ***
+K_final                      0.11  1  0.7379496    
+MeanSlope30m               183.31  1  &lt; 2.2e-16 ***
+PercentForestedLand          6.23  1  0.0125378 *  
+MEAN                       540.60  1  &lt; 2.2e-16 ***
+PM_rank                            0               
+Culvert_Count              147.01  1  &lt; 2.2e-16 ***
+Surface                     16.46  2  0.0002669 ***
+StreamCros                  83.73  1  &lt; 2.2e-16 ***
+HYDROGROUP                 201.23  7  &lt; 2.2e-16 ***
+PARENT                     139.80 15  &lt; 2.2e-16 ***
+Mean_TopoConvergence_50m   306.10  1  &lt; 2.2e-16 ***
+K_final:HYDROGROUP         113.18  7  &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># K_final distribution by HYDROGROUP, colored by damage status</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(model_data, <span class="fu">aes</span>(<span class="at">x =</span> HYDROGROUP, <span class="at">y =</span> K_final, <span class="at">fill =</span> damaged)) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">outlier.size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"No"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"red"</span>),</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Not Damaged"</span>, <span class="st">"Damaged"</span>)) <span class="sc">+</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Soil Erodibility by Hydrologic Soil Group and Damage Status"</span>,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Hydrologic Soil Group"</span>,</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"K-Factor (Soil Erodibility)"</span>,</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Status"</span>) <span class="sc">+</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">18</span>) <span class="sc">+</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_13_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages." class="level1">
+<h1>AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages.</h1>
+</section>
+<section id="according-to-burnham-and-anderson-2004" class="level1">
+<h1>According to Burnham and Anderson (2004):</h1>
+</section>
+<section id="some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support." class="level1">
+<h1>“Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta] i ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta] i ≤ 7 have considerably less support, and models having [Delta] i &gt; 10 have essentailly no support”.</h1>
+</section>
+<section id="in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model." class="level1">
+<h1>In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model.</h1>
+</section>
+<section id="the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages." class="level1">
+<h1>The greatest improvement was seen when there was a K_final:HYDROGROUP term used in the GLM. While the ANOVA result shows that K_final is not significant on its own (LR Chisq = 0.11), it is significant depending on the HYDROGROUP it is in (LR Chisq = 113.18). While other predictors are powerful on their own, (e.g.&nbsp;MEAN (precipitation), Mean_TopoConvergence_50m (Topographic Convergence), etc.), this finding highlights a new relationship. The boxplot further demonstrates this relationship, showing that on on poorly-drained HYDROGROUP soils (C, C/D) a higher K_factor is associated with more damage. This relationship makes sense–standing water accumulates on the surface, resulting in roads on soils vulnerable to sheet flow (high K_factor) experiencing more damages.</h1>
+<section id="question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types">Question 2: Does the effect of precipitation on damage probability vary across parent material types?</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mixed model — random intercept and random slope for MEAN by PARENT</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>mixed_model <span class="ot">&lt;-</span> <span class="fu">glmer</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  damaged_bin <span class="sc">~</span> MEAN <span class="sc">+</span> MeanSlope30m <span class="sc">+</span> Mean_TopoConvergence_50m <span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    HYDROGROUP <span class="sc">+</span> PercentForestedLand <span class="sc">+</span> Avg_Slope <span class="sc">+</span> K_final <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    Culvert_Count <span class="sc">+</span> StreamCros <span class="sc">+</span> Surface <span class="sc">+</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">+</span> MEAN <span class="sc">|</span> PARENT),</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> model_data,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mixed_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( logit )
+Formula: damaged_bin ~ MEAN + MeanSlope30m + Mean_TopoConvergence_50m +  
+    HYDROGROUP + PercentForestedLand + Avg_Slope + K_final +  
+    Culvert_Count + StreamCros + Surface + (1 + MEAN | PARENT)
+   Data: model_data
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+  16091.5   16328.0   -8022.8   16045.5    215876 
+
+Scaled residuals: 
+   Min     1Q Median     3Q    Max 
+-6.289 -0.088 -0.059 -0.039 48.982 
+
+Random effects:
+ Groups Name        Variance Std.Dev. Corr
+ PARENT (Intercept) 0.174073 0.41722      
+        MEAN        0.007336 0.08565  0.15
+Number of obs: 215899, groups:  PARENT, 19
+
+Fixed effects:
+                           Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)              -12.589448   0.333966 -37.697  &lt; 2e-16 ***
+MEAN                       0.368997   0.037983   9.715  &lt; 2e-16 ***
+MeanSlope30m               0.103547   0.007308  14.169  &lt; 2e-16 ***
+Mean_TopoConvergence_50m   0.621363   0.033343  18.636  &lt; 2e-16 ***
+HYDROGROUPA/D             -1.079755   0.377110  -2.863 0.004193 ** 
+HYDROGROUPB                0.391747   0.125060   3.132 0.001733 ** 
+HYDROGROUPB/D             -0.473648   0.199867  -2.370 0.017797 *  
+HYDROGROUPC               -0.446423   0.135518  -3.294 0.000987 ***
+HYDROGROUPC/D             -0.846741   0.157698  -5.369 7.90e-08 ***
+HYDROGROUPD               -1.086660   0.157776  -6.887 5.68e-12 ***
+HYDROGROUPnot rated        0.800604   0.256544   3.121 0.001804 ** 
+HYDROGROUPUnknown        -10.218584 247.914451  -0.041 0.967122    
+HYDROGROUPwater           -0.495123   1.246738  -0.397 0.691268    
+PercentForestedLand        0.371552   0.090615   4.100 4.13e-05 ***
+Avg_Slope                  0.022570   0.006280   3.594 0.000326 ***
+K_final                    0.040633   0.246314   0.165 0.868972    
+Culvert_Count              0.372412   0.028030  13.286  &lt; 2e-16 ***
+StreamCrosYes              0.663681   0.068679   9.663  &lt; 2e-16 ***
+SurfaceUnknown            -0.521877   0.233890  -2.231 0.025662 *  
+SurfaceUnpaved             0.155582   0.069440   2.241 0.025057 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Correlation matrix not shown by default, as p = 20 &gt; 12.
+Use print(x, correlation=TRUE)  or
+    vcov(x)        if you need it</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mixed_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table (Type II Wald chisquare tests)
+
+Response: damaged_bin
+                            Chisq Df Pr(&gt;Chisq)    
+MEAN                      94.3766  1  &lt; 2.2e-16 ***
+MeanSlope30m             200.7709  1  &lt; 2.2e-16 ***
+Mean_TopoConvergence_50m 347.2827  1  &lt; 2.2e-16 ***
+HYDROGROUP               188.8972  9  &lt; 2.2e-16 ***
+PercentForestedLand       16.8129  1  4.125e-05 ***
+Avg_Slope                 12.9162  1  0.0003258 ***
+K_final                    0.0272  1  0.8689722    
+Culvert_Count            176.5246  1  &lt; 2.2e-16 ***
+StreamCros                93.3829  1  &lt; 2.2e-16 ***
+Surface                   12.9606  2  0.0015333 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>re <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">ranef</span>(mixed_model)<span class="sc">$</span>PARENT)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>re<span class="sc">$</span>PARENT <span class="ot">&lt;-</span> <span class="fu">rownames</span>(re) </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>re</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           (Intercept)          MEAN   PARENT
+A         4.088781e-01  9.650102e-02        A
+DT        7.874926e-01  6.250350e-02       DT
+DT/GT     4.760835e-02  1.182403e-02    DT/GT
+DT/GT/GF -9.101679e-02 -2.020181e-02 DT/GT/GF
+DT/O     -2.462862e-03 -5.492875e-04     DT/O
+GF       -2.071030e-01  1.154114e-01       GF
+GF/GL    -1.876757e-01 -7.349659e-02    GF/GL
+GL        1.223327e-01  4.499689e-02       GL
+GL/GF    -1.137103e-01 -2.522248e-02    GL/GF
+GT        6.443471e-02  3.782864e-03       GT
+GT/DT    -2.758004e-01 -8.958784e-02    GT/DT
+GT/GF    -1.509874e-01 -3.275093e-02    GT/GF
+GT/GT_R  -9.585352e-02 -1.432666e-02  GT/GT_R
+M        -2.088722e-01 -4.444701e-02        M
+M/GF/GL  -8.580348e-02 -1.763995e-02  M/GF/GL
+O         2.303452e-01  5.166234e-02        O
+O/A      -3.871659e-02 -7.240693e-03      O/A
+Unknown  -3.029719e-06 -3.587246e-07  Unknown
+W         2.801505e-03 -1.783727e-02        W</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(re[,<span class="dv">2</span>][<span class="fu">order</span>(re[,<span class="dv">2</span>])],</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">names.arg =</span> re<span class="sc">$</span>PARENT[<span class="fu">order</span>(re[,<span class="dv">2</span>])], <span class="co">#allign orders with the order of the </span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">horiz =</span> <span class="cn">TRUE</span>, <span class="at">las =</span> <span class="dv">1</span>, <span class="co">#draw horizontal bars and horizontal labels on Y axis</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Precipitation Effect by Parent Material"</span>,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Deviation from average effect"</span>,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">ifelse</span>(re[,<span class="dv">2</span>][<span class="fu">order</span>(re[,<span class="dv">2</span>])] <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="st">"firebrick"</span>, <span class="st">"steelblue"</span>)) <span class="co">#color each bar based on +/-</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework_13_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials." class="level1">
+<h1>This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation’s effect on damage probabilities do not differ significantly across parent materials.</h1>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

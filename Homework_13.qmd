@@ -130,7 +130,7 @@ ggplot(model_data, aes(x = HYDROGROUP, y = K_final, fill = damaged)) +
 
 
 
-# Mixed model — random intercept + random slope for MEAN by PARENT
+# Mixed model — random intercept and random slope for MEAN by PARENT
 mixed_model <- glmer(
   damaged_bin ~ MEAN + MeanSlope30m + Mean_TopoConvergence_50m +
     HYDROGROUP + PercentForestedLand + Avg_Slope + K_final +
@@ -144,14 +144,16 @@ summary(mixed_model)
 Anova(mixed_model)
 
 re <- as.data.frame(ranef(mixed_model)$PARENT)
-re$PARENT <- rownames(re)
+re$PARENT <- rownames(re) 
+re
 
 barplot(re[,2][order(re[,2])],
-        names.arg = re$PARENT[order(re[,2])],
-        horiz = TRUE, las = 1,
+        names.arg = re$PARENT[order(re[,2])], #allign orders with the order of the 
+        horiz = TRUE, las = 1, #draw horizontal bars and horizontal labels on Y axis
         main = "Precipitation Effect by Parent Material",
         xlab = "Deviation from average effect",
-        col = ifelse(re[,2][order(re[,2])] > 0, "firebrick", "steelblue"))
+        col = ifelse(re[,2][order(re[,2])] > 0, "firebrick", "steelblue")) #color each bar based on +/-
 abline(v = 0, lty = 2)
 ```
 
+# This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation's effect on damage probabilities do not differ significantly across parent materials. 

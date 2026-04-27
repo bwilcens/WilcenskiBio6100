@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "WilcenskiBio6100",
     "section": "",
-    "text": "This website will hold all of Bryan Wilcenski’s relevant homework and project files for BIOL6100.\nHomework2 Homework3 Homework4 Homework5 Homework6 Homework7 Homework8 Homework9 Homework10 Homework11"
+    "text": "This website will hold all of Bryan Wilcenski’s relevant homework and project files for BIOL6100.\nHomework2 Homework3 Homework4 Homework5 Homework6 Homework7 Homework8 Homework9 Homework10 Homework11 Homework11Repo Homework12 Homework13 Homework14"
   },
   {
     "objectID": "about.html",
@@ -243,5 +243,33 @@
     "title": "Homework_09",
     "section": "Question 4",
     "text": "Question 4\n\nbumble &lt;- read.csv(\"beeData.csv\") #read in csv\n\nmosaic1&lt;- mosaicplot(~  sampling_event+ bee_caste, data=bumble, main = \"Sample Event and Caste\", color=c(\"red\", \"blue\", \"green\"), cex.axis= 2) #generate mosaic plot"
+  },
+  {
+    "objectID": "Homework_13.html#question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects",
+    "href": "Homework_13.html#question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects",
+    "title": "Homework_13",
+    "section": "Question 1:Does any pair of predictors have combined effects on damage likelihood that are greater than their individual effects?",
+    "text": "Question 1:Does any pair of predictors have combined effects on damage likelihood that are greater than their individual effects?"
+  },
+  {
+    "objectID": "Homework_13.html#question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types",
+    "href": "Homework_13.html#question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types",
+    "title": "Homework_13",
+    "section": "Question 2: Does the effect of precipitation on damage probability vary across parent material types?",
+    "text": "Question 2: Does the effect of precipitation on damage probability vary across parent material types?\n\n# Mixed model — random intercept and random slope for MEAN by PARENT\nmixed_model &lt;- glmer(\n  damaged_bin ~ MEAN + MeanSlope30m + Mean_TopoConvergence_50m +\n    HYDROGROUP + PercentForestedLand + Avg_Slope + K_final +\n    Culvert_Count + StreamCros + Surface +\n    (1 + MEAN | PARENT),\n  data = model_data,\n  family = binomial(link = \"logit\")\n)\n\nsummary(mixed_model)\n\nGeneralized linear mixed model fit by maximum likelihood (Laplace\n  Approximation) [glmerMod]\n Family: binomial  ( logit )\nFormula: damaged_bin ~ MEAN + MeanSlope30m + Mean_TopoConvergence_50m +  \n    HYDROGROUP + PercentForestedLand + Avg_Slope + K_final +  \n    Culvert_Count + StreamCros + Surface + (1 + MEAN | PARENT)\n   Data: model_data\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n  16091.5   16328.0   -8022.8   16045.5    215876 \n\nScaled residuals: \n   Min     1Q Median     3Q    Max \n-6.289 -0.088 -0.059 -0.039 48.982 \n\nRandom effects:\n Groups Name        Variance Std.Dev. Corr\n PARENT (Intercept) 0.174073 0.41722      \n        MEAN        0.007336 0.08565  0.15\nNumber of obs: 215899, groups:  PARENT, 19\n\nFixed effects:\n                           Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)              -12.589448   0.333966 -37.697  &lt; 2e-16 ***\nMEAN                       0.368997   0.037983   9.715  &lt; 2e-16 ***\nMeanSlope30m               0.103547   0.007308  14.169  &lt; 2e-16 ***\nMean_TopoConvergence_50m   0.621363   0.033343  18.636  &lt; 2e-16 ***\nHYDROGROUPA/D             -1.079755   0.377110  -2.863 0.004193 ** \nHYDROGROUPB                0.391747   0.125060   3.132 0.001733 ** \nHYDROGROUPB/D             -0.473648   0.199867  -2.370 0.017797 *  \nHYDROGROUPC               -0.446423   0.135518  -3.294 0.000987 ***\nHYDROGROUPC/D             -0.846741   0.157698  -5.369 7.90e-08 ***\nHYDROGROUPD               -1.086660   0.157776  -6.887 5.68e-12 ***\nHYDROGROUPnot rated        0.800604   0.256544   3.121 0.001804 ** \nHYDROGROUPUnknown        -10.218584 247.914451  -0.041 0.967122    \nHYDROGROUPwater           -0.495123   1.246738  -0.397 0.691268    \nPercentForestedLand        0.371552   0.090615   4.100 4.13e-05 ***\nAvg_Slope                  0.022570   0.006280   3.594 0.000326 ***\nK_final                    0.040633   0.246314   0.165 0.868972    \nCulvert_Count              0.372412   0.028030  13.286  &lt; 2e-16 ***\nStreamCrosYes              0.663681   0.068679   9.663  &lt; 2e-16 ***\nSurfaceUnknown            -0.521877   0.233890  -2.231 0.025662 *  \nSurfaceUnpaved             0.155582   0.069440   2.241 0.025057 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nCorrelation matrix not shown by default, as p = 20 &gt; 12.\nUse print(x, correlation=TRUE)  or\n    vcov(x)        if you need it\n\nAnova(mixed_model)\n\nAnalysis of Deviance Table (Type II Wald chisquare tests)\n\nResponse: damaged_bin\n                            Chisq Df Pr(&gt;Chisq)    \nMEAN                      94.3766  1  &lt; 2.2e-16 ***\nMeanSlope30m             200.7709  1  &lt; 2.2e-16 ***\nMean_TopoConvergence_50m 347.2827  1  &lt; 2.2e-16 ***\nHYDROGROUP               188.8972  9  &lt; 2.2e-16 ***\nPercentForestedLand       16.8129  1  4.125e-05 ***\nAvg_Slope                 12.9162  1  0.0003258 ***\nK_final                    0.0272  1  0.8689722    \nCulvert_Count            176.5246  1  &lt; 2.2e-16 ***\nStreamCros                93.3829  1  &lt; 2.2e-16 ***\nSurface                   12.9606  2  0.0015333 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nre &lt;- as.data.frame(ranef(mixed_model)$PARENT)\nre$PARENT &lt;- rownames(re) \nre\n\n           (Intercept)          MEAN   PARENT\nA         4.088781e-01  9.650102e-02        A\nDT        7.874926e-01  6.250350e-02       DT\nDT/GT     4.760835e-02  1.182403e-02    DT/GT\nDT/GT/GF -9.101679e-02 -2.020181e-02 DT/GT/GF\nDT/O     -2.462862e-03 -5.492875e-04     DT/O\nGF       -2.071030e-01  1.154114e-01       GF\nGF/GL    -1.876757e-01 -7.349659e-02    GF/GL\nGL        1.223327e-01  4.499689e-02       GL\nGL/GF    -1.137103e-01 -2.522248e-02    GL/GF\nGT        6.443471e-02  3.782864e-03       GT\nGT/DT    -2.758004e-01 -8.958784e-02    GT/DT\nGT/GF    -1.509874e-01 -3.275093e-02    GT/GF\nGT/GT_R  -9.585352e-02 -1.432666e-02  GT/GT_R\nM        -2.088722e-01 -4.444701e-02        M\nM/GF/GL  -8.580348e-02 -1.763995e-02  M/GF/GL\nO         2.303452e-01  5.166234e-02        O\nO/A      -3.871659e-02 -7.240693e-03      O/A\nUnknown  -3.029719e-06 -3.587246e-07  Unknown\nW         2.801505e-03 -1.783727e-02        W\n\nbarplot(re[,2][order(re[,2])],\n        names.arg = re$PARENT[order(re[,2])], #allign orders with the order of the \n        horiz = TRUE, las = 1, #draw horizontal bars and horizontal labels on Y axis\n        main = \"Precipitation Effect by Parent Material\",\n        xlab = \"Deviation from average effect\",\n        col = ifelse(re[,2][order(re[,2])] &gt; 0, \"firebrick\", \"steelblue\")) #color each bar based on +/-\nabline(v = 0, lty = 2)"
+  },
+  {
+    "objectID": "Homework_14.html#the-goal-of-the-following-two-models-is-to",
+    "href": "Homework_14.html#the-goal-of-the-following-two-models-is-to",
+    "title": "Homework_14",
+    "section": "The goal of the following two models is to:",
+    "text": "The goal of the following two models is to:"
+  },
+  {
+    "objectID": "Homework_14.html#sources",
+    "href": "Homework_14.html#sources",
+    "title": "Homework_14",
+    "section": "Sources:",
+    "text": "Sources:"
   }
 ]

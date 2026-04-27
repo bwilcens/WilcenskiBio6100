@@ -13,7 +13,7 @@ format: html
 
 # 2. Use a Random Forest to identify which predictor variables were most important in determining whether a road segment was damaged during the July 2023 flood event. 
 
-# (These models were recommended by Professor Burnham for use in the context of my RA position and thesis work.)
+# (These models were recommended by Professor Burnham for use in the context of my RA position and thesis work, and will be incorporated into my larger research project)
 
 
 ```{r}
