@@ -114,7 +114,7 @@ ggplot(model_data, aes(x = HYDROGROUP, y = K_final, fill = damaged)) +
 AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages. 
 
 According to Burnham and Anderson (2004):
-"Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta] i ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta] i ≤ 7 have considerably less support, and models having [Delta] i > 10 have essentailly no support". 
+"Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta AIC] ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta AIC] ≤ 7 have considerably less support, and models having [Delta AIC] > 10 have essentailly no support". 
 
 In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model. 
 
@@ -127,8 +127,6 @@ The greatest improvement was seen when there was a K_final:HYDROGROUP term used 
 
 
 ```{r}
-
-
 
 # Mixed model — random intercept and random slope for MEAN by PARENT
 mixed_model <- glmer(
