@@ -6,9 +6,9 @@ format: html
 # 4/15/2026
 
 
-## Question 1:Does any pair of predictors have combined effects on damage likelihood that are greater than their individual effects? 
+# Question 1: Does any pair of predictors have a combined effect on damage likelihood that is greater than their individual effects? 
 
-# Note: This question and approach was recommended by Professor Burnham after discussing my challenges with developing predictor variables. If there are predictor pairs that act together and have a combined effect on damage probabilities, then it would be possible to use feature engineering to add to my random forest (or Catboost models) to better account for variance. Use of a LLM for coding assistance was also recommended given the number of possible pairs (66). 
+Note: This question and approach was recommended by Professor Burnham after discussing my challenges with developing predictor variables. If there are predictor pairs that act together and have a combined effect on damage probabilities, then it would be possible to use feature engineering to add to my random forest (or Catboost models) to better account for variance. Use of a LLM for coding assistance was also recommended given the number of possible pairs (66). 
 ```{r}
 
 
@@ -123,7 +123,7 @@ The greatest improvement was seen when there was a K_final:HYDROGROUP term used 
 
 
 
-## Question 2: Does the effect of precipitation on damage probability vary across parent material types?
+# Question 2: Does the effect of precipitation on damage probability vary across parent material types?
 
 
 ```{r}
