@@ -228,7 +228,7 @@
     "href": "Homework_09.html#question-2",
     "title": "Homework_09",
     "section": "Question 2",
-    "text": "Question 2\n\nlibrary(ggplot2)\npetal.box &lt;- ggplot(data = iris, aes(x = Species, y = Petal.Length)) + \n  geom_boxplot(size=1, fill = \"orange\")+\n  geom_jitter(size=1) + \n\n  labs(\n    x = \"Species\",\n    y= \"Petal Width\"\n  )\npetal.box"
+    "text": "Question 2\n\nlibrary(ggplot2)\npetal.box &lt;- ggplot(data = iris, aes(x = Species, y = Petal.Length, fill = Species)) + \n  geom_boxplot(size=1)+\n  scale_fill_manual(values = c(\"setosa\" = \"blue\", \"versicolor\" = \"orange\", \"virginica\" = \"green\"))+\n  geom_jitter(size=1) + \n\n  labs(\n    x = \"Species\",\n    y= \"Petal Width\"\n  )\npetal.box"
   },
   {
     "objectID": "Homework_09.html#question-3",

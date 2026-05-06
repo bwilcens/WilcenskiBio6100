@@ -150,20 +150,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#bryan-wilcenski" id="toc-bryan-wilcenski" class="nav-link active" data-scroll-target="#bryan-wilcenski">Bryan Wilcenski</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">4/15/2026</a>
-  <ul class="collapse">
-  <li><a href="#question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects" id="toc-question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects" class="nav-link" data-scroll-target="#question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects">Question 1:Does any pair of predictors have combined effects on damage likelihood that are greater than their individual effects?</a></li>
-  </ul></li>
-  <li><a href="#note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66." id="toc-note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66." class="nav-link" data-scroll-target="#note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66.">Note: This question and approach was recommended by Professor Burnham after discussing my challenges with developing predictor variables. If there are predictor pairs that act together and have a combined effect on damage probabilities, then it would be possible to use feature engineering to add to my random forest (or Catboost models) to better account for variance. Use of a LLM for coding assistance was also recommended given the number of possible pairs (66).</a></li>
-  <li><a href="#aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages." id="toc-aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages." class="nav-link" data-scroll-target="#aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages.">AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages.</a></li>
-  <li><a href="#according-to-burnham-and-anderson-2004" id="toc-according-to-burnham-and-anderson-2004" class="nav-link" data-scroll-target="#according-to-burnham-and-anderson-2004">According to Burnham and Anderson (2004):</a></li>
-  <li><a href="#some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support." id="toc-some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support." class="nav-link" data-scroll-target="#some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support.">“Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta] i ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta] i ≤ 7 have considerably less support, and models having [Delta] i &gt; 10 have essentailly no support”.</a></li>
-  <li><a href="#in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model." id="toc-in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model." class="nav-link" data-scroll-target="#in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model.">In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model.</a></li>
-  <li><a href="#the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages." id="toc-the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages." class="nav-link" data-scroll-target="#the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages.">The greatest improvement was seen when there was a K_final:HYDROGROUP term used in the GLM. While the ANOVA result shows that K_final is not significant on its own (LR Chisq = 0.11), it is significant depending on the HYDROGROUP it is in (LR Chisq = 113.18). While other predictors are powerful on their own, (e.g.&nbsp;MEAN (precipitation), Mean_TopoConvergence_50m (Topographic Convergence), etc.), this finding highlights a new relationship. The boxplot further demonstrates this relationship, showing that on on poorly-drained HYDROGROUP soils (C, C/D) a higher K_factor is associated with more damage. This relationship makes sense–standing water accumulates on the surface, resulting in roads on soils vulnerable to sheet flow (high K_factor) experiencing more damages.</a>
-  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">4/15/2026</a></li>
+  <li><a href="#question-1-does-any-pair-of-predictors-have-a-combined-effect-on-damage-likelihood-that-is-greater-than-their-individual-effects" id="toc-question-1-does-any-pair-of-predictors-have-a-combined-effect-on-damage-likelihood-that-is-greater-than-their-individual-effects" class="nav-link" data-scroll-target="#question-1-does-any-pair-of-predictors-have-a-combined-effect-on-damage-likelihood-that-is-greater-than-their-individual-effects">Question 1: Does any pair of predictors have a combined effect on damage likelihood that is greater than their individual effects?</a></li>
   <li><a href="#question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types" id="toc-question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types" class="nav-link" data-scroll-target="#question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types">Question 2: Does the effect of precipitation on damage probability vary across parent material types?</a></li>
-  </ul></li>
-  <li><a href="#this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials." id="toc-this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials." class="nav-link" data-scroll-target="#this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials.">This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation’s effect on damage probabilities do not differ significantly across parent materials.</a></li>
   </ul>
 </nav>
     </div>
@@ -194,12 +183,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="section" class="level1">
 <h1>4/15/2026</h1>
-<section id="question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects" class="level2">
-<h2 class="anchored" data-anchor-id="question-1does-any-pair-of-predictors-have-combined-effects-on-damage-likelihood-that-are-greater-than-their-individual-effects">Question 1:Does any pair of predictors have combined effects on damage likelihood that are greater than their individual effects?</h2>
 </section>
-</section>
-<section id="note-this-question-and-approach-was-recommended-by-professor-burnham-after-discussing-my-challenges-with-developing-predictor-variables.-if-there-are-predictor-pairs-that-act-together-and-have-a-combined-effect-on-damage-probabilities-then-it-would-be-possible-to-use-feature-engineering-to-add-to-my-random-forest-or-catboost-models-to-better-account-for-variance.-use-of-a-llm-for-coding-assistance-was-also-recommended-given-the-number-of-possible-pairs-66." class="level1">
-<h1>Note: This question and approach was recommended by Professor Burnham after discussing my challenges with developing predictor variables. If there are predictor pairs that act together and have a combined effect on damage probabilities, then it would be possible to use feature engineering to add to my random forest (or Catboost models) to better account for variance. Use of a LLM for coding assistance was also recommended given the number of possible pairs (66).</h1>
+<section id="question-1-does-any-pair-of-predictors-have-a-combined-effect-on-damage-likelihood-that-is-greater-than-their-individual-effects" class="level1">
+<h1>Question 1: Does any pair of predictors have a combined effect on damage likelihood that is greater than their individual effects?</h1>
+<p>Note: This question and approach was recommended by Professor Burnham after discussing my challenges with developing predictor variables. If there are predictor pairs that act together and have a combined effect on damage probabilities, then it would be possible to use feature engineering to add to my random forest (or Catboost models) to better account for variance. Use of a LLM for coding assistance was also recommended given the number of possible pairs (66).</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -600,23 +587,13 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </div>
+<p>AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages.</p>
+<p>According to Burnham and Anderson (2004): “Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta AIC] ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta AIC] ≤ 7 have considerably less support, and models having [Delta AIC] &gt; 10 have essentailly no support”.</p>
+<p>In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model.</p>
+<p>The greatest improvement was seen when there was a K_final:HYDROGROUP term used in the GLM. While the ANOVA result shows that K_final is not significant on its own (LR Chisq = 0.11), it is significant depending on the HYDROGROUP it is in (LR Chisq = 113.18). While other predictors are powerful on their own, (e.g.&nbsp;MEAN (precipitation), Mean_TopoConvergence_50m (Topographic Convergence), etc.), this finding highlights a new relationship. The boxplot further demonstrates this relationship, showing that on on poorly-drained HYDROGROUP soils (C, C/D) a higher K_factor is associated with more damage. This relationship makes sense–standing water accumulates on the surface, resulting in roads on soils vulnerable to sheet flow (high K_factor) experiencing more damages.</p>
 </section>
-<section id="aic-was-used-to-compare-the-effects-of-all-interaction-terms-against-the-base-model-with-all-individual-predictors-but-no-interaction-terms-because-the-large-sample-size-resulted-in-almost-all-interactions-having-a-significant-p-value.-a-lower-aic-means-that-the-model-is-better-at-predicting-damages." class="level1">
-<h1>AIC was used to compare the effects of all interaction terms against the base model with all individual predictors (but no interaction terms) because the large sample size resulted in almost all interactions having a significant p-value. A lower AIC means that the model is better at predicting damages.</h1>
-</section>
-<section id="according-to-burnham-and-anderson-2004" class="level1">
-<h1>According to Burnham and Anderson (2004):</h1>
-</section>
-<section id="some-simple-rules-of-thumb-are-often-useful-in-assessing-the-relative-merits-of-models-in-the-set-models-having-delta-i-2-have-substantial-support-evidence-those-in-which-4-delta-i-7-have-considerably-less-support-and-models-having-delta-i-10-have-essentailly-no-support." class="level1">
-<h1>“Some simple rules of thumb are often useful in assessing the relative merits of models in the set: Models having [Delta] i ≤ 2 have substantial support (evidence), those in which 4 ≤ [Delta] i ≤ 7 have considerably less support, and models having [Delta] i &gt; 10 have essentailly no support”.</h1>
-</section>
-<section id="in-my-data-the-aic_improvement-calculation-uses-the-difference-between-the-base-model-aic-and-the-interaction-term-and-thus-a-higher-aic-improvement-means-that-the-interaction-term-improves-the-model." class="level1">
-<h1>In my data, the AIC_Improvement calculation uses the difference between the base model AIC and the interaction term, and thus a higher AIC improvement means that the interaction term improves the model.</h1>
-</section>
-<section id="the-greatest-improvement-was-seen-when-there-was-a-k_finalhydrogroup-term-used-in-the-glm.-while-the-anova-result-shows-that-k_final-is-not-significant-on-its-own-lr-chisq-0.11-it-is-significant-depending-on-the-hydrogroup-it-is-in-lr-chisq-113.18.-while-other-predictors-are-powerful-on-their-own-e.g.-mean-precipitation-mean_topoconvergence_50m-topographic-convergence-etc.-this-finding-highlights-a-new-relationship.-the-boxplot-further-demonstrates-this-relationship-showing-that-on-on-poorly-drained-hydrogroup-soils-c-cd-a-higher-k_factor-is-associated-with-more-damage.-this-relationship-makes-sensestanding-water-accumulates-on-the-surface-resulting-in-roads-on-soils-vulnerable-to-sheet-flow-high-k_factor-experiencing-more-damages." class="level1">
-<h1>The greatest improvement was seen when there was a K_final:HYDROGROUP term used in the GLM. While the ANOVA result shows that K_final is not significant on its own (LR Chisq = 0.11), it is significant depending on the HYDROGROUP it is in (LR Chisq = 113.18). While other predictors are powerful on their own, (e.g.&nbsp;MEAN (precipitation), Mean_TopoConvergence_50m (Topographic Convergence), etc.), this finding highlights a new relationship. The boxplot further demonstrates this relationship, showing that on on poorly-drained HYDROGROUP soils (C, C/D) a higher K_factor is associated with more damage. This relationship makes sense–standing water accumulates on the surface, resulting in roads on soils vulnerable to sheet flow (high K_factor) experiencing more damages.</h1>
-<section id="question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types" class="level2">
-<h2 class="anchored" data-anchor-id="question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types">Question 2: Does the effect of precipitation on damage probability vary across parent material types?</h2>
+<section id="question-2-does-the-effect-of-precipitation-on-damage-probability-vary-across-parent-material-types" class="level1">
+<h1>Question 2: Does the effect of precipitation on damage probability vary across parent material types?</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mixed model — random intercept and random slope for MEAN by PARENT</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>mixed_model <span class="ot">&lt;-</span> <span class="fu">glmer</span>(</span>
@@ -643,36 +620,36 @@ Formula: damaged_bin ~ MEAN + MeanSlope30m + Mean_TopoConvergence_50m +
 
 Scaled residuals: 
    Min     1Q Median     3Q    Max 
--6.289 -0.088 -0.059 -0.039 48.982 
+-6.289 -0.088 -0.059 -0.039 48.985 
 
 Random effects:
  Groups Name        Variance Std.Dev. Corr
- PARENT (Intercept) 0.174073 0.41722      
-        MEAN        0.007336 0.08565  0.15
+ PARENT (Intercept) 0.174510 0.41774      
+        MEAN        0.007298 0.08543  0.15
 Number of obs: 215899, groups:  PARENT, 19
 
 Fixed effects:
                            Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)              -12.589448   0.333966 -37.697  &lt; 2e-16 ***
-MEAN                       0.368997   0.037983   9.715  &lt; 2e-16 ***
-MeanSlope30m               0.103547   0.007308  14.169  &lt; 2e-16 ***
-Mean_TopoConvergence_50m   0.621363   0.033343  18.636  &lt; 2e-16 ***
-HYDROGROUPA/D             -1.079755   0.377110  -2.863 0.004193 ** 
-HYDROGROUPB                0.391747   0.125060   3.132 0.001733 ** 
-HYDROGROUPB/D             -0.473648   0.199867  -2.370 0.017797 *  
-HYDROGROUPC               -0.446423   0.135518  -3.294 0.000987 ***
-HYDROGROUPC/D             -0.846741   0.157698  -5.369 7.90e-08 ***
-HYDROGROUPD               -1.086660   0.157776  -6.887 5.68e-12 ***
-HYDROGROUPnot rated        0.800604   0.256544   3.121 0.001804 ** 
-HYDROGROUPUnknown        -10.218584 247.914451  -0.041 0.967122    
-HYDROGROUPwater           -0.495123   1.246738  -0.397 0.691268    
-PercentForestedLand        0.371552   0.090615   4.100 4.13e-05 ***
-Avg_Slope                  0.022570   0.006280   3.594 0.000326 ***
-K_final                    0.040633   0.246314   0.165 0.868972    
-Culvert_Count              0.372412   0.028030  13.286  &lt; 2e-16 ***
-StreamCrosYes              0.663681   0.068679   9.663  &lt; 2e-16 ***
-SurfaceUnknown            -0.521877   0.233890  -2.231 0.025662 *  
-SurfaceUnpaved             0.155582   0.069440   2.241 0.025057 *  
+(Intercept)              -12.590166   0.333995 -37.696  &lt; 2e-16 ***
+MEAN                       0.369228   0.037917   9.738  &lt; 2e-16 ***
+MeanSlope30m               0.103531   0.007308  14.167  &lt; 2e-16 ***
+Mean_TopoConvergence_50m   0.621343   0.033343  18.635  &lt; 2e-16 ***
+HYDROGROUPA/D             -1.079024   0.376997  -2.862 0.004208 ** 
+HYDROGROUPB                0.391458   0.125065   3.130 0.001748 ** 
+HYDROGROUPB/D             -0.473347   0.199860  -2.368 0.017865 *  
+HYDROGROUPC               -0.446534   0.135522  -3.295 0.000984 ***
+HYDROGROUPC/D             -0.846765   0.157702  -5.369 7.90e-08 ***
+HYDROGROUPD               -1.086776   0.157782  -6.888 5.66e-12 ***
+HYDROGROUPnot rated        0.800836   0.256535   3.122 0.001798 ** 
+HYDROGROUPUnknown        -10.028181 225.461709  -0.044 0.964523    
+HYDROGROUPwater           -0.496091   1.247132  -0.398 0.690789    
+PercentForestedLand        0.371671   0.090614   4.102 4.10e-05 ***
+Avg_Slope                  0.022568   0.006280   3.593 0.000326 ***
+K_final                    0.040204   0.246311   0.163 0.870342    
+Culvert_Count              0.372389   0.028030  13.285  &lt; 2e-16 ***
+StreamCrosYes              0.663678   0.068680   9.663  &lt; 2e-16 ***
+SurfaceUnknown            -0.521462   0.233850  -2.230 0.025754 *  
+SurfaceUnpaved             0.155641   0.069441   2.241 0.025005 *  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -688,16 +665,16 @@ Use print(x, correlation=TRUE)  or
 
 Response: damaged_bin
                             Chisq Df Pr(&gt;Chisq)    
-MEAN                      94.3766  1  &lt; 2.2e-16 ***
-MeanSlope30m             200.7709  1  &lt; 2.2e-16 ***
-Mean_TopoConvergence_50m 347.2827  1  &lt; 2.2e-16 ***
-HYDROGROUP               188.8972  9  &lt; 2.2e-16 ***
-PercentForestedLand       16.8129  1  4.125e-05 ***
-Avg_Slope                 12.9162  1  0.0003258 ***
-K_final                    0.0272  1  0.8689722    
-Culvert_Count            176.5246  1  &lt; 2.2e-16 ***
-StreamCros                93.3829  1  &lt; 2.2e-16 ***
-Surface                   12.9606  2  0.0015333 ** 
+MEAN                      94.8245  1  &lt; 2.2e-16 ***
+MeanSlope30m             200.6962  1  &lt; 2.2e-16 ***
+Mean_TopoConvergence_50m 347.2599  1  &lt; 2.2e-16 ***
+HYDROGROUP               188.8334  9  &lt; 2.2e-16 ***
+PercentForestedLand       16.8239  1  4.101e-05 ***
+Avg_Slope                 12.9128  1  0.0003263 ***
+K_final                    0.0266  1  0.8703418    
+Culvert_Count            176.4963  1  &lt; 2.2e-16 ***
+StreamCros                93.3814  1  &lt; 2.2e-16 ***
+Surface                   12.9581  2  0.0015353 ** 
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -706,25 +683,25 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>re</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           (Intercept)          MEAN   PARENT
-A         4.088781e-01  9.650102e-02        A
-DT        7.874926e-01  6.250350e-02       DT
-DT/GT     4.760835e-02  1.182403e-02    DT/GT
-DT/GT/GF -9.101679e-02 -2.020181e-02 DT/GT/GF
-DT/O     -2.462862e-03 -5.492875e-04     DT/O
-GF       -2.071030e-01  1.154114e-01       GF
-GF/GL    -1.876757e-01 -7.349659e-02    GF/GL
-GL        1.223327e-01  4.499689e-02       GL
-GL/GF    -1.137103e-01 -2.522248e-02    GL/GF
-GT        6.443471e-02  3.782864e-03       GT
-GT/DT    -2.758004e-01 -8.958784e-02    GT/DT
-GT/GF    -1.509874e-01 -3.275093e-02    GT/GF
-GT/GT_R  -9.585352e-02 -1.432666e-02  GT/GT_R
-M        -2.088722e-01 -4.444701e-02        M
-M/GF/GL  -8.580348e-02 -1.763995e-02  M/GF/GL
-O         2.303452e-01  5.166234e-02        O
-O/A      -3.871659e-02 -7.240693e-03      O/A
-Unknown  -3.029719e-06 -3.587246e-07  Unknown
-W         2.801505e-03 -1.783727e-02        W</code></pre>
+A         4.102598e-01  9.619982e-02        A
+DT        7.886088e-01  6.228084e-02       DT
+DT/GT     4.777846e-02  1.177594e-02    DT/GT
+DT/GT/GF -9.138625e-02 -2.014159e-02 DT/GT/GF
+DT/O     -2.473158e-03 -5.477017e-04     DT/O
+GF       -2.057405e-01  1.151090e-01       GF
+GF/GL    -1.886892e-01 -7.321105e-02    GF/GL
+GL        1.232379e-01  4.483417e-02       GL
+GL/GF    -1.141640e-01 -2.514563e-02    GL/GF
+GT        6.533831e-02  3.621197e-03       GT
+GT/DT    -2.770916e-01 -8.928540e-02    GT/DT
+GT/GF    -1.515777e-01 -3.265250e-02    GT/GF
+GT/GT_R  -9.612238e-02 -1.429279e-02  GT/GT_R
+M        -2.098226e-01 -4.438527e-02        M
+M/GF/GL  -8.614588e-02 -1.759201e-02  M/GF/GL
+O         2.310411e-01  5.145198e-02        O
+O/A      -3.888439e-02 -7.227099e-03      O/A
+Unknown  -3.674985e-06 -4.334207e-07  Unknown
+W         2.757021e-03 -1.772267e-02        W</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(re[,<span class="dv">2</span>][<span class="fu">order</span>(re[,<span class="dv">2</span>])],</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">names.arg =</span> re<span class="sc">$</span>PARENT[<span class="fu">order</span>(re[,<span class="dv">2</span>])], <span class="co">#allign orders with the order of the </span></span>
@@ -741,10 +718,7 @@ W         2.801505e-03 -1.783727e-02        W</code></pre>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="this-is-a-binomial-glmm-with-random-effects-for-precipitation-by-parent-material-intended-to-determine-if-a-given-amount-of-precipitation-on-one-soil-parent-type-causes-a-different-probability-of-damages-on-another-soil-type.-while-some-soil-parent-materials-that-affect-the-probability-of-damage-notably-erosive-parent-materials-like-gf-and-a-the-overall-changes-are-small-variance-0.007-compared-to-the-the-average-effect-of-precipitation-mean-across-all-soils-estimate-0.369.-this-indicates-that-precipitations-effect-on-damage-probabilities-do-not-differ-significantly-across-parent-materials." class="level1">
-<h1>This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation’s effect on damage probabilities do not differ significantly across parent materials.</h1>
+<p>This is a binomial GLMM with random effects for precipitation by parent material intended to determine if a given amount of precipitation on one soil parent type causes a different probability of damages on another soil type. While some soil parent materials that affect the probability of damage (notably: erosive parent materials like GF and A), the overall changes are small (Variance= 0.007) compared to the the average effect of precipitation (MEAN) across all soils (Estimate = 0.369). This indicates that precipitation’s effect on damage probabilities do not differ significantly across parent materials.</p>
 
 
 </section>
